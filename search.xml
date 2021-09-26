@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>计算机组成原理</title>
+      <link href="/2021/09/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+      <url>/2021/09/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<p>操作系统是对计算机硬件资源进行合理分配</p><p>高级语言——汇编语言——机器语言</p><p>0低电平     1高电平</p><p>内存铜片代表高低电平，因为有很多小铜片所以可以同时传递多个01二进制</p><p>存储体里面放置存储单元每个地址对应一个存储单元</p><p><img src="C:\Users\Wans\AppData\Roaming\Typora\typora-user-images\image-20210926223855949.png" alt="image-20210926223855949"></p><p>存储单元：每个存储单元存放一串二进制代码</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 计算机原理,笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关键字参数和默认值参数</title>
       <link href="/2021/09/23/%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0%E5%92%8C%E9%BB%98%E8%AE%A4%E5%80%BC%E5%8F%82%E6%95%B0/"/>
       <url>/2021/09/23/%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0%E5%92%8C%E9%BB%98%E8%AE%A4%E5%80%BC%E5%8F%82%E6%95%B0/</url>
