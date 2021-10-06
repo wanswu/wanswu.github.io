@@ -168,33 +168,6 @@
     
     
     <entry>
-      <title>计算机组成原理</title>
-      <link href="/posts/51917/"/>
-      <url>/posts/51917/</url>
-      
-        <content type="html"><![CDATA[<h1 id="操作系统是对计算机硬件资源进行合理分配"><a href="#操作系统是对计算机硬件资源进行合理分配" class="headerlink" title="操作系统是对计算机硬件资源进行合理分配"></a>操作系统是对计算机硬件资源进行合理分配</h1><p>高级语言——汇编语言——机器语言</p><p>0低电平     1高电平</p><p>内存铜片代表高低电平，因为有很多小铜片所以可以同时传递多个01二进制</p><p>存储体里面放置存储单元每个地址对应一个存储单元</p><h1 id="主存储器的基本组成"><a href="#主存储器的基本组成" class="headerlink" title="主存储器的基本组成"></a>主存储器的基本组成</h1><p><img src="/images/image-20210926231230935.png" alt="image-20210926233714348"></p><p>存储单元：每个存储单元存放一串二进制代码</p><p>存储字（word）：存储单元中二进制代码的组合</p><p>存储字长：存储单元中二进制代码的位数</p><p>存储元：即存储二进制的电子元件，每个存储元可存1bit</p><p>1个**字(word) **= 16bit</p><p>易混淆：1个<strong>字节（byte）</strong> = 8 bit</p><p>​                1B = 1个字节(byte)，1b = 1个bit</p><h1 id="运算器的基本组成"><a href="#运算器的基本组成" class="headerlink" title="运算器的基本组成"></a>运算器的基本组成</h1><p><img src="/images/image-20211006140309421.png" alt="image-20211006140309421"></p><h1 id="控制器的基本组成"><a href="#控制器的基本组成" class="headerlink" title="控制器的基本组成"></a>控制器的基本组成</h1><p><img src="/images/image-20211006140340299.png" alt="image-20211006140340299"></p><h1 id="计算机的工作过程"><a href="#计算机的工作过程" class="headerlink" title="计算机的工作过程"></a>计算机的工作过程</h1><p><img src="/images/image-20211006140400680.png" alt="image-20211006140400680"></p><p><img src="/images/image-20211006140423760.png" alt="image-20211006140423760"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 自学 </category>
-          
-          <category> 计算机原理 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 计算机原理 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>文件操作</title>
       <link href="/posts/16177/"/>
       <url>/posts/16177/</url>
@@ -214,6 +187,33 @@
         <tags>
             
             <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算机组成原理</title>
+      <link href="/posts/51917/"/>
+      <url>/posts/51917/</url>
+      
+        <content type="html"><![CDATA[<h1 id="操作系统是对计算机硬件资源进行合理分配"><a href="#操作系统是对计算机硬件资源进行合理分配" class="headerlink" title="操作系统是对计算机硬件资源进行合理分配"></a>操作系统是对计算机硬件资源进行合理分配</h1><p>高级语言——汇编语言——机器语言</p><p>0低电平     1高电平</p><p>内存铜片代表高低电平，因为有很多小铜片所以可以同时传递多个01二进制</p><p>存储体里面放置存储单元每个地址对应一个存储单元</p><h1 id="主存储器的基本组成"><a href="#主存储器的基本组成" class="headerlink" title="主存储器的基本组成"></a>主存储器的基本组成</h1><p><img src="/images/image-20210926231230935.png" alt="image-20210926233714348"></p><p>存储单元：每个存储单元存放一串二进制代码</p><p>存储字（word）：存储单元中二进制代码的组合</p><p>存储字长：存储单元中二进制代码的位数</p><p>存储元：即存储二进制的电子元件，每个存储元可存1bit</p><p>1个**字(word) **= 16bit</p><p>易混淆：1个<strong>字节（byte）</strong> = 8 bit</p><p>​                1B = 1个字节(byte)，1b = 1个bit</p><h1 id="运算器的基本组成"><a href="#运算器的基本组成" class="headerlink" title="运算器的基本组成"></a>运算器的基本组成</h1><p><img src="/images/image-20211006140309421.png" alt="image-20211006140309421"></p><h1 id="控制器的基本组成"><a href="#控制器的基本组成" class="headerlink" title="控制器的基本组成"></a>控制器的基本组成</h1><p><img src="/images/image-20211006140340299.png" alt="image-20211006140340299"></p><h1 id="计算机的工作过程"><a href="#计算机的工作过程" class="headerlink" title="计算机的工作过程"></a>计算机的工作过程</h1><p><img src="/images/image-20211006140400680.png" alt="image-20211006140400680"></p><p><img src="/images/image-20211006140423760.png" alt="image-20211006140423760"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 自学 </category>
+          
+          <category> 计算机原理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机原理 </tag>
             
         </tags>
       
