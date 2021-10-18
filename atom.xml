@@ -272,33 +272,6 @@
   </entry>
   
   <entry>
-    <title>计算机组成原理</title>
-    <link href="https://wanswu.gitee.io/posts/51917/"/>
-    <id>https://wanswu.gitee.io/posts/51917/</id>
-    <published>2021-09-25T15:28:57.000Z</published>
-    <updated>2021-10-06T07:15:49.027Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;操作系统是对计算机硬件资源进行合理分配&quot;&gt;&lt;a href=&quot;#操作系统是对计算机硬件资源进行合理分配&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
-    
-    <category term="计算机原理" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
-    
-    
-    <category term="计算机原理" scheme="https://wanswu.gitee.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
     <title>文件操作</title>
     <link href="https://wanswu.gitee.io/posts/16177/"/>
     <id>https://wanswu.gitee.io/posts/16177/</id>
@@ -322,6 +295,33 @@
     
     
     <category term="Python" scheme="https://wanswu.gitee.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机组成原理</title>
+    <link href="https://wanswu.gitee.io/posts/51917/"/>
+    <id>https://wanswu.gitee.io/posts/51917/</id>
+    <published>2021-09-25T15:28:57.000Z</published>
+    <updated>2021-10-06T07:15:49.027Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;操作系统是对计算机硬件资源进行合理分配&quot;&gt;&lt;a href=&quot;#操作系统是对计算机硬件资源进行合理分配&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
+    
+    <category term="计算机原理" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
+    
+    
+    <category term="计算机原理" scheme="https://wanswu.gitee.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
