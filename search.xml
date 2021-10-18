@@ -181,33 +181,6 @@
     
     
     <entry>
-      <title>python集合</title>
-      <link href="/posts/19623/"/>
-      <url>/posts/19623/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">集合：</span><br><span class="line">    <span class="built_in">list</span> <span class="built_in">tuple</span>  ----&gt; <span class="built_in">set</span>()</span><br><span class="line">    无序不重复的序列，集合</span><br><span class="line">    无序-----&gt;跟下标相关</span><br><span class="line">    s = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125; ----&gt;s[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">内置函数：</span><br><span class="line">添加：add update</span><br><span class="line">删除：remove discard pop clear</span><br><span class="line"></span><br><span class="line">运算相关函数</span><br><span class="line">- difference()</span><br><span class="line">| union</span><br><span class="line">&amp; intersection()</span><br><span class="line">^ symmetric_difference()</span><br><span class="line"></span><br><span class="line">可变和不可变</span><br><span class="line">可变：地址不变里面内容改变 <span class="built_in">list</span> <span class="built_in">dict</span> <span class="built_in">set</span></span><br><span class="line">不可变：只要内容改变，必须改变地址 <span class="built_in">int</span> <span class="built_in">str</span> <span class="built_in">float</span> <span class="built_in">tuple</span> <span class="built_in">frozenset</span></span><br><span class="line"></span><br><span class="line">类型转换：</span><br><span class="line"><span class="built_in">str</span> ----&gt; <span class="built_in">list</span> <span class="built_in">set</span> ... 相互转换</span><br><span class="line"><span class="built_in">list</span> ---&gt; <span class="built_in">set</span> <span class="built_in">tuple</span> <span class="built_in">dict</span> 相互的转换</span><br><span class="line"></span><br><span class="line">函数：</span><br><span class="line">    增加代码的复用，减少代码的冗余</span><br><span class="line">    <span class="function"><span class="keyword">def</span> 函数名(<span class="params">[参数,]</span>):</span></span><br><span class="line">        函数体</span><br><span class="line">没有参数:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>():</span></span><br><span class="line">    add()</span><br><span class="line"></span><br><span class="line">有参数：</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">a, b</span>):</span></span><br><span class="line">    result = a+b</span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line">调用：</span><br><span class="line">add(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">add(<span class="number">2</span>,<span class="number">8</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 自学 </category>
-          
-          <category> Python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>python可变参数列表拆装</title>
       <link href="/posts/10926/"/>
       <url>/posts/10926/</url>
@@ -235,11 +208,11 @@
     
     
     <entry>
-      <title>文件操作</title>
-      <link href="/posts/16177/"/>
-      <url>/posts/16177/</url>
+      <title>python集合</title>
+      <link href="/posts/19623/"/>
+      <url>/posts/19623/</url>
       
-        <content type="html"><![CDATA[<p><img src="/images/image-20211004110415017.png" alt="image-20211004110415017"></p>]]></content>
+        <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">集合：</span><br><span class="line">    <span class="built_in">list</span> <span class="built_in">tuple</span>  ----&gt; <span class="built_in">set</span>()</span><br><span class="line">    无序不重复的序列，集合</span><br><span class="line">    无序-----&gt;跟下标相关</span><br><span class="line">    s = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125; ----&gt;s[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">内置函数：</span><br><span class="line">添加：add update</span><br><span class="line">删除：remove discard pop clear</span><br><span class="line"></span><br><span class="line">运算相关函数</span><br><span class="line">- difference()</span><br><span class="line">| union</span><br><span class="line">&amp; intersection()</span><br><span class="line">^ symmetric_difference()</span><br><span class="line"></span><br><span class="line">可变和不可变</span><br><span class="line">可变：地址不变里面内容改变 <span class="built_in">list</span> <span class="built_in">dict</span> <span class="built_in">set</span></span><br><span class="line">不可变：只要内容改变，必须改变地址 <span class="built_in">int</span> <span class="built_in">str</span> <span class="built_in">float</span> <span class="built_in">tuple</span> <span class="built_in">frozenset</span></span><br><span class="line"></span><br><span class="line">类型转换：</span><br><span class="line"><span class="built_in">str</span> ----&gt; <span class="built_in">list</span> <span class="built_in">set</span> ... 相互转换</span><br><span class="line"><span class="built_in">list</span> ---&gt; <span class="built_in">set</span> <span class="built_in">tuple</span> <span class="built_in">dict</span> 相互的转换</span><br><span class="line"></span><br><span class="line">函数：</span><br><span class="line">    增加代码的复用，减少代码的冗余</span><br><span class="line">    <span class="function"><span class="keyword">def</span> 函数名(<span class="params">[参数,]</span>):</span></span><br><span class="line">        函数体</span><br><span class="line">没有参数:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>():</span></span><br><span class="line">    add()</span><br><span class="line"></span><br><span class="line">有参数：</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">a, b</span>):</span></span><br><span class="line">    result = a+b</span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line">调用：</span><br><span class="line">add(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">add(<span class="number">2</span>,<span class="number">8</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -267,6 +240,33 @@
       <url>/posts/4090/</url>
       
         <content type="html"><![CDATA[<p><img src="/images/image-20211004000841483.png" alt="image-20211004000841483"></p><p><img src="/images/image-20211004011556646.png" alt="image-20211004011556646"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 自学 </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>文件操作</title>
+      <link href="/posts/16177/"/>
+      <url>/posts/16177/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/image-20211004110415017.png" alt="image-20211004110415017"></p>]]></content>
       
       
       <categories>
