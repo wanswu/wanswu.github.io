@@ -6,7 +6,7 @@
   <link href="https://wanswu.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://wanswu.gitee.io/"/>
-  <updated>2021-10-25T08:02:25.715Z</updated>
+  <updated>2021-11-02T16:08:55.872Z</updated>
   <id>https://wanswu.gitee.io/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python_django</title>
+    <link href="https://wanswu.gitee.io/posts/650b5471/"/>
+    <id>https://wanswu.gitee.io/posts/650b5471/</id>
+    <published>2021-11-02T14:19:14.000Z</published>
+    <updated>2021-11-02T16:08:55.872Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://docs.python.org/zh-cn/3/library/venv.html&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;平台&lt;/th&gt;
+&lt;th</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>生成器与迭代器</title>
+    <link href="https://wanswu.gitee.io/posts/76a3894a/"/>
+    <id>https://wanswu.gitee.io/posts/76a3894a/</id>
+    <published>2021-10-31T15:25:36.000Z</published>
+    <updated>2021-10-31T15:27:03.415Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/image-20211031232546648.png&quot; alt=&quot;image-20211031232546648&quot;&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>windows装mysql解压版教程</title>
+    <link href="https://wanswu.gitee.io/posts/5880561a/"/>
+    <id>https://wanswu.gitee.io/posts/5880561a/</id>
+    <published>2021-10-27T09:12:08.000Z</published>
+    <updated>2021-10-27T11:48:09.500Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;用&lt;strong&gt;管理员&lt;/strong&gt;打开CMD，切换到MySql的解压目录下的&lt;code&gt;bin&lt;/code&gt;目录：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;执行以下命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>青龙面板安装</title>
@@ -123,7 +198,7 @@
     <link href="https://wanswu.gitee.io/posts/34285/"/>
     <id>https://wanswu.gitee.io/posts/34285/</id>
     <published>2021-10-05T16:03:15.000Z</published>
-    <updated>2021-10-10T15:13:11.662Z</updated>
+    <updated>2021-10-24T08:37:34.996Z</updated>
     
     
       
@@ -258,18 +333,19 @@
   </entry>
   
   <entry>
-    <title>文件操作</title>
-    <link href="https://wanswu.gitee.io/posts/16177/"/>
-    <id>https://wanswu.gitee.io/posts/16177/</id>
+    <title>内置函数+匿名函数</title>
+    <link href="https://wanswu.gitee.io/posts/4090/"/>
+    <id>https://wanswu.gitee.io/posts/4090/</id>
     <published>2021-09-25T15:28:57.000Z</published>
-    <updated>2021-10-06T07:15:49.025Z</updated>
+    <updated>2021-10-14T12:26:50.961Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/image-20211004110415017.png&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/image-20211004000841483.png&quot; alt=&quot;image-20211004000841483&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/image-20211004011556646.png&quot;</summary>
         
       
     
@@ -285,19 +361,18 @@
   </entry>
   
   <entry>
-    <title>内置函数+匿名函数</title>
-    <link href="https://wanswu.gitee.io/posts/4090/"/>
-    <id>https://wanswu.gitee.io/posts/4090/</id>
+    <title>文件操作</title>
+    <link href="https://wanswu.gitee.io/posts/16177/"/>
+    <id>https://wanswu.gitee.io/posts/16177/</id>
     <published>2021-09-25T15:28:57.000Z</published>
-    <updated>2021-10-14T12:26:50.961Z</updated>
+    <updated>2021-10-06T07:15:49.025Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/image-20211004000841483.png&quot; alt=&quot;image-20211004000841483&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/image-20211004011556646.png&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/image-20211004110415017.png&quot;</summary>
         
       
     
