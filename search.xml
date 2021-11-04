@@ -207,33 +207,6 @@
     
     
     <entry>
-      <title>python函数调用</title>
-      <link href="/posts/28879/"/>
-      <url>/posts/28879/</url>
-      
-        <content type="html"><![CDATA[<h1 id="函数嵌套调用"><a href="#函数嵌套调用" class="headerlink" title="函数嵌套调用"></a>函数嵌套调用</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;AAAAAAA&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span>():</span></span><br><span class="line">    <span class="comment"># 调用函数a</span></span><br><span class="line">    a()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;BBBBBBB&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">c</span>():</span></span><br><span class="line">    b()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;CCCCCCC&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">c()</span><br></pre></td></tr></table></figure><h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> 自学 </category>
-          
-          <category> Python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>python集合</title>
       <link href="/posts/19623/"/>
       <url>/posts/19623/</url>
@@ -288,6 +261,60 @@
     
     
     <entry>
+      <title>python函数调用</title>
+      <link href="/posts/28879/"/>
+      <url>/posts/28879/</url>
+      
+        <content type="html"><![CDATA[<h1 id="函数嵌套调用"><a href="#函数嵌套调用" class="headerlink" title="函数嵌套调用"></a>函数嵌套调用</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;AAAAAAA&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span>():</span></span><br><span class="line">    <span class="comment"># 调用函数a</span></span><br><span class="line">    a()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;BBBBBBB&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">c</span>():</span></span><br><span class="line">    b()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;CCCCCCC&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">c()</span><br></pre></td></tr></table></figure><h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 自学 </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算机组成原理</title>
+      <link href="/posts/51917/"/>
+      <url>/posts/51917/</url>
+      
+        <content type="html"><![CDATA[<h1 id="操作系统是对计算机硬件资源进行合理分配"><a href="#操作系统是对计算机硬件资源进行合理分配" class="headerlink" title="操作系统是对计算机硬件资源进行合理分配"></a>操作系统是对计算机硬件资源进行合理分配</h1><p>高级语言——汇编语言——机器语言</p><p>0低电平     1高电平</p><p>内存铜片代表高低电平，因为有很多小铜片所以可以同时传递多个01二进制</p><p>存储体里面放置存储单元每个地址对应一个存储单元</p><h1 id="主存储器的基本组成"><a href="#主存储器的基本组成" class="headerlink" title="主存储器的基本组成"></a>主存储器的基本组成</h1><p><img src="/images/image-20210926231230935.png" alt="image-20210926233714348"></p><p>存储单元：每个存储单元存放一串二进制代码</p><p>存储字（word）：存储单元中二进制代码的组合</p><p>存储字长：存储单元中二进制代码的位数</p><p>存储元：即存储二进制的电子元件，每个存储元可存1bit</p><p>1个**字(word) **= 16bit</p><p>易混淆：1个<strong>字节（byte）</strong> = 8 bit</p><p>​                1B = 1个字节(byte)，1b = 1个bit</p><h1 id="运算器的基本组成"><a href="#运算器的基本组成" class="headerlink" title="运算器的基本组成"></a>运算器的基本组成</h1><p><img src="/images/image-20211006140309421.png" alt="image-20211006140309421"></p><h1 id="控制器的基本组成"><a href="#控制器的基本组成" class="headerlink" title="控制器的基本组成"></a>控制器的基本组成</h1><p><img src="/images/image-20211006140340299.png" alt="image-20211006140340299"></p><h1 id="计算机的工作过程"><a href="#计算机的工作过程" class="headerlink" title="计算机的工作过程"></a>计算机的工作过程</h1><p><img src="/images/image-20211006140400680.png" alt="image-20211006140400680"></p><p><img src="/images/image-20211006140423760.png" alt="image-20211006140423760"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 自学 </category>
+          
+          <category> 计算机原理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>内置函数+匿名函数</title>
       <link href="/posts/4090/"/>
       <url>/posts/4090/</url>
@@ -334,33 +361,6 @@
         <tags>
             
             <tag> Python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>计算机组成原理</title>
-      <link href="/posts/51917/"/>
-      <url>/posts/51917/</url>
-      
-        <content type="html"><![CDATA[<h1 id="操作系统是对计算机硬件资源进行合理分配"><a href="#操作系统是对计算机硬件资源进行合理分配" class="headerlink" title="操作系统是对计算机硬件资源进行合理分配"></a>操作系统是对计算机硬件资源进行合理分配</h1><p>高级语言——汇编语言——机器语言</p><p>0低电平     1高电平</p><p>内存铜片代表高低电平，因为有很多小铜片所以可以同时传递多个01二进制</p><p>存储体里面放置存储单元每个地址对应一个存储单元</p><h1 id="主存储器的基本组成"><a href="#主存储器的基本组成" class="headerlink" title="主存储器的基本组成"></a>主存储器的基本组成</h1><p><img src="/images/image-20210926231230935.png" alt="image-20210926233714348"></p><p>存储单元：每个存储单元存放一串二进制代码</p><p>存储字（word）：存储单元中二进制代码的组合</p><p>存储字长：存储单元中二进制代码的位数</p><p>存储元：即存储二进制的电子元件，每个存储元可存1bit</p><p>1个**字(word) **= 16bit</p><p>易混淆：1个<strong>字节（byte）</strong> = 8 bit</p><p>​                1B = 1个字节(byte)，1b = 1个bit</p><h1 id="运算器的基本组成"><a href="#运算器的基本组成" class="headerlink" title="运算器的基本组成"></a>运算器的基本组成</h1><p><img src="/images/image-20211006140309421.png" alt="image-20211006140309421"></p><h1 id="控制器的基本组成"><a href="#控制器的基本组成" class="headerlink" title="控制器的基本组成"></a>控制器的基本组成</h1><p><img src="/images/image-20211006140340299.png" alt="image-20211006140340299"></p><h1 id="计算机的工作过程"><a href="#计算机的工作过程" class="headerlink" title="计算机的工作过程"></a>计算机的工作过程</h1><p><img src="/images/image-20211006140400680.png" alt="image-20211006140400680"></p><p><img src="/images/image-20211006140423760.png" alt="image-20211006140423760"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 自学 </category>
-          
-          <category> 计算机原理 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 计算机原理 </tag>
             
         </tags>
       
