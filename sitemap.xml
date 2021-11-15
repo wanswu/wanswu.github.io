@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wanswu.gitee.io/posts/d114782d/</loc>
+    
+    <lastmod>2021-11-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wanswu.gitee.io/posts/b87b8b00/</loc>
+    
+    <lastmod>2021-11-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wanswu.gitee.io/posts/76a3894a/</loc>
     
     <lastmod>2021-11-03</lastmod>
@@ -158,7 +172,7 @@
 
   <url>
     <loc>https://wanswu.gitee.io/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -166,70 +180,84 @@
   
   <url>
     <loc>https://wanswu.gitee.io/tags/Python/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wanswu.gitee.io/tags/Docker/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wanswu.gitee.io/tags/%E7%9E%8E%E5%AD%A6/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wanswu.gitee.io/tags/VsCode/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wanswu.gitee.io/tags/C/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wanswu.gitee.io/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-11-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wanswu.gitee.io/tags/Linux/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wanswu.gitee.io/tags/windows10/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.gitee.io/tags/Linux/</loc>
+    <lastmod>2021-11-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.gitee.io/tags/python/</loc>
+    <lastmod>2021-11-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.gitee.io/tags/%E8%87%AA%E5%AD%A6/</loc>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wanswu.gitee.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wanswu.gitee.io/tags/qinglong/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -238,35 +266,42 @@
   
   <url>
     <loc>https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wanswu.gitee.io/categories/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/Python/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.gitee.io/categories/%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/Docker/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <lastmod>2021-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

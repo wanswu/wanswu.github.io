@@ -6,7 +6,7 @@
   <link href="https://wanswu.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://wanswu.gitee.io/"/>
-  <updated>2021-11-03T05:12:09.904Z</updated>
+  <updated>2021-11-15T09:48:38.893Z</updated>
   <id>https://wanswu.gitee.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>phpstudy和windows_mysql_冲突解决办法</title>
+    <link href="https://wanswu.gitee.io/posts/d114782d/"/>
+    <id>https://wanswu.gitee.io/posts/d114782d/</id>
+    <published>2021-11-15T09:38:53.000Z</published>
+    <updated>2021-11-15T09:48:38.893Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1、删除自己在电脑上安装的mysql服务&quot;&gt;&lt;a href=&quot;#1、删除自己在电脑上安装的mysql服务&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="环境问题" scheme="https://wanswu.gitee.io/categories/%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98/"/>
+    
+    
+    <category term="教程" scheme="https://wanswu.gitee.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python魔术方法</title>
+    <link href="https://wanswu.gitee.io/posts/b87b8b00/"/>
+    <id>https://wanswu.gitee.io/posts/b87b8b00/</id>
+    <published>2021-11-13T05:38:43.000Z</published>
+    <updated>2021-11-13T14:49:37.947Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;python-魔术方法&quot;&gt;&lt;a href=&quot;#python-魔术方法&quot; class=&quot;headerlink&quot; title=&quot;python 魔术方法&quot;&gt;&lt;/a&gt;python 魔术方法&lt;/h1&gt;&lt;h1 id=&quot;常用魔术方法&quot;&gt;&lt;a href=&quot;#常用魔术方法&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
+    
+    
+    <category term="python" scheme="https://wanswu.gitee.io/tags/python/"/>
+    
+    <category term="自学" scheme="https://wanswu.gitee.io/tags/%E8%87%AA%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>python_django</title>
@@ -252,18 +304,18 @@
   </entry>
   
   <entry>
-    <title>python集合</title>
-    <link href="https://wanswu.gitee.io/posts/19623/"/>
-    <id>https://wanswu.gitee.io/posts/19623/</id>
+    <title>python函数调用</title>
+    <link href="https://wanswu.gitee.io/posts/28879/"/>
+    <id>https://wanswu.gitee.io/posts/28879/</id>
     <published>2021-09-27T03:01:57.000Z</published>
-    <updated>2021-10-14T12:27:10.972Z</updated>
+    <updated>2021-10-14T12:27:06.396Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+    <summary type="html">&lt;h1 id=&quot;函数嵌套调用&quot;&gt;&lt;a href=&quot;#函数嵌套调用&quot; class=&quot;headerlink&quot; title=&quot;函数嵌套调用&quot;&gt;&lt;/a&gt;函数嵌套调用&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
         
       
     
@@ -306,18 +358,46 @@
   </entry>
   
   <entry>
-    <title>python函数调用</title>
-    <link href="https://wanswu.gitee.io/posts/28879/"/>
-    <id>https://wanswu.gitee.io/posts/28879/</id>
+    <title>python集合</title>
+    <link href="https://wanswu.gitee.io/posts/19623/"/>
+    <id>https://wanswu.gitee.io/posts/19623/</id>
     <published>2021-09-27T03:01:57.000Z</published>
-    <updated>2021-10-14T12:27:06.396Z</updated>
+    <updated>2021-10-14T12:27:10.972Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;函数嵌套调用&quot;&gt;&lt;a href=&quot;#函数嵌套调用&quot; class=&quot;headerlink&quot; title=&quot;函数嵌套调用&quot;&gt;&lt;/a&gt;函数嵌套调用&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+    <summary type="html">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
+    
+    <category term="Python" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/Python/"/>
+    
+    
+    <category term="Python" scheme="https://wanswu.gitee.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>内置函数+匿名函数</title>
+    <link href="https://wanswu.gitee.io/posts/4090/"/>
+    <id>https://wanswu.gitee.io/posts/4090/</id>
+    <published>2021-09-25T15:28:57.000Z</published>
+    <updated>2021-10-14T12:26:50.961Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/image-20211004000841483.png&quot; alt=&quot;image-20211004000841483&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/image-20211004011556646.png&quot;</summary>
         
       
     
@@ -356,34 +436,6 @@
     
     
     <category term="计算机原理" scheme="https://wanswu.gitee.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>内置函数+匿名函数</title>
-    <link href="https://wanswu.gitee.io/posts/4090/"/>
-    <id>https://wanswu.gitee.io/posts/4090/</id>
-    <published>2021-09-25T15:28:57.000Z</published>
-    <updated>2021-10-14T12:26:50.961Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/image-20211004000841483.png&quot; alt=&quot;image-20211004000841483&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/image-20211004011556646.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
-    
-    <category term="Python" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/Python/"/>
-    
-    
-    <category term="Python" scheme="https://wanswu.gitee.io/tags/Python/"/>
     
   </entry>
   
