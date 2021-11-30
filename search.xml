@@ -45,9 +45,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 自学 </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -60,9 +60,25 @@
       <link href="/posts/650b5471/"/>
       <url>/posts/650b5471/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://docs.python.org/zh-cn/3/library/venv.html">官方文档</a></p><table><thead><tr><th align="left">平台</th><th align="left">Shell</th><th align="left">用于激活虚拟环境的命令</th></tr></thead><tbody><tr><td align="left">POSIX</td><td align="left">bash/zsh</td><td align="left">$ source <venv>/bin/activate</td></tr><tr><td align="left"></td><td align="left">fish</td><td align="left">$ source <venv>/bin/activate.fish</td></tr><tr><td align="left"></td><td align="left">csh/tcsh</td><td align="left">$ source <venv>/bin/activate.csh</td></tr><tr><td align="left"></td><td align="left">PowerShell Core</td><td align="left">$ <venv>/bin/Activate.ps1</td></tr><tr><td align="left">Windows</td><td align="left">cmd.exe</td><td align="left">C:&gt; <venv>\Scripts\activate.bat</td></tr><tr><td align="left"></td><td align="left">PowerShell</td><td align="left">PS C:&gt; <venv>\Scripts\Activate.ps1</td></tr></tbody></table><p>创建网站框架</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\django-admin.exe startproject mysite</span><br></pre></td></tr></table></figure><p>启动django框架</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure><p>网站中的一个功能</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python .\manage.py startapp index</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="我的笔记"><a href="#我的笔记" class="headerlink" title="我的笔记"></a>我的笔记</h1><p><a href="https://docs.python.org/zh-cn/3/library/venv.html">官方文档</a></p><table><thead><tr><th align="left">平台</th><th align="left">Shell</th><th align="left">用于激活虚拟环境的命令</th></tr></thead><tbody><tr><td align="left">POSIX</td><td align="left">bash/zsh</td><td align="left">$ source <venv>/bin/activate</td></tr><tr><td align="left"></td><td align="left">fish</td><td align="left">$ source <venv>/bin/activate.fish</td></tr><tr><td align="left"></td><td align="left">csh/tcsh</td><td align="left">$ source <venv>/bin/activate.csh</td></tr><tr><td align="left"></td><td align="left">PowerShell Core</td><td align="left">$ <venv>/bin/Activate.ps1</td></tr><tr><td align="left">Windows</td><td align="left">cmd.exe</td><td align="left">C:&gt; <venv>\Scripts\activate.bat</td></tr><tr><td align="left"></td><td align="left">PowerShell</td><td align="left">PS C:&gt; <venv>\Scripts\Activate.ps1</td></tr></tbody></table><p>创建网站框架</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\django-admin.exe startproject mysite</span><br></pre></td></tr></table></figure><p>启动django框架</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br><span class="line">python manage.py runserver [端口号]</span><br></pre></td></tr></table></figure><p>网站中的一个功能创建应用</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python .\manage.py startapp index</span><br></pre></td></tr></table></figure><p>数据库迁移</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py migate</span><br></pre></td></tr></table></figure><p>列出django子命令</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage .py</span><br></pre></td></tr></table></figure><h2 id="目录解读"><a href="#目录解读" class="headerlink" title="目录解读"></a>目录解读</h2><p><img src="/images/image-20211129095301686.png" alt="image-20211129095301686"></p><p><img src="/images/image-20211129104235294.png" alt="image-20211129104235294"></p><p><img src="/images/image-20211129104304785.png" alt="image-20211129104304785"></p><p><img src="/images/image-20211129104323422.png" alt="image-20211129104323422"></p><p><img src="/images/image-20211129104800457.png" alt="image-20211129104800457"></p><p><img src="/images/image-20211129104820337.png" alt="image-20211129104820337"></p><p><img src="/images/image-20211129104940840.png" alt="image-20211129104940840"></p><p><img src="/images/image-20211129105214895.png" alt="image-20211129105214895"></p><p><img src="/images/image-20211129105351007.png" alt="image-20211129105351007"></p><p><img src="/images/image-20211129105747983.png" alt="image-20211129105747983"></p><h2 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2><p>目前在我看来视图（view）就是用来写html的文件，urls就是将这个文件的路径导入，使得可以在浏览器显示</p><p><img src="/images/image-20211129110849895.png" alt="image-20211129110849895"></p><p>浏览器访问page/2003/    djgano匹配到视图（views）中有page_2003中有函数，然后输出函数的内容</p><p>这是路由吗？？我感觉是，因为urls将浏览器请求的url地址指向views</p><p><img src="/images/image-20211129111001293.png" alt="image-20211129111001293"><img src="/images/image-20211129111029113.png" alt="image-20211129111029113"></p><h2 id="路由配置"><a href="#路由配置" class="headerlink" title="路由配置"></a>路由配置</h2><p><img src="/images/image-20211129111214428.png" alt="image-20211129111214428"></p><h2 id="路由配置-path"><a href="#路由配置-path" class="headerlink" title="路由配置-path"></a>路由配置-path</h2><p><img src="/images/image-20211129111418584.png" alt="image-20211129111418584"></p><h2 id="路由配置-path-转换器"><a href="#路由配置-path-转换器" class="headerlink" title="路由配置 - path - 转换器"></a>路由配置 - path - 转换器</h2><p><img src="/images/image-20211129112600885.png" alt="image-20211129112600885"></p><h2 id="路由配置-path-转换器-1"><a href="#路由配置-path-转换器-1" class="headerlink" title="路由配置 - path - 转换器"></a>路由配置 - path - 转换器</h2><p><img src="/images/image-20211129112814502.png" alt="image-20211129112814502"></p><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p><img src="/images/image-20211129113915653.png" alt="image-20211129113915653"><img src="/images/image-20211129113939729.png" alt="image-20211129113939729"></p><p><img src="/images/image-20211129113926093.png" alt="image-20211129113926093"><img src="/images/image-20211129114053987.png" alt="image-20211129114053987"></p><p>可以看出来，执行的时候是由上而下执行</p><h3 id="练习：计算器"><a href="#练习：计算器" class="headerlink" title="练习：计算器"></a>练习：计算器</h3><p><img src="/images/image-20211129123645517.png" alt="image-20211129123645517"></p><h2 id="路由配置-re-path"><a href="#路由配置-re-path" class="headerlink" title="路由配置 - re_path()"></a>路由配置 - re_path()</h2><p><img src="/images/image-20211129141056822.png" alt="image-20211129141056822"></p><h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h3><p><img src="/images/image-20211129141712298.png" alt="image-20211129141712298"></p><h3 id="生日正则："><a href="#生日正则：" class="headerlink" title="生日正则："></a>生日正则：</h3><p><img src="/images/image-20211129145314266.png" alt="image-20211129145314266"></p><p><img src="/images/image-20211129145335743.png" alt="image-20211129145335743"></p><p><img src="/images/image-20211129145352623.png" alt="image-20211129145352623"></p><h2 id="Django中的请求"><a href="#Django中的请求" class="headerlink" title="Django中的请求"></a>Django中的请求</h2><p><img src="/images/image-20211129170039257.png" alt="image-20211129170039257"></p><h2 id="Django中的请求-1"><a href="#Django中的请求-1" class="headerlink" title="Django中的请求"></a>Django中的请求</h2><p><img src="/images/image-20211129171430226.png" alt="image-20211129171430226"></p><h2 id="Django中的响应对象"><a href="#Django中的响应对象" class="headerlink" title="Django中的响应对象"></a>Django中的响应对象</h2><p><img src="/images/image-20211129172858756.png" alt="image-20211129172858756"></p><p>Django中的响应对象</p><p><img src="/images/image-20211129173135044.png" alt="image-20211129173135044"></p><p><img src="/images/image-20211129173257111.png" alt="image-20211129173257111"></p><h2 id="GET处理"><a href="#GET处理" class="headerlink" title="GET处理"></a>GET处理</h2><p><img src="/images/image-20211129174221824.png" alt="image-20211129174221824"></p><p><img src="/images/image-20211129174751910.png" alt="image-20211129174751910"></p><p><img src="/images/image-20211129175033023.png" alt="image-20211129175033023"></p><h2 id="POST处理"><a href="#POST处理" class="headerlink" title="POST处理"></a>POST处理</h2><p><img src="/images/image-20211129201247287.png" alt="image-20211129201247287"></p><p><img src="/images/image-20211129201306505.png" alt="image-20211129201306505"></p><p><img src="/images/image-20211129201327000.png" alt="image-20211129201327000"></p>]]></content>
       
       
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 毕设 </tag>
+            
+            <tag> 自学 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -86,7 +102,7 @@
       <link href="/posts/5880561a/"/>
       <url>/posts/5880561a/</url>
       
-        <content type="html"><![CDATA[<ul><li><p>用<strong>管理员</strong>打开CMD，切换到MySql的解压目录下的<code>bin</code>目录：</p></li><li><p>执行以下命令</p></li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize --console# 记住密码</span><br><span class="line">mysqld -install</span><br></pre></td></tr></table></figure><ul><li>输入命令<code>net start mysql</code>或<code>sc start mysql</code>启动mysql服务</li><li>如果启动失败，那么可以直接登录试试</li><li>输入<code>mysql -u root -p</code>来登陆数据库，并输入前面记录的临时密码：</li><li>登陆成功后输入命令<code>alter user &#39;root&#39;@&#39;localhost&#39; identified by &#39;想要设置的密码&#39;;</code>将原来复杂的密码修改为自己的密码，并输入<code>commit;</code>提交：</li><li><strong>停止MySQL服务：</strong><code>net stop mysqld</code>或<code>sc stop mysqld</code></li><li><strong>删除MySQL服务：</strong><code>sc delete mysqld</code>或<code>mysqld -remove</code>（需先停止服务）</li></ul>]]></content>
+        <content type="html"><![CDATA[<ul><li><p>用<strong>管理员</strong>打开CMD，切换到MySql的解压目录下的<code>bin</code>目录：</p></li><li><p>执行以下命令</p></li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize --console# 记住密码</span><br><span class="line">mysqld -install</span><br></pre></td></tr></table></figure><ul><li><p>输入命令<code>net start mysql</code>或<code>sc start mysql</code>启动mysql服务</p></li><li><p>如果启动失败，那么可以直接登录试试</p></li><li><p>输入<code>mysql -u root -p</code>来登陆数据库，并输入前面记录的临时密码：</p></li><li><p>登陆成功后输入命令<code>alter user &#39;root&#39;@&#39;localhost&#39; identified by &#39;想要设置的密码&#39;;</code>将原来复杂的密码修改为自己的密码，并输入<code>commit;</code>提交：</p></li><li><p><strong>停止MySQL服务：</strong><code>net stop mysqld</code>或<code>sc stop mysqld</code></p></li><li><p><strong>删除MySQL服务：</strong><code>sc delete mysqld</code>或<code>mysqld -remove</code>（需先停止服务）</p></li><li><p>在mysql的目录下设置配置文件my.ini</p></li><li><pre><code class="shell">[mysqld] # 设置mysql的安装目录，也就是刚才我们解压的目录basedir=C:/mysql-8.0.13-winx64# 设置mysql数据库的数据的存放目录# datadir=C:/mysql-8.0.13-winx64/data# 设置默认使用的端口port=3306# 允许最大连接数max_connections=200# 允许连接失败的次数。这是为了防止有人试图攻击数据库max_connect_errors=10# 服务端使用的字符集character-set-server=utf8mb4# 数据库字符集对应一些排序等规则使用的字符集collation-server=utf8mb4_general_ci# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB# 默认使用“mysql_native_password”插件作为认证加密方式# MySQL8.0默认认证加密方式为caching_sha2_passworddefault_authentication_plugin=mysql_native_password [mysql]# 设置mysql客户端默认字符集default-character-set=utf8mb4 [client]default-character-set=utf8mb4port=3306</code></pre></li><li></li></ul>]]></content>
       
       
       
@@ -286,6 +302,33 @@
     
     
     <entry>
+      <title>python集合</title>
+      <link href="/posts/19623/"/>
+      <url>/posts/19623/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">集合：</span><br><span class="line">    <span class="built_in">list</span> <span class="built_in">tuple</span>  ----&gt; <span class="built_in">set</span>()</span><br><span class="line">    无序不重复的序列，集合</span><br><span class="line">    无序-----&gt;跟下标相关</span><br><span class="line">    s = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125; ----&gt;s[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">内置函数：</span><br><span class="line">添加：add update</span><br><span class="line">删除：remove discard pop clear</span><br><span class="line"></span><br><span class="line">运算相关函数</span><br><span class="line">- difference()</span><br><span class="line">| union</span><br><span class="line">&amp; intersection()</span><br><span class="line">^ symmetric_difference()</span><br><span class="line"></span><br><span class="line">可变和不可变</span><br><span class="line">可变：地址不变里面内容改变 <span class="built_in">list</span> <span class="built_in">dict</span> <span class="built_in">set</span></span><br><span class="line">不可变：只要内容改变，必须改变地址 <span class="built_in">int</span> <span class="built_in">str</span> <span class="built_in">float</span> <span class="built_in">tuple</span> <span class="built_in">frozenset</span></span><br><span class="line"></span><br><span class="line">类型转换：</span><br><span class="line"><span class="built_in">str</span> ----&gt; <span class="built_in">list</span> <span class="built_in">set</span> ... 相互转换</span><br><span class="line"><span class="built_in">list</span> ---&gt; <span class="built_in">set</span> <span class="built_in">tuple</span> <span class="built_in">dict</span> 相互的转换</span><br><span class="line"></span><br><span class="line">函数：</span><br><span class="line">    增加代码的复用，减少代码的冗余</span><br><span class="line">    <span class="function"><span class="keyword">def</span> 函数名(<span class="params">[参数,]</span>):</span></span><br><span class="line">        函数体</span><br><span class="line">没有参数:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>():</span></span><br><span class="line">    add()</span><br><span class="line"></span><br><span class="line">有参数：</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">a, b</span>):</span></span><br><span class="line">    result = a+b</span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line">调用：</span><br><span class="line">add(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">add(<span class="number">2</span>,<span class="number">8</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 自学 </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python可变参数列表拆装</title>
       <link href="/posts/10926/"/>
       <url>/posts/10926/</url>
@@ -313,11 +356,11 @@
     
     
     <entry>
-      <title>python集合</title>
-      <link href="/posts/19623/"/>
-      <url>/posts/19623/</url>
+      <title>文件操作</title>
+      <link href="/posts/16177/"/>
+      <url>/posts/16177/</url>
       
-        <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">集合：</span><br><span class="line">    <span class="built_in">list</span> <span class="built_in">tuple</span>  ----&gt; <span class="built_in">set</span>()</span><br><span class="line">    无序不重复的序列，集合</span><br><span class="line">    无序-----&gt;跟下标相关</span><br><span class="line">    s = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125; ----&gt;s[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">内置函数：</span><br><span class="line">添加：add update</span><br><span class="line">删除：remove discard pop clear</span><br><span class="line"></span><br><span class="line">运算相关函数</span><br><span class="line">- difference()</span><br><span class="line">| union</span><br><span class="line">&amp; intersection()</span><br><span class="line">^ symmetric_difference()</span><br><span class="line"></span><br><span class="line">可变和不可变</span><br><span class="line">可变：地址不变里面内容改变 <span class="built_in">list</span> <span class="built_in">dict</span> <span class="built_in">set</span></span><br><span class="line">不可变：只要内容改变，必须改变地址 <span class="built_in">int</span> <span class="built_in">str</span> <span class="built_in">float</span> <span class="built_in">tuple</span> <span class="built_in">frozenset</span></span><br><span class="line"></span><br><span class="line">类型转换：</span><br><span class="line"><span class="built_in">str</span> ----&gt; <span class="built_in">list</span> <span class="built_in">set</span> ... 相互转换</span><br><span class="line"><span class="built_in">list</span> ---&gt; <span class="built_in">set</span> <span class="built_in">tuple</span> <span class="built_in">dict</span> 相互的转换</span><br><span class="line"></span><br><span class="line">函数：</span><br><span class="line">    增加代码的复用，减少代码的冗余</span><br><span class="line">    <span class="function"><span class="keyword">def</span> 函数名(<span class="params">[参数,]</span>):</span></span><br><span class="line">        函数体</span><br><span class="line">没有参数:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>():</span></span><br><span class="line">    add()</span><br><span class="line"></span><br><span class="line">有参数：</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">a, b</span>):</span></span><br><span class="line">    result = a+b</span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line">调用：</span><br><span class="line">add(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">add(<span class="number">2</span>,<span class="number">8</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p><img src="/images/image-20211004110415017.png" alt="image-20211004110415017"></p>]]></content>
       
       
       <categories>
@@ -386,33 +429,6 @@
         <tags>
             
             <tag> 计算机原理 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>文件操作</title>
-      <link href="/posts/16177/"/>
-      <url>/posts/16177/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/images/image-20211004110415017.png" alt="image-20211004110415017"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 自学 </category>
-          
-          <category> Python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python </tag>
             
         </tags>
       
