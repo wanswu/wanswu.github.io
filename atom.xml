@@ -175,7 +175,7 @@
     <link href="https://wanswu.gitee.io/posts/b87b8b00/"/>
     <id>https://wanswu.gitee.io/posts/b87b8b00/</id>
     <published>2021-11-13T05:38:43.000Z</published>
-    <updated>2021-11-15T09:49:30.059Z</updated>
+    <updated>2021-12-06T06:06:51.941Z</updated>
     
     
       
@@ -188,12 +188,10 @@
     
     
     
-    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
+    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
     
     
     <category term="自学" scheme="https://wanswu.gitee.io/tags/%E8%87%AA%E5%AD%A6/"/>
-    
-    <category term="python" scheme="https://wanswu.gitee.io/tags/python/"/>
     
   </entry>
   
@@ -202,7 +200,7 @@
     <link href="https://wanswu.gitee.io/posts/650b5471/"/>
     <id>https://wanswu.gitee.io/posts/650b5471/</id>
     <published>2021-11-02T14:19:14.000Z</published>
-    <updated>2021-12-04T15:45:55.115Z</updated>
+    <updated>2021-12-06T06:06:00.237Z</updated>
     
     
       
@@ -215,10 +213,8 @@
     
     
     
-    <category term="Python" scheme="https://wanswu.gitee.io/categories/Python/"/>
+    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
     
-    
-    <category term="Python" scheme="https://wanswu.gitee.io/tags/Python/"/>
     
     <category term="毕设" scheme="https://wanswu.gitee.io/tags/%E6%AF%95%E8%AE%BE/"/>
     
@@ -231,7 +227,7 @@
     <link href="https://wanswu.gitee.io/posts/76a3894a/"/>
     <id>https://wanswu.gitee.io/posts/76a3894a/</id>
     <published>2021-10-31T15:25:36.000Z</published>
-    <updated>2021-11-03T05:12:09.908Z</updated>
+    <updated>2021-12-06T06:04:18.350Z</updated>
     
     
       
@@ -245,6 +241,10 @@
     
     
     
+    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
+    
+    
+    <category term="自学" scheme="https://wanswu.gitee.io/tags/%E8%87%AA%E5%AD%A6/"/>
     
   </entry>
   
@@ -253,7 +253,7 @@
     <link href="https://wanswu.gitee.io/posts/5880561a/"/>
     <id>https://wanswu.gitee.io/posts/5880561a/</id>
     <published>2021-10-27T09:12:08.000Z</published>
-    <updated>2021-12-04T17:18:46.220Z</updated>
+    <updated>2021-12-06T06:07:35.934Z</updated>
     
     
       
@@ -266,6 +266,10 @@
     
     
     
+    <category term="教程" scheme="https://wanswu.gitee.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="环境搭建" scheme="https://wanswu.gitee.io/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
@@ -274,7 +278,7 @@
     <link href="https://wanswu.gitee.io/posts/b9ec591f/"/>
     <id>https://wanswu.gitee.io/posts/b9ec591f/</id>
     <published>2021-10-25T02:25:15.000Z</published>
-    <updated>2021-10-25T08:02:25.715Z</updated>
+    <updated>2021-12-06T06:05:00.212Z</updated>
     
     
       
@@ -287,7 +291,7 @@
     
     
     
-    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
+    <category term="工具" scheme="https://wanswu.gitee.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="瞎学" scheme="https://wanswu.gitee.io/tags/%E7%9E%8E%E5%AD%A6/"/>
@@ -301,7 +305,7 @@
     <link href="https://wanswu.gitee.io/posts/d947b397/"/>
     <id>https://wanswu.gitee.io/posts/d947b397/</id>
     <published>2021-10-11T08:27:19.000Z</published>
-    <updated>2021-10-11T08:54:36.411Z</updated>
+    <updated>2021-12-06T06:07:12.736Z</updated>
     
     
       
@@ -316,8 +320,6 @@
     
     <category term="教程" scheme="https://wanswu.gitee.io/categories/%E6%95%99%E7%A8%8B/"/>
     
-    
-    <category term="教程" scheme="https://wanswu.gitee.io/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="windows10" scheme="https://wanswu.gitee.io/tags/windows10/"/>
     
@@ -351,32 +353,11 @@
   </entry>
   
   <entry>
-    <title>VsCode配置C++</title>
-    <link href="https://wanswu.gitee.io/posts/e2c1080e/"/>
-    <id>https://wanswu.gitee.io/posts/e2c1080e/</id>
-    <published>2021-10-09T06:44:23.000Z</published>
-    <updated>2021-10-10T15:14:36.070Z</updated>
-    
-    
-    
-    
-    <category term="教程" scheme="https://wanswu.gitee.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="VsCode" scheme="https://wanswu.gitee.io/tags/VsCode/"/>
-    
-    <category term="C++" scheme="https://wanswu.gitee.io/tags/C/"/>
-    
-    <category term="教程" scheme="https://wanswu.gitee.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Docker自学</title>
     <link href="https://wanswu.gitee.io/posts/34285/"/>
     <id>https://wanswu.gitee.io/posts/34285/</id>
     <published>2021-10-05T16:03:15.000Z</published>
-    <updated>2021-10-24T08:37:34.996Z</updated>
+    <updated>2021-12-06T06:05:53.301Z</updated>
     
     
       
@@ -389,9 +370,7 @@
     
     
     
-    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
-    
-    <category term="Docker" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/Docker/"/>
+    <category term="Docker" scheme="https://wanswu.gitee.io/categories/Docker/"/>
     
     
     <category term="Docker" scheme="https://wanswu.gitee.io/tags/Docker/"/>
@@ -405,7 +384,7 @@
     <link href="https://wanswu.gitee.io/posts/19235/"/>
     <id>https://wanswu.gitee.io/posts/19235/</id>
     <published>2021-10-05T15:58:47.000Z</published>
-    <updated>2021-10-14T12:27:19.474Z</updated>
+    <updated>2021-12-06T06:06:42.719Z</updated>
     
     
       
@@ -420,9 +399,7 @@
     
     
     
-    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
-    
-    <category term="Python" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/Python/"/>
+    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
     
     
     <category term="Python" scheme="https://wanswu.gitee.io/tags/Python/"/>
@@ -434,7 +411,7 @@
     <link href="https://wanswu.gitee.io/posts/28879/"/>
     <id>https://wanswu.gitee.io/posts/28879/</id>
     <published>2021-09-27T03:01:57.000Z</published>
-    <updated>2021-10-14T12:27:06.396Z</updated>
+    <updated>2021-12-06T06:06:18.653Z</updated>
     
     
       
@@ -447,9 +424,7 @@
     
     
     
-    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
-    
-    <category term="Python" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/Python/"/>
+    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
     
     
     <category term="Python" scheme="https://wanswu.gitee.io/tags/Python/"/>
@@ -461,7 +436,7 @@
     <link href="https://wanswu.gitee.io/posts/10926/"/>
     <id>https://wanswu.gitee.io/posts/10926/</id>
     <published>2021-09-27T03:01:57.000Z</published>
-    <updated>2021-10-14T12:27:14.915Z</updated>
+    <updated>2021-12-06T06:06:34.479Z</updated>
     
     
       
@@ -474,9 +449,7 @@
     
     
     
-    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
-    
-    <category term="Python" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/Python/"/>
+    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
     
     
     <category term="Python" scheme="https://wanswu.gitee.io/tags/Python/"/>
@@ -488,7 +461,7 @@
     <link href="https://wanswu.gitee.io/posts/19623/"/>
     <id>https://wanswu.gitee.io/posts/19623/</id>
     <published>2021-09-27T03:01:57.000Z</published>
-    <updated>2021-10-14T12:27:10.972Z</updated>
+    <updated>2021-12-06T06:06:27.619Z</updated>
     
     
       
@@ -501,9 +474,7 @@
     
     
     
-    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
-    
-    <category term="Python" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/Python/"/>
+    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
     
     
     <category term="Python" scheme="https://wanswu.gitee.io/tags/Python/"/>
@@ -515,7 +486,7 @@
     <link href="https://wanswu.gitee.io/posts/4090/"/>
     <id>https://wanswu.gitee.io/posts/4090/</id>
     <published>2021-09-25T15:28:57.000Z</published>
-    <updated>2021-10-14T12:26:50.961Z</updated>
+    <updated>2021-12-06T06:04:29.360Z</updated>
     
     
       
@@ -529,12 +500,35 @@
     
     
     
-    <category term="自学" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/"/>
-    
-    <category term="Python" scheme="https://wanswu.gitee.io/categories/%E8%87%AA%E5%AD%A6/Python/"/>
+    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
     
     
-    <category term="Python" scheme="https://wanswu.gitee.io/tags/Python/"/>
+    <category term="自学" scheme="https://wanswu.gitee.io/tags/%E8%87%AA%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文件操作</title>
+    <link href="https://wanswu.gitee.io/posts/16177/"/>
+    <id>https://wanswu.gitee.io/posts/16177/</id>
+    <published>2021-09-25T15:28:57.000Z</published>
+    <updated>2021-12-06T06:05:23.689Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/image-20211004110415017.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
+    
+    
+    <category term="自学" scheme="https://wanswu.gitee.io/tags/%E8%87%AA%E5%AD%A6/"/>
     
   </entry>
   
