@@ -214,13 +214,6 @@
 
   
   <url>
-    <loc>https://wanswu.gitee.io/tags/Python/</loc>
-    <lastmod>2021-12-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wanswu.gitee.io/tags/Docker/</loc>
     <lastmod>2021-12-12</lastmod>
     <changefreq>daily</changefreq>
@@ -235,14 +228,7 @@
   </url>
   
   <url>
-    <loc>https://wanswu.gitee.io/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-12-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wanswu.gitee.io/tags/windows10/</loc>
+    <loc>https://wanswu.gitee.io/tags/Python/</loc>
     <lastmod>2021-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -256,7 +242,14 @@
   </url>
   
   <url>
-    <loc>https://wanswu.gitee.io/tags/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://wanswu.gitee.io/tags/windows10/</loc>
+    <lastmod>2021-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.gitee.io/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2021-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -285,6 +278,13 @@
   
   <url>
     <loc>https://wanswu.gitee.io/tags/jetbrains/</loc>
+    <lastmod>2021-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.gitee.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2021-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -342,14 +342,14 @@
 
   
   <url>
-    <loc>https://wanswu.gitee.io/categories/python/</loc>
+    <loc>https://wanswu.gitee.io/categories/Docker/</loc>
     <lastmod>2021-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wanswu.gitee.io/categories/Docker/</loc>
+    <loc>https://wanswu.gitee.io/categories/python/</loc>
     <lastmod>2021-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
