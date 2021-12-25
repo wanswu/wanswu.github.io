@@ -6,7 +6,7 @@
   <link href="https://wanswu.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://wanswu.gitee.io/"/>
-  <updated>2021-12-21T01:00:31.774Z</updated>
+  <updated>2021-12-25T14:05:24.736Z</updated>
   <id>https://wanswu.gitee.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>proxy_pool搭建过程</title>
+    <link href="https://wanswu.gitee.io/posts/62eac934/"/>
+    <id>https://wanswu.gitee.io/posts/62eac934/</id>
+    <published>2021-12-25T13:24:05.000Z</published>
+    <updated>2021-12-25T14:05:24.736Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一、使用docker搭建一个redis&lt;/p&gt;
+&lt;figure class=&quot;highlight dockerfile&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>安装PicGo中的picgo-plugin-compress插件</title>
@@ -64,7 +86,7 @@
     <link href="https://wanswu.gitee.io/posts/366baac0/"/>
     <id>https://wanswu.gitee.io/posts/366baac0/</id>
     <published>2021-12-11T05:35:08.000Z</published>
-    <updated>2021-12-21T01:14:29.577Z</updated>
+    <updated>2021-12-21T03:20:39.460Z</updated>
     
     
       
@@ -492,31 +514,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;笔记&quot;&gt;&lt;a href=&quot;#笔记&quot; class=&quot;headerlink&quot; title=&quot;笔记&quot;&gt;&lt;/a&gt;笔记&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
-    
-    
-    <category term="Python" scheme="https://wanswu.gitee.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python函数调用</title>
-    <link href="https://wanswu.gitee.io/posts/28879/"/>
-    <id>https://wanswu.gitee.io/posts/28879/</id>
-    <published>2021-09-27T03:01:57.000Z</published>
-    <updated>2021-12-17T14:54:14.863Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;函数嵌套调用&quot;&gt;&lt;a href=&quot;#函数嵌套调用&quot; class=&quot;headerlink&quot; title=&quot;函数嵌套调用&quot;&gt;&lt;/a&gt;函数嵌套调用&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
         
       
     
