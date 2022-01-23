@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://wanswu.gitee.io/sitemap.xml
-Sitemap: http://wanswu.gitee.io/baidusitemap.xml
-Sitemap: http://wanswu.github.io/sitemap.xml
-Sitemap: http://wanswu.github.io/baidusitemap.xml
+Sitemap: https://wanswu.gitee.io/sitemap.xml
+Sitemap: https://wanswu.gitee.io/baidusitemap.xml
+Sitemap: https://wanswu.github.io/sitemap.xml
+Sitemap: https://wanswu.github.io/baidusitemap.xml

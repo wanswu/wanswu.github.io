@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wanswu.gitee.io/baidu_verify_code-NyK4OtTSsB.html</loc>
+    <loc>https://wanswu.gitee.io/google_analytics.html</loc>
     
     <lastmod>2022-01-23</lastmod>
     
   </url>
   
   <url>
-    <loc>https://wanswu.gitee.io/google_analytics.html</loc>
+    <loc>https://wanswu.gitee.io/baidu_verify_code-NyK4OtTSsB.html</loc>
     
     <lastmod>2022-01-23</lastmod>
     
@@ -263,6 +263,13 @@
   </url>
   
   <url>
+    <loc>https://wanswu.gitee.io/tags/windows10/</loc>
+    <lastmod>2022-01-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wanswu.gitee.io/tags/Linux/</loc>
     <lastmod>2022-01-23</lastmod>
     <changefreq>daily</changefreq>
@@ -271,13 +278,6 @@
   
   <url>
     <loc>https://wanswu.gitee.io/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2022-01-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wanswu.gitee.io/tags/windows10/</loc>
     <lastmod>2022-01-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
