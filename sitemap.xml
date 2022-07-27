@@ -249,20 +249,6 @@
 
   
   <url>
-    <loc>https://wanswu.gitee.io/tags/Docker/</loc>
-    <lastmod>2022-07-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wanswu.gitee.io/tags/%E7%9E%8E%E5%AD%A6/</loc>
-    <lastmod>2022-07-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wanswu.gitee.io/tags/Python/</loc>
     <lastmod>2022-07-27</lastmod>
     <changefreq>daily</changefreq>
@@ -277,7 +263,28 @@
   </url>
   
   <url>
+    <loc>https://wanswu.gitee.io/tags/Docker/</loc>
+    <lastmod>2022-07-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.gitee.io/tags/%E7%9E%8E%E5%AD%A6/</loc>
+    <lastmod>2022-07-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wanswu.gitee.io/tags/Linux/</loc>
+    <lastmod>2022-07-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.gitee.io/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -306,13 +313,6 @@
   
   <url>
     <loc>https://wanswu.gitee.io/tags/jetbrains/</loc>
-    <lastmod>2022-07-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wanswu.gitee.io/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -377,13 +377,6 @@
 
   
   <url>
-    <loc>https://wanswu.gitee.io/categories/Docker/</loc>
-    <lastmod>2022-07-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wanswu.gitee.io/categories/python/</loc>
     <lastmod>2022-07-27</lastmod>
     <changefreq>daily</changefreq>
@@ -392,6 +385,13 @@
   
   <url>
     <loc>https://wanswu.gitee.io/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2022-07-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.gitee.io/categories/Docker/</loc>
     <lastmod>2022-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
