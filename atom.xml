@@ -6,7 +6,7 @@
   <link href="https://wanswu.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://wanswu.gitee.io/"/>
-  <updated>2022-07-27T20:32:51.666Z</updated>
+  <updated>2022-04-22T02:18:28.172Z</updated>
   <id>https://wanswu.gitee.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>测试文章</title>
-    <link href="https://wanswu.gitee.io/posts/7a6a6b5a/"/>
-    <id>https://wanswu.gitee.io/posts/7a6a6b5a/</id>
-    <published>2022-07-27T20:25:47.000Z</published>
-    <updated>2022-07-27T20:32:51.666Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/image-20220728043248798.png&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>平时积累</title>
@@ -522,6 +501,33 @@
     <category term="Docker" scheme="https://wanswu.gitee.io/tags/Docker/"/>
     
     <category term="瞎学" scheme="https://wanswu.gitee.io/tags/%E7%9E%8E%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python列表</title>
+    <link href="https://wanswu.gitee.io/posts/19235/"/>
+    <id>https://wanswu.gitee.io/posts/19235/</id>
+    <published>2021-10-05T15:58:47.000Z</published>
+    <updated>2022-02-23T12:33:12.025Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/image-20211006000059728.webp&quot; alt=&quot;image-20211006000059728&quot;&gt;&lt;/p&gt;
+&lt;p&gt;pycharm Code 配置&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
+    
+    
+    <category term="Python" scheme="https://wanswu.gitee.io/tags/Python/"/>
     
   </entry>
   
