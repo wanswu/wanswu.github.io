@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Wans小木屋</title>
-  <icon>https://wanswu.gitee.io/icon.png</icon>
+  <icon>https://wanswu.github.io/icon.png</icon>
   <subtitle>喜欢瞎搞的大学生</subtitle>
-  <link href="https://wanswu.gitee.io/atom.xml" rel="self"/>
+  <link href="https://wanswu.github.io/atom.xml" rel="self"/>
   
-  <link href="https://wanswu.gitee.io/"/>
-  <updated>2022-04-22T02:18:28.172Z</updated>
-  <id>https://wanswu.gitee.io/</id>
+  <link href="https://wanswu.github.io/"/>
+  <updated>2022-07-28T08:55:10.749Z</updated>
+  <id>https://wanswu.github.io/</id>
   
   <author>
     <name>Wans</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>平时积累</title>
-    <link href="https://wanswu.gitee.io/posts/730b8fb7/"/>
-    <id>https://wanswu.gitee.io/posts/730b8fb7/</id>
+    <link href="https://wanswu.github.io/posts/730b8fb7/"/>
+    <id>https://wanswu.github.io/posts/730b8fb7/</id>
     <published>2022-03-13T05:00:11.000Z</published>
-    <updated>2022-04-22T02:18:28.172Z</updated>
+    <updated>2022-07-28T08:55:10.749Z</updated>
     
     
       
@@ -34,19 +34,19 @@
     
     
     
-    <category term="分享" scheme="https://wanswu.gitee.io/categories/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="https://wanswu.github.io/categories/%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="工具" scheme="https://wanswu.gitee.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://wanswu.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="教程" scheme="https://wanswu.gitee.io/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://wanswu.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>proxy_pool搭建过程</title>
-    <link href="https://wanswu.gitee.io/posts/62eac934/"/>
-    <id>https://wanswu.gitee.io/posts/62eac934/</id>
+    <link href="https://wanswu.github.io/posts/62eac934/"/>
+    <id>https://wanswu.github.io/posts/62eac934/</id>
     <published>2021-12-25T13:24:05.000Z</published>
     <updated>2022-07-27T20:17:44.005Z</updated>
     
@@ -67,10 +67,10 @@
   
   <entry>
     <title>安装PicGo中的picgo-plugin-compress插件</title>
-    <link href="https://wanswu.gitee.io/posts/4c3fd5bc/"/>
-    <id>https://wanswu.gitee.io/posts/4c3fd5bc/</id>
+    <link href="https://wanswu.github.io/posts/4c3fd5bc/"/>
+    <id>https://wanswu.github.io/posts/4c3fd5bc/</id>
     <published>2021-12-17T15:33:34.000Z</published>
-    <updated>2022-02-23T12:29:55.805Z</updated>
+    <updated>2022-07-28T08:46:53.140Z</updated>
     
     
       
@@ -78,9 +78,7 @@
         
         
     <summary type="html">&lt;p&gt;下载PigGo&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/image-20211217233444390.webp&quot; alt=&quot;image-20211217233444390&quot;&gt;&lt;/p&gt;
-&lt;p&gt;在PigGo的更目录执行下面命令&lt;/p&gt;
-&lt;figure</summary>
+&lt;p&gt;&lt;img</summary>
         
       
     
@@ -91,8 +89,8 @@
   
   <entry>
     <title>python多态</title>
-    <link href="https://wanswu.gitee.io/posts/d2b9d54/"/>
-    <id>https://wanswu.gitee.io/posts/d2b9d54/</id>
+    <link href="https://wanswu.github.io/posts/d2b9d54/"/>
+    <id>https://wanswu.github.io/posts/d2b9d54/</id>
     <published>2021-12-17T14:56:12.000Z</published>
     <updated>2021-12-21T01:00:31.771Z</updated>
     
@@ -112,10 +110,10 @@
   
   <entry>
     <title>IntelliJ IDEA 2021.3、PyCharm永久激活</title>
-    <link href="https://wanswu.gitee.io/posts/366baac0/"/>
-    <id>https://wanswu.gitee.io/posts/366baac0/</id>
+    <link href="https://wanswu.github.io/posts/366baac0/"/>
+    <id>https://wanswu.github.io/posts/366baac0/</id>
     <published>2021-12-11T05:35:08.000Z</published>
-    <updated>2022-07-27T10:48:45.987Z</updated>
+    <updated>2022-07-28T08:32:02.321Z</updated>
     
     
       
@@ -128,25 +126,25 @@
     
     
     
-    <category term="教程" scheme="https://wanswu.gitee.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://wanswu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="激活" scheme="https://wanswu.gitee.io/tags/%E6%BF%80%E6%B4%BB/"/>
+    <category term="激活" scheme="https://wanswu.github.io/tags/%E6%BF%80%E6%B4%BB/"/>
     
-    <category term="ider" scheme="https://wanswu.gitee.io/tags/ider/"/>
+    <category term="ider" scheme="https://wanswu.github.io/tags/ider/"/>
     
-    <category term="Pycharm" scheme="https://wanswu.gitee.io/tags/Pycharm/"/>
+    <category term="Pycharm" scheme="https://wanswu.github.io/tags/Pycharm/"/>
     
-    <category term="jetbrains" scheme="https://wanswu.gitee.io/tags/jetbrains/"/>
+    <category term="jetbrains" scheme="https://wanswu.github.io/tags/jetbrains/"/>
     
   </entry>
   
   <entry>
     <title>base64解码</title>
-    <link href="https://wanswu.gitee.io/posts/c539f933/"/>
-    <id>https://wanswu.gitee.io/posts/c539f933/</id>
+    <link href="https://wanswu.github.io/posts/c539f933/"/>
+    <id>https://wanswu.github.io/posts/c539f933/</id>
     <published>2021-12-06T05:01:43.000Z</published>
-    <updated>2021-12-13T05:03:01.666Z</updated>
+    <updated>2022-07-28T08:12:46.792Z</updated>
     
     
       
@@ -160,17 +158,17 @@
     
     
     
-    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
+    <category term="python" scheme="https://wanswu.github.io/categories/python/"/>
     
     
-    <category term="工具" scheme="https://wanswu.gitee.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://wanswu.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>邮件测试</title>
-    <link href="https://wanswu.gitee.io/posts/b57f2192/"/>
-    <id>https://wanswu.gitee.io/posts/b57f2192/</id>
+    <link href="https://wanswu.github.io/posts/b57f2192/"/>
+    <id>https://wanswu.github.io/posts/b57f2192/</id>
     <published>2021-12-06T05:00:11.000Z</published>
     <updated>2021-12-13T05:02:54.733Z</updated>
     
@@ -186,17 +184,17 @@
     
     
     
-    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
+    <category term="python" scheme="https://wanswu.github.io/categories/python/"/>
     
     
-    <category term="工具" scheme="https://wanswu.gitee.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://wanswu.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>大小写转换脚本</title>
-    <link href="https://wanswu.gitee.io/posts/8401e43a/"/>
-    <id>https://wanswu.gitee.io/posts/8401e43a/</id>
+    <link href="https://wanswu.github.io/posts/8401e43a/"/>
+    <id>https://wanswu.github.io/posts/8401e43a/</id>
     <published>2021-12-06T04:58:13.000Z</published>
     <updated>2021-12-13T04:58:47.963Z</updated>
     
@@ -211,17 +209,17 @@
     
     
     
-    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
+    <category term="python" scheme="https://wanswu.github.io/categories/python/"/>
     
     
-    <category term="ctf工具" scheme="https://wanswu.gitee.io/tags/ctf%E5%B7%A5%E5%85%B7/"/>
+    <category term="ctf工具" scheme="https://wanswu.github.io/tags/ctf%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>埃特巴什码</title>
-    <link href="https://wanswu.gitee.io/posts/e37c0862/"/>
-    <id>https://wanswu.gitee.io/posts/e37c0862/</id>
+    <link href="https://wanswu.github.io/posts/e37c0862/"/>
+    <id>https://wanswu.github.io/posts/e37c0862/</id>
     <published>2021-12-06T04:56:28.000Z</published>
     <updated>2021-12-13T04:58:44.051Z</updated>
     
@@ -236,17 +234,17 @@
     
     
     
-    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
+    <category term="python" scheme="https://wanswu.github.io/categories/python/"/>
     
     
-    <category term="ctf工具" scheme="https://wanswu.gitee.io/tags/ctf%E5%B7%A5%E5%85%B7/"/>
+    <category term="ctf工具" scheme="https://wanswu.github.io/tags/ctf%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>我在校园2.5python</title>
-    <link href="https://wanswu.gitee.io/posts/387075cf/"/>
-    <id>https://wanswu.gitee.io/posts/387075cf/</id>
+    <link href="https://wanswu.github.io/posts/387075cf/"/>
+    <id>https://wanswu.github.io/posts/387075cf/</id>
     <published>2021-12-06T04:53:29.000Z</published>
     <updated>2022-01-19T09:08:02.909Z</updated>
     
@@ -261,21 +259,21 @@
     
     
     
-    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
+    <category term="python" scheme="https://wanswu.github.io/categories/python/"/>
     
     
-    <category term="工具" scheme="https://wanswu.gitee.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://wanswu.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="校园" scheme="https://wanswu.gitee.io/tags/%E6%A0%A1%E5%9B%AD/"/>
+    <category term="校园" scheme="https://wanswu.github.io/tags/%E6%A0%A1%E5%9B%AD/"/>
     
   </entry>
   
   <entry>
     <title>phpstudy和windows_mysql_冲突解决办法</title>
-    <link href="https://wanswu.gitee.io/posts/d114782d/"/>
-    <id>https://wanswu.gitee.io/posts/d114782d/</id>
+    <link href="https://wanswu.github.io/posts/d114782d/"/>
+    <id>https://wanswu.github.io/posts/d114782d/</id>
     <published>2021-11-15T09:38:53.000Z</published>
-    <updated>2022-02-23T12:32:16.935Z</updated>
+    <updated>2022-07-28T08:33:24.085Z</updated>
     
     
       
@@ -288,17 +286,17 @@
     
     
     
-    <category term="环境问题" scheme="https://wanswu.gitee.io/categories/%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98/"/>
+    <category term="环境问题" scheme="https://wanswu.github.io/categories/%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98/"/>
     
     
-    <category term="教程" scheme="https://wanswu.gitee.io/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://wanswu.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>python魔术方法</title>
-    <link href="https://wanswu.gitee.io/posts/b87b8b00/"/>
-    <id>https://wanswu.gitee.io/posts/b87b8b00/</id>
+    <link href="https://wanswu.github.io/posts/b87b8b00/"/>
+    <id>https://wanswu.github.io/posts/b87b8b00/</id>
     <published>2021-11-13T05:38:43.000Z</published>
     <updated>2021-12-13T05:11:08.232Z</updated>
     
@@ -313,17 +311,17 @@
     
     
     
-    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
+    <category term="python" scheme="https://wanswu.github.io/categories/python/"/>
     
     
-    <category term="自学" scheme="https://wanswu.gitee.io/tags/%E8%87%AA%E5%AD%A6/"/>
+    <category term="自学" scheme="https://wanswu.github.io/tags/%E8%87%AA%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>python_django</title>
-    <link href="https://wanswu.gitee.io/posts/650b5471/"/>
-    <id>https://wanswu.gitee.io/posts/650b5471/</id>
+    <link href="https://wanswu.github.io/posts/650b5471/"/>
+    <id>https://wanswu.github.io/posts/650b5471/</id>
     <published>2021-11-02T14:19:14.000Z</published>
     <updated>2022-03-06T03:56:52.504Z</updated>
     
@@ -338,45 +336,44 @@
     
     
     
-    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
+    <category term="python" scheme="https://wanswu.github.io/categories/python/"/>
     
     
-    <category term="毕设" scheme="https://wanswu.gitee.io/tags/%E6%AF%95%E8%AE%BE/"/>
+    <category term="毕设" scheme="https://wanswu.github.io/tags/%E6%AF%95%E8%AE%BE/"/>
     
-    <category term="自学" scheme="https://wanswu.gitee.io/tags/%E8%87%AA%E5%AD%A6/"/>
+    <category term="自学" scheme="https://wanswu.github.io/tags/%E8%87%AA%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>生成器与迭代器</title>
-    <link href="https://wanswu.gitee.io/posts/76a3894a/"/>
-    <id>https://wanswu.gitee.io/posts/76a3894a/</id>
+    <link href="https://wanswu.github.io/posts/76a3894a/"/>
+    <id>https://wanswu.github.io/posts/76a3894a/</id>
     <published>2021-10-31T15:25:36.000Z</published>
-    <updated>2022-02-23T12:31:21.715Z</updated>
+    <updated>2022-07-28T08:52:17.197Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/image-20211031232546648.webp&quot; alt=&quot;image-20211031232546648&quot;&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/_posts/%E7%94%9F%E6%88%90%E5%99%A8%E4%B8%8E%E8%BF%AD%E4%BB%A3%E5%99%A8/image-20211031232546648.webp&quot;</summary>
         
       
     
     
     
-    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
+    <category term="python" scheme="https://wanswu.github.io/categories/python/"/>
     
     
-    <category term="自学" scheme="https://wanswu.gitee.io/tags/%E8%87%AA%E5%AD%A6/"/>
+    <category term="自学" scheme="https://wanswu.github.io/tags/%E8%87%AA%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>windows装mysql解压版教程</title>
-    <link href="https://wanswu.gitee.io/posts/5880561a/"/>
-    <id>https://wanswu.gitee.io/posts/5880561a/</id>
+    <link href="https://wanswu.github.io/posts/5880561a/"/>
+    <id>https://wanswu.github.io/posts/5880561a/</id>
     <published>2021-10-27T09:12:08.000Z</published>
     <updated>2022-02-23T12:33:42.460Z</updated>
     
@@ -391,17 +388,17 @@
     
     
     
-    <category term="教程" scheme="https://wanswu.gitee.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://wanswu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="环境搭建" scheme="https://wanswu.gitee.io/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <category term="环境搭建" scheme="https://wanswu.github.io/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
   <entry>
     <title>青龙面板安装</title>
-    <link href="https://wanswu.gitee.io/posts/b9ec591f/"/>
-    <id>https://wanswu.gitee.io/posts/b9ec591f/</id>
+    <link href="https://wanswu.github.io/posts/b9ec591f/"/>
+    <id>https://wanswu.github.io/posts/b9ec591f/</id>
     <published>2021-10-25T02:25:15.000Z</published>
     <updated>2021-12-13T05:01:27.634Z</updated>
     
@@ -416,21 +413,21 @@
     
     
     
-    <category term="工具" scheme="https://wanswu.gitee.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://wanswu.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="瞎学" scheme="https://wanswu.gitee.io/tags/%E7%9E%8E%E5%AD%A6/"/>
+    <category term="瞎学" scheme="https://wanswu.github.io/tags/%E7%9E%8E%E5%AD%A6/"/>
     
-    <category term="qinglong" scheme="https://wanswu.gitee.io/tags/qinglong/"/>
+    <category term="qinglong" scheme="https://wanswu.github.io/tags/qinglong/"/>
     
   </entry>
   
   <entry>
     <title>Windows10网络感叹号修复</title>
-    <link href="https://wanswu.gitee.io/posts/d947b397/"/>
-    <id>https://wanswu.gitee.io/posts/d947b397/</id>
+    <link href="https://wanswu.github.io/posts/d947b397/"/>
+    <id>https://wanswu.github.io/posts/d947b397/</id>
     <published>2021-10-11T08:27:19.000Z</published>
-    <updated>2022-02-23T12:33:26.598Z</updated>
+    <updated>2022-07-28T08:42:31.409Z</updated>
     
     
       
@@ -443,19 +440,19 @@
     
     
     
-    <category term="教程" scheme="https://wanswu.gitee.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://wanswu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="windows10" scheme="https://wanswu.gitee.io/tags/windows10/"/>
+    <category term="windows10" scheme="https://wanswu.github.io/tags/windows10/"/>
     
   </entry>
   
   <entry>
     <title>Windows远程桌面docker容器</title>
-    <link href="https://wanswu.gitee.io/posts/354df3ef/"/>
-    <id>https://wanswu.gitee.io/posts/354df3ef/</id>
+    <link href="https://wanswu.github.io/posts/354df3ef/"/>
+    <id>https://wanswu.github.io/posts/354df3ef/</id>
     <published>2021-10-10T07:23:42.000Z</published>
-    <updated>2022-02-23T12:33:34.863Z</updated>
+    <updated>2022-07-28T08:44:14.535Z</updated>
     
     
       
@@ -470,17 +467,17 @@
     
     
     
-    <category term="教程" scheme="https://wanswu.gitee.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://wanswu.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Linux" scheme="https://wanswu.gitee.io/tags/Linux/"/>
+    <category term="Linux" scheme="https://wanswu.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Docker自学</title>
-    <link href="https://wanswu.gitee.io/posts/34285/"/>
-    <id>https://wanswu.gitee.io/posts/34285/</id>
+    <link href="https://wanswu.github.io/posts/34285/"/>
+    <id>https://wanswu.github.io/posts/34285/</id>
     <published>2021-10-05T16:03:15.000Z</published>
     <updated>2022-02-23T12:31:52.854Z</updated>
     
@@ -495,39 +492,38 @@
     
     
     
-    <category term="Docker" scheme="https://wanswu.gitee.io/categories/Docker/"/>
+    <category term="Docker" scheme="https://wanswu.github.io/categories/Docker/"/>
     
     
-    <category term="Docker" scheme="https://wanswu.gitee.io/tags/Docker/"/>
+    <category term="Docker" scheme="https://wanswu.github.io/tags/Docker/"/>
     
-    <category term="瞎学" scheme="https://wanswu.gitee.io/tags/%E7%9E%8E%E5%AD%A6/"/>
+    <category term="瞎学" scheme="https://wanswu.github.io/tags/%E7%9E%8E%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>Python列表</title>
-    <link href="https://wanswu.gitee.io/posts/19235/"/>
-    <id>https://wanswu.gitee.io/posts/19235/</id>
+    <link href="https://wanswu.github.io/posts/19235/"/>
+    <id>https://wanswu.github.io/posts/19235/</id>
     <published>2021-10-05T15:58:47.000Z</published>
-    <updated>2022-02-23T12:33:12.025Z</updated>
+    <updated>2022-07-28T08:40:50.548Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/image-20211006000059728.webp&quot; alt=&quot;image-20211006000059728&quot;&gt;&lt;/p&gt;
-&lt;p&gt;pycharm Code 配置&lt;/p&gt;
-&lt;figure class=&quot;highlight</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/_posts/Python%E5%88%97%E8%A1%A8/image-20211006000059728.webp&quot; alt=&quot;image-20211006000059728&quot;&gt;&lt;/p&gt;
+&lt;p&gt;pycharm Code</summary>
         
       
     
     
     
-    <category term="python" scheme="https://wanswu.gitee.io/categories/python/"/>
+    <category term="python" scheme="https://wanswu.github.io/categories/python/"/>
     
     
-    <category term="Python" scheme="https://wanswu.gitee.io/tags/Python/"/>
+    <category term="Python" scheme="https://wanswu.github.io/tags/Python/"/>
     
   </entry>
   
