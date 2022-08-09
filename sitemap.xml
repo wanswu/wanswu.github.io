@@ -249,13 +249,6 @@
 
   
   <url>
-    <loc>https://wanswu.github.io/tags/Python/</loc>
-    <lastmod>2022-08-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wanswu.github.io/tags/Docker/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>daily</changefreq>
@@ -264,6 +257,13 @@
   
   <url>
     <loc>https://wanswu.github.io/tags/%E7%9E%8E%E5%AD%A6/</loc>
+    <lastmod>2022-08-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.github.io/tags/Python/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -377,14 +377,14 @@
 
   
   <url>
-    <loc>https://wanswu.github.io/categories/python/</loc>
+    <loc>https://wanswu.github.io/categories/Docker/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wanswu.github.io/categories/Docker/</loc>
+    <loc>https://wanswu.github.io/categories/python/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
