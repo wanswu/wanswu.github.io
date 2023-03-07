@@ -6,7 +6,7 @@
   <link href="https://wanswu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wanswu.github.io/"/>
-  <updated>2022-08-04T17:09:25.652Z</updated>
+  <updated>2023-03-07T12:05:58.743Z</updated>
   <id>https://wanswu.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>安装遇到的各种问题</title>
+    <link href="https://wanswu.github.io/posts/59a3d58d/"/>
+    <id>https://wanswu.github.io/posts/59a3d58d/</id>
+    <published>2022-10-21T05:52:24.000Z</published>
+    <updated>2023-03-07T12:05:58.743Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;acunetix（AWVS）&quot;&gt;&lt;a href=&quot;#acunetix（AWVS）&quot; class=&quot;headerlink&quot; title=&quot;acunetix（AWVS）&quot;&gt;&lt;/a&gt;acunetix（AWVS）&lt;/h1&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>平时积累</title>
     <link href="https://wanswu.github.io/posts/730b8fb7/"/>
     <id>https://wanswu.github.io/posts/730b8fb7/</id>
     <published>2022-03-13T05:00:11.000Z</published>
-    <updated>2022-08-04T17:09:25.652Z</updated>
+    <updated>2023-03-07T12:01:12.864Z</updated>
     
     
       
@@ -499,32 +520,6 @@
     <category term="Docker" scheme="https://wanswu.github.io/tags/Docker/"/>
     
     <category term="瞎学" scheme="https://wanswu.github.io/tags/%E7%9E%8E%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python列表</title>
-    <link href="https://wanswu.github.io/posts/19235/"/>
-    <id>https://wanswu.github.io/posts/19235/</id>
-    <published>2021-10-05T15:58:47.000Z</published>
-    <updated>2022-07-28T09:13:18.474Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://wanswu.github.io/posts/19235/image-20211006000059728.webp&quot; alt=&quot;image-20211006000059728&quot;&gt;&lt;/p&gt;
-&lt;p&gt;pycharm Code</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="https://wanswu.github.io/categories/python/"/>
-    
-    
-    <category term="Python" scheme="https://wanswu.github.io/tags/Python/"/>
     
   </entry>
   
