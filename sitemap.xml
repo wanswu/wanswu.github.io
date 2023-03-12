@@ -256,6 +256,13 @@
 
   
   <url>
+    <loc>https://wanswu.github.io/tags/Python/</loc>
+    <lastmod>2023-03-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wanswu.github.io/tags/Docker/</loc>
     <lastmod>2023-03-12</lastmod>
     <changefreq>daily</changefreq>
@@ -270,13 +277,6 @@
   </url>
   
   <url>
-    <loc>https://wanswu.github.io/tags/Python/</loc>
-    <lastmod>2023-03-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wanswu.github.io/tags/windows10/</loc>
     <lastmod>2023-03-12</lastmod>
     <changefreq>daily</changefreq>
@@ -285,34 +285,6 @@
   
   <url>
     <loc>https://wanswu.github.io/tags/Linux/</loc>
-    <lastmod>2023-03-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wanswu.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2023-03-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wanswu.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2023-03-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wanswu.github.io/tags/%E6%AF%95%E8%AE%BE/</loc>
-    <lastmod>2023-03-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wanswu.github.io/tags/%E8%87%AA%E5%AD%A6/</loc>
     <lastmod>2023-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -341,6 +313,34 @@
   
   <url>
     <loc>https://wanswu.github.io/tags/jetbrains/</loc>
+    <lastmod>2023-03-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2023-03-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.github.io/tags/%E6%AF%95%E8%AE%BE/</loc>
+    <lastmod>2023-03-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.github.io/tags/%E8%87%AA%E5%AD%A6/</loc>
+    <lastmod>2023-03-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2023-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -384,14 +384,14 @@
 
   
   <url>
-    <loc>https://wanswu.github.io/categories/Docker/</loc>
+    <loc>https://wanswu.github.io/categories/python/</loc>
     <lastmod>2023-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wanswu.github.io/categories/python/</loc>
+    <loc>https://wanswu.github.io/categories/Docker/</loc>
     <lastmod>2023-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
