@@ -37,9 +37,9 @@ https://wanswu.github.io/
 https://wanswu.github.io/tags/Docker/
 https://wanswu.github.io/tags/%E7%9E%8E%E5%AD%A6/
 https://wanswu.github.io/tags/Python/
+https://wanswu.github.io/tags/Linux/
 https://wanswu.github.io/tags/windows10/
 https://wanswu.github.io/tags/%E5%B7%A5%E5%85%B7/
-https://wanswu.github.io/tags/Linux/
 https://wanswu.github.io/tags/%E6%BF%80%E6%B4%BB/
 https://wanswu.github.io/tags/ider/
 https://wanswu.github.io/tags/Pycharm/
