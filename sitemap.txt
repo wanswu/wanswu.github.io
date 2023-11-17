@@ -7,8 +7,6 @@ https://wanswu.github.io/categories/index.html
 https://wanswu.github.io/link/index.html
 https://wanswu.github.io/messageboard/index.html
 https://wanswu.github.io/tags/index.html
-https://wanswu.github.io/posts/57307/
-https://wanswu.github.io/posts/28879/
 https://wanswu.github.io/posts/10926/
 https://wanswu.github.io/posts/d2b9d54/
 https://wanswu.github.io/posts/19623/
@@ -24,6 +22,8 @@ https://wanswu.github.io/posts/387075cf/
 https://wanswu.github.io/posts/16177/
 https://wanswu.github.io/posts/76a3894a/
 https://wanswu.github.io/posts/51917/
+https://wanswu.github.io/posts/57307/
+https://wanswu.github.io/posts/28879/
 https://wanswu.github.io/posts/d114782d/
 https://wanswu.github.io/posts/62eac934/
 https://wanswu.github.io/posts/650b5471/
