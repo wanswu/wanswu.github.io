@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>平时积累 | Wans</title><meta name="author" content="Wans"><meta name="copyright" content="Wans"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1、重装系统1.1、备份环境变量的注册表 ​		备份环境变量的目的是让你操作系统之后不需要再去配置环境变量  ​			Win+R输入regedit ​			打开下面这个地址 ​			系统环境变量位置 ​			HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment ​			用户环境变量位置 ​">
+<meta property="og:type" content="article">
+<meta property="og:title" content="平时积累">
+<meta property="og:url" content="https://wanswu.github.io/posts/730b8fb7.html">
+<meta property="og:site_name" content="Wans">
+<meta property="og:description" content="1、重装系统1.1、备份环境变量的注册表 ​		备份环境变量的目的是让你操作系统之后不需要再去配置环境变量  ​			Win+R输入regedit ​			打开下面这个地址 ​			系统环境变量位置 ​			HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment ​			用户环境变量位置 ​">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png">
+<meta property="article:published_time" content="2022-03-13T05:00:11.000Z">
+<meta property="article:modified_time" content="2024-08-15T04:14:55.360Z">
+<meta property="article:author" content="Wans">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "平时积累",
+  "url": "https://wanswu.github.io/posts/730b8fb7.html",
+  "image": "https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png",
+  "datePublished": "2022-03-13T05:00:11.000Z",
+  "dateModified": "2024-08-15T04:14:55.360Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Wans",
+      "url": "https://wanswu.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.ico"><link rel="canonical" href="https://wanswu.github.io/posts/730b8fb7.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//www.clarity.ms"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-6708142930496909',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1eef215a82c1ac65643b2f28468a92ab";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NDJCWM8G60"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-NDJCWM8G60')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-NDJCWM8G60', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ab6du0wgum");</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '平时积累',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Wans" type="application/atom+xml">
+</head><body><div id="web_bg" style="background-image: url(images/006ZFECEgy1fr1x6cbnb3j31hc0u0na3.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Wans</span></a><a class="nav-page-title" href="/"><span class="site-name">平时积累</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">平时积累</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-13T05:00:11.000Z" title="发表于 2022-03-13 13:00:11">2022-03-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-15T04:14:55.360Z" title="更新于 2024-08-15 12:14:55">2024-08-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%88%86%E4%BA%AB/">分享</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="1、重装系统"><a href="#1、重装系统" class="headerlink" title="1、重装系统"></a>1、重装系统</h1><h2 id="1-1、备份环境变量的注册表"><a href="#1-1、备份环境变量的注册表" class="headerlink" title="1.1、备份环境变量的注册表"></a>1.1、备份环境变量的注册表</h2><blockquote>
+<p>​		备份环境变量的目的是让你操作系统之后不需要再去配置环境变量</p>
+</blockquote>
+<p>​			<code>Win+R</code>输入<code>regedit</code></p>
+<p>​			打开下面这个地址</p>
+<p>​			<strong>系统环境变量</strong>位置</p>
+<p>​			<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment</code></p>
+<p>​			<strong>用户环境变量</strong>位置</p>
+<p>​			<code>HKEY_CURRENT_USER\Environment</code></p>
+<p>​			分别<code>用户环境变量</code>和<code>系统环境变量</code>在<code>Environment</code>上右击点击<code>导出</code>就好了</p>
+<p>​			<strong>记得备份好，不要重装完系统备份的东西没了，重装系统之后双击就行了</strong></p>
+<p>​			<strong>建议将软件都装在D盘，如果你只有一个盘当我没说</strong></p>
+<h2 id="1-2、高级玩法"><a href="#1-2、高级玩法" class="headerlink" title="1.2、高级玩法"></a>1.2、高级玩法</h2><p>​			不想写</p>
+<h1 id="2、Windows安装"><a href="#2、Windows安装" class="headerlink" title="2、Windows安装"></a>2、Windows安装</h1><h2 id="2-1、Windows镜像地址"><a href="#2-1、Windows镜像地址" class="headerlink" title="2.1、Windows镜像地址"></a>2.1、Windows镜像地址</h2><p>​			Windows10：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.microsoft.com/zh-cn/software-download/windows10">https://www.microsoft.com/zh-cn/software-download/windows10</a></p>
+<p>​			Windows11：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.microsoft.com/zh-cn/software-download/windows11">https://www.microsoft.com/zh-cn/software-download/windows11</a></p>
+<p>​			也可以通过<code>Rufus</code>下载windows镜像</p>
+<h2 id="2-2、下载和制作USB启动盘"><a href="#2-2、下载和制作USB启动盘" class="headerlink" title="2.2、下载和制作USB启动盘"></a>2.2、下载和制作USB启动盘</h2><p>​			Rufus - 轻松创建USB启动盘：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://rufus.ie/zh/">http://rufus.ie/zh/</a></p>
+<h2 id="2-3、重启用U盘启动"><a href="#2-3、重启用U盘启动" class="headerlink" title="2.3、重启用U盘启动"></a>2.3、重启用U盘启动</h2><p>​			分区直接将c盘，esp，mbr分区删除，然后直接选中未分配的区域点下一步就行了</p>
+<h2 id="2-4、进入系统"><a href="#2-4、进入系统" class="headerlink" title="2.4、进入系统"></a>2.4、进入系统</h2><h3 id="可选操作"><a href="#可选操作" class="headerlink" title="可选操作"></a>可选操作</h3><p>​					将桌面路径修改至D盘，操作过程</p>
+<p>​					<code>此电脑</code>—–&gt;<code>桌面</code>—–&gt;<code>属性</code>—–&gt;<code>位置</code>—–&gt;直接将C改为D就好了</p>
+<p>​					其它依次这样操作</p>
+<h2 id="2-5、激活windows、office"><a href="#2-5、激活windows、office" class="headerlink" title="2.5、激活windows、office"></a>2.5、激活windows、office</h2><p>​				云萌window激活、版本转换：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cmwtat.cloudmoe.com/cn.html">https://cmwtat.cloudmoe.com/cn.html</a></p>
+<p>​				HEU_KMS_Acticator：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/zbezj/HEU_KMS_Activator">https://github.com/zbezj/HEU_KMS_Activator</a></p>
+<p>​				Office Tools <a target="_blank" rel="noopener external nofollow noreferrer" href="https://otp.landian.vip/zh-cn/">https://otp.landian.vip/zh-cn/</a></p>
+<h2 id="2-6、PE"><a href="#2-6、PE" class="headerlink" title="2.6、PE"></a>2.6、PE</h2><p>​				<a target="_blank" rel="noopener external nofollow noreferrer" href="https://firpe.cn/page-247">https://firpe.cn/page-247</a></p>
+<h1 id="3、必备软件"><a href="#3、必备软件" class="headerlink" title="3、必备软件"></a>3、必备软件</h1><h2 id="3-1、装驱动"><a href="#3-1、装驱动" class="headerlink" title="3.1、装驱动"></a>3.1、装驱动</h2><p>​			如果没有无线网卡，去你电脑品牌的官网下载驱动就行了，</p>
+<h2 id="3-2、浏览器"><a href="#3-2、浏览器" class="headerlink" title="3.2、浏览器"></a>3.2、浏览器</h2><p>​			Edge(自带，推荐，因为可以同步)</p>
+<p>​			Google Chrome(谷歌浏览器)： <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.google.cn/chrome/index.html">https://www.google.cn/chrome/index.html</a></p>
+<h2 id="3-3、Bandizip-解压软件"><a href="#3-3、Bandizip-解压软件" class="headerlink" title="3.3、Bandizip(解压软件)"></a>3.3、Bandizip(解压软件)</h2><p>​			Bandizip：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.bandisoft.com/">http://www.bandisoft.com/</a></p>
+<h2 id="3-4、安全软件"><a href="#3-4、安全软件" class="headerlink" title="3.4、安全软件"></a>3.4、安全软件</h2><p>​			火绒安全：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.huorong.cn/">https://www.huorong.cn/</a></p>
+<h2 id="3-5、截图软件"><a href="#3-5、截图软件" class="headerlink" title="3.5、截图软件"></a>3.5、截图软件</h2><p>​			Snipaste：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://zh.snipaste.com/">https://zh.snipaste.com/</a></p>
+<p>​			Snipaste微软商店地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.microsoft.com/zh-cn/p/snipaste/9p1wxpkb68kx">https://www.microsoft.com/zh-cn/p/snipaste/9p1wxpkb68kx</a></p>
+<h2 id="3-6、文本编辑软件"><a href="#3-6、文本编辑软件" class="headerlink" title="3.6、文本编辑软件"></a>3.6、文本编辑软件</h2><p>​			Sublime Text：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.sublimetext.com/">http://www.sublimetext.com/</a></p>
+<p>​			notepad++：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/notepad-plus-plus/notepad-plus-plus/releases">https://github.com/notepad-plus-plus/notepad-plus-plus/releases</a></p>
+<h2 id="3-7、Office破解版安装"><a href="#3-7、Office破解版安装" class="headerlink" title="3.7、Office破解版安装"></a>3.7、Office破解版安装</h2><p>​			Office Tools <a target="_blank" rel="noopener external nofollow noreferrer" href="https://otp.landian.vip/zh-cn/">https://otp.landian.vip/zh-cn/</a></p>
+<h1 id="4、其他软件"><a href="#4、其他软件" class="headerlink" title="4、其他软件"></a>4、其他软件</h1><h2 id="4-1、jetbrains全家桶补丁"><a href="#4-1、jetbrains全家桶补丁" class="headerlink" title="4.1、jetbrains全家桶补丁"></a>4.1、jetbrains全家桶补丁</h2><p>​			配合：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://jetbra.in/s">https://jetbra.in/s</a></p>
+<p>​			补丁地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ja-netfilter/ja-netfilter">https://github.com/ja-netfilter/ja-netfilter</a></p>
+<p>​			知了大神： <a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhile.io/2021/11/29/ja-netfilter-javaagent-lib.html">https://zhile.io/2021/11/29/ja-netfilter-javaagent-lib.html</a></p>
+<h2 id="4-2、流氓软件删除"><a href="#4-2、流氓软件删除" class="headerlink" title="4.2、流氓软件删除"></a>4.2、流氓软件删除</h2><p>​			SoftCnKiller高速下载器捆绑软件杀手：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://softcnkiller.blog.csdn.net/article/details/104799162?spm=1001.2014.3001.5502">https://softcnkiller.blog.csdn.net/article/details/104799162?spm=1001.2014.3001.5502</a></p>
+<h2 id="4-3、idm补丁"><a href="#4-3、idm补丁" class="headerlink" title="4.3、idm补丁"></a>4.3、idm补丁</h2><p>​			补丁作者：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://ckk.ir/863/%d8%af%d8%a7%d9%86%d9%84%d9%88%d8%af-%d8%a8%d9%87%d8%aa%d8%b1%db%8c%d9%86-%da%a9%d8%b1%da%a9-idm-internet-download-manager/">https://ckk.ir/863/%d8%af%d8%a7%d9%86%d9%84%d9%88%d8%af-%d8%a8%d9%87%d8%aa%d8%b1%db%8c%d9%86-%da%a9%d8%b1%da%a9-idm-internet-download-manager/</a></p>
+<p>​			放在idm根目录就好</p>
+<h2 id="4-4、Clash（包括中文地址）"><a href="#4-4、Clash（包括中文地址）" class="headerlink" title="4.4、Clash（包括中文地址）"></a>4.4、Clash（包括中文地址）</h2><p>​			Clash_for_windows_pkg：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://archive.org/details/clash_for_windows_pkg">https://archive.org/details/clash_for_windows_pkg</a></p>
+<p>​			Clash Verge <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/zzzgydi/clash-verge/releases">https://github.com/zzzgydi/clash-verge/releases</a></p>
+<p>​			Clash For Windows 汉化补丁和汉化脚本：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/Z-Siqi/Clash-for-Windows_Chinese">https://github.com/Z-Siqi/Clash-for-Windows_Chinese</a><br>​			<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ender-zhao/Clash-for-Windows_Chinese">https://github.com/ender-zhao/Clash-for-Windows_Chinese</a></p>
+<p>​			ClashForAndroid：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://web.archive.org/web/20231103071433/https://github.com/Kr328/ClashForAndroid">https://web.archive.org/web/20231103071433/https://github.com/Kr328/ClashForAndroid</a></p>
+<pre><code> ClashMetaForAndroid：https://github.com/MetaCubeX/ClashMetaForAndroid
+</code></pre>
+<h2 id="4-5、Burpsuite-pro"><a href="#4-5、Burpsuite-pro" class="headerlink" title="4.5、Burpsuite_pro"></a>4.5、Burpsuite_pro</h2><p>​			BurpLoaderKeygen: Burp Suite Pro Loader &amp; Keygen：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/h3110w0r1d-y/BurpLoaderKeygen">https://github.com/h3110w0r1d-y/BurpLoaderKeygen</a></p>
+<h2 id="4-6、M3U8视频下载"><a href="#4-6、M3U8视频下载" class="headerlink" title="4.6、M3U8视频下载"></a>4.6、M3U8视频下载</h2><p>​			M3U8批量下载器：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.52pojie.cn/thread-1374045-1-1.html">https://www.52pojie.cn/thread-1374045-1-1.html</a></p>
+<h1 id="5、网站一键安装脚本"><a href="#5、网站一键安装脚本" class="headerlink" title="5、网站一键安装脚本"></a>5、网站一键安装脚本</h1><p>​			自动安装 - OneinStack：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://oneinstack.com/auto/">https://oneinstack.com/auto/</a></p>
+<p>​			LNMP一键安装包：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://lnmp.org/">https://lnmp.org/</a></p>
+<p>​			宝塔：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bt.cn/">https://www.bt.cn</a></p>
+<h1 id="6、Linux"><a href="#6、Linux" class="headerlink" title="6、Linux"></a>6、Linux</h1><p>​			一键更换国内软件源 :<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/SuperManito/LinuxMirrors">https://github.com/SuperManito/LinuxMirrors</a></p>
+<h1 id="7、配置wls2-与windows主机的连通性"><a href="#7、配置wls2-与windows主机的连通性" class="headerlink" title="7、配置wls2 与windows主机的连通性"></a>7、配置wls2 与windows主机的连通性</h1><p>​			powershell 管理员运行</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">New-NetFirewallRule</span> <span class="literal">-DisplayName</span> <span class="string">&quot;WSL&quot;</span> <span class="literal">-Direction</span> Inbound  <span class="literal">-InterfaceAlias</span> <span class="string">&quot;vEthernet (WSL)&quot;</span>  <span class="literal">-Action</span> Allow</span><br></pre></td></tr></table></figure>
+
+<p>​			如果还不能ping通说明windows 主机拒绝了icmp报文</p>
+<h3 id="配置防火墙规则"><a href="#配置防火墙规则" class="headerlink" title="配置防火墙规则"></a>配置防火墙规则</h3><p>​			入站规则—&gt;<code>核心网络诊断-ICMP回显请求(ICMPv4-In)</code>勾选启用就行了</p>
+<h3 id="clash-for-windows-设置"><a href="#clash-for-windows-设置" class="headerlink" title="clash for windows 设置"></a>clash for windows 设置</h3><p>​			打开 Allow LAN，</p>
+<p>​			在wsl中环境变量，统计下面代码，添加到<code>.bashrc</code>这个文件最后，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">port=25648</span><br><span class="line">hostip=$(<span class="built_in">cat</span> /etc/resolv.conf | grep nameserver | awk <span class="string">&#x27;&#123; print $2 &#125;&#x27;</span>)</span><br><span class="line"><span class="comment"># setp是设置代理的命令，可以自定义</span></span><br><span class="line"><span class="built_in">alias</span> setp=<span class="string">&#x27;export https_proxy=&quot;http://$&#123;hostip&#125;:$&#123;port&#125;&quot;;export http_proxy=&quot;http://$&#123;hostip&#125;:$&#123;port&#125;&quot;;export all_proxy=&quot;socks5://$&#123;hostip&#125;:$&#123;port&#125;&quot;;export ALL_PROXY=&quot;socks5://$&#123;hostip&#125;:$&#123;port&#125;&quot;;echo &quot;set proxy:&quot;;env|grep -i proxy&#x27;</span></span><br><span class="line"><span class="comment"># unsetp是取消代理的命令，可以自定义</span></span><br><span class="line"><span class="built_in">alias</span> unsetp=<span class="string">&#x27;unset https_proxy; unset http_proxy; unset all_proxy; unset ALL_PROXY;echo &quot;clear proxy:&quot;;env|grep -i proxy&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="8、小工具"><a href="#8、小工具" class="headerlink" title="8、小工具"></a>8、小工具</h1><p>查看自己代理ip</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://23.80.5.90/ip.php">http://23.80.5.90/ip.php</a></p>
+<p>查看电脑出口公网ip</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.cip.cc/">http://www.cip.cc/</a></p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://tool.lu/netcard/">https://tool.lu/netcard/</a></p>
+<h1 id="9、直播录屏软件"><a href="#9、直播录屏软件" class="headerlink" title="9、直播录屏软件"></a>9、直播录屏软件</h1><p><code>Open Broadcaster Software | OBS</code></p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//obsproject.com</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="10、流氓垃圾软件清理工具"><a href="#10、流氓垃圾软件清理工具" class="headerlink" title="10、流氓垃圾软件清理工具"></a>10、流氓垃圾软件清理工具</h1><p>清理工具<code>SoftCnKiller高速下载器捆绑软件杀手</code></p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>blog.csdn.net<span class="regexp">/hfhbutn/</span>article<span class="regexp">/details/</span><span class="number">104799162</span></span><br></pre></td></tr></table></figure>
+
+<p>免疫工具<code>小鱼儿yr系统封装优化设置辅助工具</code></p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//www.yrxitong.com/h-nd-100.html</span></span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://wanswu.github.io">Wans</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://wanswu.github.io/posts/730b8fb7.html">https://wanswu.github.io/posts/730b8fb7.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://wanswu.github.io" target="_blank">Wans</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post-share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/62eac934.html" title="proxy_pool搭建过程"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">proxy_pool搭建过程</div></div><div class="info-2"><div class="info-item-1">一、使用docker搭建一个redis 1234docker pull redisdocker run -p 6379:6379 --name myredis -v D:/Docker/redis/:/etc/redis/ -d redis redis-server /etc/redis/redis.conf --appendonly no  二、配置proxy_pool中的setting  三、拉取proxy_pool 123456789101112131415docker pull jhao104/proxy_pool# 命令报错，docker是一个虚拟环境,127.0.0.1和localhost指的是虚拟环境内部,而不是外部宿主机,所以无法这样访问.docker run --env DB_CONN=redis://:password@ip:port/0 -p 5010:5010 jhao104/proxy_pool# 使用下面命令docker run --env DB_CONN=redis://:@host.docker.internal:6379/0 -p...</div></div></div></a><a class="pagination-related" href="/posts/59a3d58d.html" title="安装遇到的各种问题"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">安装遇到的各种问题</div></div><div class="info-2"><div class="info-item-1">acunetix（AWVS）12345678910111213sudo systemctl stop acunetixsudo vm wvcsc /home/acunetix/.acunetix/v_221007170/scanner/wvscsudo chown acunetix:acunetix /home/acunetix/.acunetix/v_221007170/scanner/wvscsudo chmod +x /home/acunetix/.acunetix/v_221007170/scanner/wvscsudo rm /home/acunetix/.acunetix/data/license/*sudo mv license_info.json /home/acunetix/.acunetix/data/license/sudo mv wa_data.dat /home/acunetix/.acunetix/data/license/sudo chown acunetix:acunetix...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/c539f933.html" title="base64解码"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-06</div><div class="info-item-2">base64解码</div></div><div class="info-2"><div class="info-item-1">base64解码 123456789101112131415161718import base64container = open(r&#x27;base.txt&#x27;, &#x27;rt&#x27;, encoding=&#x27;utf-8&#x27;).read()while 1:    container = base64.b64decode(container)    if &#x27; &#x27; in str(container):        print(str(container))        break    if &#x27;&#123;&#x27; in str(container):        print(str(container))        break    if &#x27;flag&#x27; in str(container):        print(str(container))        break    if &#x27;ctf&#x27; in str(container):       ...</div></div></div></a><a class="pagination-related" href="/posts/387075cf.html" title="我在校园2.5python"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-06</div><div class="info-item-2">我在校园2.5python</div></div><div class="info-2"><div class="info-item-1">📲 我在校园打卡(Python)新版本我在校园取消了原来的token鉴权机制，改为JWSESSION进行鉴权。 我结合两个位大神的程序更改了一下源代码实现了以下功能 😊目前实现  使用自动登录的方式获取jwsession值，将jwsession储存在leanCloud   增加了一言一句话，调用google翻译的api来翻译一言一句话（心灵鸡汤😂）  使用PushPlus每天自动发送告诉你是否打卡成功邮件  🚩准备工作纯python编写，需要安装第三方库requests leancloud 🌕依赖安装（本地测试，也可以不测试，之间上传）12pip install -i https://pypi.tuna.tsinghua.edu.cn/simple requestspip install -i https://pypi.tuna.tsinghua.edu.cn/simple leancloud  👌开始1. 获取 PushPlus 的 token微信搜索公众号“pushplus 推送加”，关注后即可生成属于自己的...</div></div></div></a><a class="pagination-related" href="/posts/b57f2192.html" title="邮件测试"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-06</div><div class="info-item-2">邮件测试</div></div><div class="info-2"><div class="info-item-1">邮件测试 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970import requestsimport smtplibfrom email.mime.text import MIMETextfrom email.utils import formataddrmy_sender = &#x27;wa.ns@qq.com&#x27;  # 发件人邮箱账号my_pass = &#x27;afgbznymvzbkjhee&#x27;  # 发件人邮箱密码my_user = &#x27;wa.ns@qq.com&#x27;  # 收件人邮箱账号，我这边发送给自己def get_status(**kwargs):    # 调用一言一句话    def YiYan():        data = &#123;            &#x27;c&#x27;:...</div></div></div></a><a class="pagination-related" href="/posts/d114782d.html" title="phpstudy和windows_mysql_冲突解决办法"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-15</div><div class="info-item-2">phpstudy和windows_mysql_冲突解决办法</div></div><div class="info-2"><div class="info-item-1">1、删除自己在电脑上安装的mysql服务Win+X，管理员打开windows终端然后输入命令，PS：如果你没有添加mysql环境变量，那么你需要进入mysql中的bin目录里面打开终端  123# 先停止你的mysql服务net stop mysqlmysqld -remove  2、打开phpstudy启动mysql点击启动就可以启动了  3、创建新的mysql服务，服务名称重新命名1234# 新建myql服务名称mysqld install sql# 启动mysql服务，你就可以打开你原来的mysql数据库了net start slq  </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Wans</div><div class="author-info-description">自学的笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/wanswu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/wanswu" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">打工牛马人。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E3%80%81%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.</span> <span class="toc-text">1、重装系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1%E3%80%81%E5%A4%87%E4%BB%BD%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E6%B3%A8%E5%86%8C%E8%A1%A8"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、备份环境变量的注册表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2%E3%80%81%E9%AB%98%E7%BA%A7%E7%8E%A9%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、高级玩法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E3%80%81Windows%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">2、Windows安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1%E3%80%81Windows%E9%95%9C%E5%83%8F%E5%9C%B0%E5%9D%80"><span class="toc-number">2.1.</span> <span class="toc-text">2.1、Windows镜像地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2%E3%80%81%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%88%B6%E4%BD%9CUSB%E5%90%AF%E5%8A%A8%E7%9B%98"><span class="toc-number">2.2.</span> <span class="toc-text">2.2、下载和制作USB启动盘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3%E3%80%81%E9%87%8D%E5%90%AF%E7%94%A8U%E7%9B%98%E5%90%AF%E5%8A%A8"><span class="toc-number">2.3.</span> <span class="toc-text">2.3、重启用U盘启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4%E3%80%81%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.4.</span> <span class="toc-text">2.4、进入系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E9%80%89%E6%93%8D%E4%BD%9C"><span class="toc-number">2.4.1.</span> <span class="toc-text">可选操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5%E3%80%81%E6%BF%80%E6%B4%BBwindows%E3%80%81office"><span class="toc-number">2.5.</span> <span class="toc-text">2.5、激活windows、office</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6%E3%80%81PE"><span class="toc-number">2.6.</span> <span class="toc-text">2.6、PE</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%E3%80%81%E5%BF%85%E5%A4%87%E8%BD%AF%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">3、必备软件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E3%80%81%E8%A3%85%E9%A9%B1%E5%8A%A8"><span class="toc-number">3.1.</span> <span class="toc-text">3.1、装驱动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-number">3.2.</span> <span class="toc-text">3.2、浏览器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3%E3%80%81Bandizip-%E8%A7%A3%E5%8E%8B%E8%BD%AF%E4%BB%B6"><span class="toc-number">3.3.</span> <span class="toc-text">3.3、Bandizip(解压软件)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4%E3%80%81%E5%AE%89%E5%85%A8%E8%BD%AF%E4%BB%B6"><span class="toc-number">3.4.</span> <span class="toc-text">3.4、安全软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5%E3%80%81%E6%88%AA%E5%9B%BE%E8%BD%AF%E4%BB%B6"><span class="toc-number">3.5.</span> <span class="toc-text">3.5、截图软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6%E3%80%81%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6"><span class="toc-number">3.6.</span> <span class="toc-text">3.6、文本编辑软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-7%E3%80%81Office%E7%A0%B4%E8%A7%A3%E7%89%88%E5%AE%89%E8%A3%85"><span class="toc-number">3.7.</span> <span class="toc-text">3.7、Office破解版安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%E3%80%81%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">4、其他软件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1%E3%80%81jetbrains%E5%85%A8%E5%AE%B6%E6%A1%B6%E8%A1%A5%E4%B8%81"><span class="toc-number">4.1.</span> <span class="toc-text">4.1、jetbrains全家桶补丁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2%E3%80%81%E6%B5%81%E6%B0%93%E8%BD%AF%E4%BB%B6%E5%88%A0%E9%99%A4"><span class="toc-number">4.2.</span> <span class="toc-text">4.2、流氓软件删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3%E3%80%81idm%E8%A1%A5%E4%B8%81"><span class="toc-number">4.3.</span> <span class="toc-text">4.3、idm补丁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4%E3%80%81Clash%EF%BC%88%E5%8C%85%E6%8B%AC%E4%B8%AD%E6%96%87%E5%9C%B0%E5%9D%80%EF%BC%89"><span class="toc-number">4.4.</span> <span class="toc-text">4.4、Clash（包括中文地址）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5%E3%80%81Burpsuite-pro"><span class="toc-number">4.5.</span> <span class="toc-text">4.5、Burpsuite_pro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6%E3%80%81M3U8%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD"><span class="toc-number">4.6.</span> <span class="toc-text">4.6、M3U8视频下载</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5%E3%80%81%E7%BD%91%E7%AB%99%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC"><span class="toc-number">5.</span> <span class="toc-text">5、网站一键安装脚本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6%E3%80%81Linux"><span class="toc-number">6.</span> <span class="toc-text">6、Linux</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7%E3%80%81%E9%85%8D%E7%BD%AEwls2-%E4%B8%8Ewindows%E4%B8%BB%E6%9C%BA%E7%9A%84%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="toc-number">7.</span> <span class="toc-text">7、配置wls2 与windows主机的连通性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E9%98%B2%E7%81%AB%E5%A2%99%E8%A7%84%E5%88%99"><span class="toc-number">7.0.1.</span> <span class="toc-text">配置防火墙规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clash-for-windows-%E8%AE%BE%E7%BD%AE"><span class="toc-number">7.0.2.</span> <span class="toc-text">clash for windows 设置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8%E3%80%81%E5%B0%8F%E5%B7%A5%E5%85%B7"><span class="toc-number">8.</span> <span class="toc-text">8、小工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9%E3%80%81%E7%9B%B4%E6%92%AD%E5%BD%95%E5%B1%8F%E8%BD%AF%E4%BB%B6"><span class="toc-number">9.</span> <span class="toc-text">9、直播录屏软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10%E3%80%81%E6%B5%81%E6%B0%93%E5%9E%83%E5%9C%BE%E8%BD%AF%E4%BB%B6%E6%B8%85%E7%90%86%E5%B7%A5%E5%85%B7"><span class="toc-number">10.</span> <span class="toc-text">10、流氓垃圾软件清理工具</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/59a3d58d.html" title="安装遇到的各种问题"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装遇到的各种问题"/></a><div class="content"><a class="title" href="/posts/59a3d58d.html" title="安装遇到的各种问题">安装遇到的各种问题</a><time datetime="2022-10-21T05:52:24.000Z" title="发表于 2022-10-21 13:52:24">2022-10-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/730b8fb7.html" title="平时积累"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="平时积累"/></a><div class="content"><a class="title" href="/posts/730b8fb7.html" title="平时积累">平时积累</a><time datetime="2022-03-13T05:00:11.000Z" title="发表于 2022-03-13 13:00:11">2022-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/62eac934.html" title="proxy_pool搭建过程"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="proxy_pool搭建过程"/></a><div class="content"><a class="title" href="/posts/62eac934.html" title="proxy_pool搭建过程">proxy_pool搭建过程</a><time datetime="2021-12-25T13:24:05.000Z" title="发表于 2021-12-25 21:24:05">2021-12-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/4c3fd5bc.html" title="安装PicGo中的picgo-plugin-compress插件"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装PicGo中的picgo-plugin-compress插件"/></a><div class="content"><a class="title" href="/posts/4c3fd5bc.html" title="安装PicGo中的picgo-plugin-compress插件">安装PicGo中的picgo-plugin-compress插件</a><time datetime="2021-12-17T15:33:34.000Z" title="发表于 2021-12-17 23:33:34">2021-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d2b9d54.html" title="python多态"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python多态"/></a><div class="content"><a class="title" href="/posts/d2b9d54.html" title="python多态">python多态</a><time datetime="2021-12-17T14:56:12.000Z" title="发表于 2021-12-17 22:56:12">2021-12-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Wans</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"]):not([href="/messageboard/"]):not([href="/link/"]):not([href="/categories/"]):not([href="/tags/"]):not([href="/archives/"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: true,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      const usePjax = true
+      true 
+        ? (usePjax ? pjax.loadUrl('/404.html') : window.location.href = '/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

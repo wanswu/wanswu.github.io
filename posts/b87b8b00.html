@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>python魔术方法 | Wans</title><meta name="author" content="Wans"><meta name="copyright" content="Wans"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="python 魔术方法常用魔术方法  魔术方法就是一个类&#x2F;对象中的方法，和普通方法唯一的不同时，普通方法需要调用！而魔术方法是在特定时刻自动触发。  1.init123456初始化魔术方法触发时机：初始化对象时触发（不是实例化触发，但是和实例化在一个操作中）参数：至少有一个self，接收对象返回值：无作用：初始化对象的成员注意：使用该方式初始化的成员都是直接写入对象当中，类中无法具有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python魔术方法">
+<meta property="og:url" content="https://wanswu.github.io/posts/b87b8b00.html">
+<meta property="og:site_name" content="Wans">
+<meta property="og:description" content="python 魔术方法常用魔术方法  魔术方法就是一个类&#x2F;对象中的方法，和普通方法唯一的不同时，普通方法需要调用！而魔术方法是在特定时刻自动触发。  1.init123456初始化魔术方法触发时机：初始化对象时触发（不是实例化触发，但是和实例化在一个操作中）参数：至少有一个self，接收对象返回值：无作用：初始化对象的成员注意：使用该方式初始化的成员都是直接写入对象当中，类中无法具有">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png">
+<meta property="article:published_time" content="2021-11-13T05:38:43.000Z">
+<meta property="article:modified_time" content="2024-01-23T08:19:22.238Z">
+<meta property="article:author" content="Wans">
+<meta property="article:tag" content="自学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "python魔术方法",
+  "url": "https://wanswu.github.io/posts/b87b8b00.html",
+  "image": "https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png",
+  "datePublished": "2021-11-13T05:38:43.000Z",
+  "dateModified": "2024-01-23T08:19:22.238Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Wans",
+      "url": "https://wanswu.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.ico"><link rel="canonical" href="https://wanswu.github.io/posts/b87b8b00.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//www.clarity.ms"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-6708142930496909',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1eef215a82c1ac65643b2f28468a92ab";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NDJCWM8G60"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-NDJCWM8G60')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-NDJCWM8G60', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ab6du0wgum");</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'python魔术方法',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Wans" type="application/atom+xml">
+</head><body><div id="web_bg" style="background-image: url(images/006ZFECEgy1fr1x6cbnb3j31hc0u0na3.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Wans</span></a><a class="nav-page-title" href="/"><span class="site-name">python魔术方法</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">python魔术方法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-11-13T05:38:43.000Z" title="发表于 2021-11-13 13:38:43">2021-11-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-23T08:19:22.238Z" title="更新于 2024-01-23 16:19:22">2024-01-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/python/">python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="python-魔术方法"><a href="#python-魔术方法" class="headerlink" title="python 魔术方法"></a>python 魔术方法</h1><h1 id="常用魔术方法"><a href="#常用魔术方法" class="headerlink" title="常用魔术方法"></a>常用魔术方法</h1><hr>
+<blockquote>
+<p>魔术方法就是一个类&#x2F;对象中的方法，和普通方法唯一的不同时，普通方法需要调用！而魔术方法是在特定时刻自动触发。</p>
+</blockquote>
+<h4 id="1-init"><a href="#1-init" class="headerlink" title="1.init"></a>1.<strong>init</strong></h4><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">初始化魔术方法</span><br><span class="line">触发时机：初始化对象时触发（不是实例化触发，但是和实例化在一个操作中）</span><br><span class="line">参数：至少有一个<span class="keyword">self</span>，接收对象</span><br><span class="line">返回值：无</span><br><span class="line">作用：初始化对象的成员</span><br><span class="line">注意：使用该方式初始化的成员都是直接写入对象当中，类中无法具有</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-new"><a href="#2-new" class="headerlink" title="2.new"></a>2.<strong>new</strong></h4><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">实例化魔术方法</span><br><span class="line">触发时机： 在实例化对时触发</span><br><span class="line">参数：至少一个cls 接收当前类</span><br><span class="line">返回值：必须返回一个对象实例</span><br><span class="line">作用：实例化对象</span><br><span class="line">注意：实例化对象是Object类底层实现，其他类继承了Object的<span class="emphasis">__new__</span>才能够实现实例化对象。</span><br><span class="line">没事别碰这个魔术方法，先触发<span class="emphasis">__new__</span>才会触发<span class="emphasis">__init__</span> </span><br></pre></td></tr></table></figure>
+
+<h4 id="3-del"><a href="#3-del" class="headerlink" title="3.del"></a>3.<strong>del</strong></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">析构魔术方法</span><br><span class="line">触发时机：当对象没有用（没有任何变量引用）的时候被触发</span><br><span class="line">参数：一个<span class="variable language_">self</span> 结婚搜对象</span><br><span class="line">返回值：无</span><br><span class="line">作用：使用完对象是回收资源</span><br><span class="line">注意：<span class="keyword">del</span>不一定会触发当前方法，只有当前对象没有任何变量接收时才会触发</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-call"><a href="#4-call" class="headerlink" title="4.call"></a>4.<strong>call</strong></h4><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">调用对象的魔术方法</span><br><span class="line"><span class="section">触发时机:将对象当作函数调用时触发 对象()</span></span><br><span class="line"><span class="section">参数:至少一个self接收对象，其余根据调用时参数决定</span></span><br><span class="line">返回值：根据情况而定</span><br><span class="line">作用：可以将复杂的步骤进行合并操作，减少调用的步骤，方便使用</span><br><span class="line">注意：无</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-len"><a href="#5-len" class="headerlink" title="5.len"></a>5.<strong>len</strong></h4><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">触发时机：使用<span class="built_in">len</span>(对象) 的时候触发</span><br><span class="line">参数：一个参数<span class="built_in">self</span></span><br><span class="line">返回值：必须是一个整型</span><br><span class="line">作用：可以设置为检测对象成员个数，但是也可以进行其他任意操作</span><br><span class="line">注意：返回值必须必须是整数，否则语法报错，另外该要求是格式要求。</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-str"><a href="#6-str" class="headerlink" title="6.str"></a>6.<strong>str</strong></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">触发时机:使用<span class="built_in">print</span>(对象)或者<span class="built_in">str</span>(对象)的时候触发</span><br><span class="line">参数：一个<span class="variable language_">self</span>接收对象</span><br><span class="line">返回值：必须是字符串类型</span><br><span class="line">作用：<span class="built_in">print</span>（对象时）进行操作，得到字符串，通常用于快捷操作</span><br><span class="line">注意：无</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-repr"><a href="#7-repr" class="headerlink" title="7.repr"></a>7.<strong>repr</strong></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">触发时机:在使用<span class="built_in">repr</span>(对象)的时候触发</span><br><span class="line">参数：一个<span class="variable language_">self</span>接收对象</span><br><span class="line">返回值：必须是字符串</span><br><span class="line">作用：将对象转使用<span class="built_in">repr</span>化为字符串时使用，也可以用于快捷操作</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>repr函数和str函数处理字符串只有一个区别：</p>
+<p>str的结果 字符串本身 （结果可以被eval执行）</p>
+<p>如：x &#x3D; ‘无图言Diao’ str() -&gt;无图言Diao</p>
+<p>rerpr的结果 字符串定义结构 （eavl不会执行repr结果）</p>
+<p>如：x &#x3D; ‘无图言Diao’ repr() -&gt;’无图言Diao’</p>
+<p>备注: 在类中通常情况下__str__和__repr__ 设置相同即可</p>
+<p>eval()</p>
+<p>函数 将字符串当作python代码执行</p>
+<p>格式：eval(字符串)</p>
+<p>返回值：可以有返回值</p>
+</blockquote>
+<h4 id="8-bool"><a href="#8-bool" class="headerlink" title="8.bool"></a>8.<strong>bool</strong></h4><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">触发时机: 使用<span class="built_in">bool</span>(对象)的时候触发</span><br><span class="line">参数：一个<span class="symbol">self</span>接收对象</span><br><span class="line">返回值：必须是布尔值</span><br><span class="line">作用：根据实际情况决定，可以作为快捷方式使用</span><br><span class="line">注意:仅适合于返回布尔值的操作</span><br></pre></td></tr></table></figure>
+
+<h4 id="9-format"><a href="#9-format" class="headerlink" title="9.format"></a>9.<strong>format</strong></h4><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">触发时机：使用字符串.<span class="built_in">format</span>(对象)时候触发</span><br><span class="line">参数：一个<span class="built_in">self</span>接收对象，一个参数接收<span class="built_in">format</span>的&#123;&#125;中的格式，例如:&gt;<span class="number">5</span></span><br><span class="line">返回值:必须是字符串</span><br><span class="line">作用：设置对象可以作为<span class="built_in">format</span>的参数，并且自定义对象格式化的规则</span><br><span class="line">注意：无</span><br></pre></td></tr></table></figure>
+
+<h1 id="描述符相关的魔术方法"><a href="#描述符相关的魔术方法" class="headerlink" title="描述符相关的魔术方法"></a>描述符相关的魔术方法</h1><hr>
+<h4 id="1-get"><a href="#1-get" class="headerlink" title="1.get()"></a>1.<strong>get</strong>()</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">触发时机：在获取指定描述符操作的成员属性的值的时候触发</span><br><span class="line">参数：1描述符对象本身，2描述符描述的属性所在的对象，描述符描述的对象的类</span><br><span class="line">返回值：必须有，不然无法获取相应属性值</span><br><span class="line">注意：仅在描述符中使用</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-set"><a href="#2-set" class="headerlink" title="2.set()"></a>2.<strong>set</strong>()</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">触发时机：在设置或者添加指定描述符操作的成员属性的时候触发</span><br><span class="line">参数：1描述符对象本身，2描述符描述的属性所在的对象,3要设置的值</span><br><span class="line">返回值：无</span><br><span class="line">注意：仅在描述符中使用</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-delete"><a href="#3-delete" class="headerlink" title="3.delete()"></a>3.<strong>delete</strong>()</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">触发时机：在删除指定描述符操作的成员属性的时候触发</span><br><span class="line">参数：1描述符对象本身，2描述符描述的属性所在的对象</span><br><span class="line">返回值：无</span><br><span class="line">注意：仅在描述符中使用</span><br></pre></td></tr></table></figure>
+
+<h1 id="与属性操作相关的魔术方法"><a href="#与属性操作相关的魔术方法" class="headerlink" title="与属性操作相关的魔术方法"></a>与属性操作相关的魔术方法</h1><hr>
+<h4 id="1-getattr（）"><a href="#1-getattr（）" class="headerlink" title="1.getattr（）"></a>1.<strong>getattr</strong>（）</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">触发时机：获取不存在的对象成员时触发</span><br><span class="line">参数：<span class="number">1</span>接收当前对象的<span class="variable language_">self</span>，一个是获取成员名称的字符串</span><br><span class="line">返回值：必须有值</span><br><span class="line">作用:为访问不存在的属性设置值</span><br><span class="line">注意：getattribute无论何时都会在<span class="built_in">getattr</span>之前触发，触发了getattribute就不会在触发<span class="built_in">getattr</span>了</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-setattr（）"><a href="#2-setattr（）" class="headerlink" title="2.setattr（）"></a>2.<strong>setattr</strong>（）</h4><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">触发时机:设置对象成员值的时候触发</span></span><br><span class="line"><span class="section">参数:1个当前对象的self,一个是要设置的成员名称字符串,一个是要设置的值</span></span><br><span class="line"><span class="section">返回值:无 过程操作</span></span><br><span class="line"><span class="section">作用:接管设置操作,可以在设置前之前进行判断验证等行为</span></span><br><span class="line"><span class="section">注意:在当前方法中无法使用成员=值的方式直接设置成员，否则会无限递归，必须借助object的设置方法来完成</span></span><br><span class="line"></span><br><span class="line">object.__setattr__（参数1，参数2，参数3）</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-delattr（）"><a href="#3-delattr（）" class="headerlink" title="3.delattr（）"></a>3.<strong>delattr</strong>（）</h4><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">触发时机：删除对象成员时触发</span><br><span class="line">参数：一个当前对象的<span class="keyword">self</span></span><br><span class="line">返回值：无</span><br><span class="line">作用:可以在删除成员时进行验证。</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-getattribute（）"><a href="#4-getattribute（）" class="headerlink" title="4.getattribute（）"></a>4.<strong>getattribute</strong>（）</h4><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">触发时机：使用对象成员时触发，无论成员是否存在</span><br><span class="line">参数：<span class="number">1</span>个接收当前对象<span class="keyword">self</span>，一个是获取的成员的名称字符串</span><br><span class="line">返回值：必须有</span><br><span class="line">作用：在具有封装操作（私有化时），为程序开部分访问权限使用</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-dir（）"><a href="#5-dir（）" class="headerlink" title="5.dir（）"></a>5.<strong>dir</strong>（）</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">触发时机：<span class="built_in">dir</span>（对象）的时候触发</span><br><span class="line">参数:<span class="number">1</span>个接收当前对象<span class="variable language_">self</span></span><br><span class="line">返回值：必须为序列类型（列表，元组，集合等，）</span><br><span class="line">作用：可以自定义成员列表的返回值</span><br></pre></td></tr></table></figure>
+
+<h1 id="运算相关魔术方法-上帝模式"><a href="#运算相关魔术方法-上帝模式" class="headerlink" title="运算相关魔术方法(上帝模式)"></a>运算相关魔术方法(上帝模式)</h1><hr>
+<h2 id="比较运算相关魔术方法"><a href="#比较运算相关魔术方法" class="headerlink" title="比较运算相关魔术方法"></a>比较运算相关魔术方法</h2><hr>
+<h4 id="1-lt"><a href="#1-lt" class="headerlink" title="1.lt()"></a>1.<strong>lt</strong>()</h4><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">    def __lt__(<span class="symbol">self</span>,<span class="symbol">other</span>):</span><br><span class="line">    <span class="keyword">return</span> 数据</span><br><span class="line"></span><br><span class="line">特征：</span><br><span class="line">    触发时机：进行小于判断时自动触发</span><br><span class="line">    参数：<span class="number">2</span>个参数第一个是<span class="symbol">self</span>，第二个判断的第二个对象</span><br><span class="line">    返回值：返回值可以任意类型，推荐布尔值</span><br><span class="line">    作用：定义小于号的行为：<span class="variable language_">x</span> &lt; <span class="variable language_">y</span> 调用 <span class="variable language_">x</span>.lt(<span class="variable language_">y</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-le"><a href="#2-le" class="headerlink" title="2.le()"></a>2.<strong>le</strong>()</h4><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">    def __le__(<span class="symbol">self</span>):</span><br><span class="line">    <span class="keyword">return</span> str</span><br><span class="line"></span><br><span class="line">特征：</span><br><span class="line">    触发时机：进行小于等于判断时自动触发</span><br><span class="line">    参数：<span class="number">2</span>个参数第一个是<span class="symbol">self</span>，第二个判断的第二个对象</span><br><span class="line">    返回值：返回值可以任意类型，推荐布尔值</span><br><span class="line">    作用：定义小于等于号的行为：<span class="variable language_">x</span> &lt;= <span class="variable language_">y</span> 调用 <span class="variable language_">x</span>.le(<span class="variable language_">y</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-gt"><a href="#3-gt" class="headerlink" title="3.gt()"></a>3.<strong>gt</strong>()</h4><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">    def __gt__(<span class="symbol">self</span>):</span><br><span class="line">    <span class="keyword">return</span> str</span><br><span class="line"></span><br><span class="line">特征：</span><br><span class="line">    触发时机：进行大于判断时自动触发</span><br><span class="line">    参数：<span class="number">2</span>个参数第一个是<span class="symbol">self</span>，第二个判断的第二个对象</span><br><span class="line">    返回值：返回值可以任意类型，推荐布尔值</span><br><span class="line">    作用：定义大于号的行为：<span class="variable language_">x</span> &gt; <span class="variable language_">y</span> 调用 <span class="variable language_">x</span>.gt(<span class="variable language_">y</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-ge"><a href="#4-ge" class="headerlink" title="4.ge()"></a>4.<strong>ge</strong>()</h4><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">    def __ge__(<span class="symbol">self</span>):</span><br><span class="line">    <span class="keyword">return</span> str</span><br><span class="line"></span><br><span class="line">特征：</span><br><span class="line">    触发时机：进行大于等于判断时自动触发</span><br><span class="line">    参数：<span class="number">2</span>个参数第一个是<span class="symbol">self</span>，第二个判断的第二个对象</span><br><span class="line">    返回值：返回值可以任意类型，推荐布尔值</span><br><span class="line">    作用：定义大于等于号的行为：<span class="variable language_">x</span> &gt;= <span class="variable language_">y</span> 调用 <span class="variable language_">x</span>.ge(<span class="variable language_">y</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-eq"><a href="#5-eq" class="headerlink" title="5.eq()"></a>5.<strong>eq</strong>()</h4><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">    def __eq__(<span class="symbol">self</span>):</span><br><span class="line">    <span class="keyword">return</span> str</span><br><span class="line"></span><br><span class="line">特征：</span><br><span class="line">    触发时机：进行等于判断时自动触发</span><br><span class="line">    参数：<span class="number">2</span>个参数第一个是<span class="symbol">self</span>，第二个判断的第二个对象</span><br><span class="line">    返回值：返回值可以任意类型，推荐布尔值</span><br><span class="line">    作用：定义大于等于号的行为：<span class="variable language_">x</span> == <span class="variable language_">y</span> 调用 <span class="variable language_">x</span>.eq(<span class="variable language_">y</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-ne"><a href="#6-ne" class="headerlink" title="6.ne()"></a>6.<strong>ne</strong>()</h4><figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">    def __ne__(<span class="symbol">self</span>):</span><br><span class="line">    <span class="keyword">return</span> str</span><br><span class="line"></span><br><span class="line">特征：</span><br><span class="line">    触发时机：进行不等于判断时自动触发</span><br><span class="line">    参数：<span class="number">2</span>个参数第一个是<span class="symbol">self</span>，第二个判断的第二个对象</span><br><span class="line">    返回值：返回值可以任意类型，推荐布尔值</span><br><span class="line">    作用：定义不等号的行为：<span class="variable language_">x</span> != <span class="variable language_">y</span> 调用 <span class="variable language_">x</span>.ne(<span class="variable language_">y</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="算术运算相关魔术方法"><a href="#算术运算相关魔术方法" class="headerlink" title="算术运算相关魔术方法"></a>算术运算相关魔术方法</h2><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">__add__(<span class="variable language_">self</span>, other)           定义加法的行为：+</span><br><span class="line">__sub__(<span class="variable language_">self</span>, other)           定义减法的行为：-</span><br><span class="line">__mul__(<span class="variable language_">self</span>, other)           定义乘法的行为：</span><br><span class="line">__truediv__(<span class="variable language_">self</span>, other)       定义真除法的行为：/</span><br><span class="line">__floordiv__(<span class="variable language_">self</span>, other)      定义整数除法的行为：//</span><br><span class="line">__mod__(<span class="variable language_">self</span>, other)           定义取模算法的行为：%</span><br><span class="line">__divmod__(<span class="variable language_">self</span>, other)        定义当被 <span class="built_in">divmod</span>() 调用时的行为</span><br><span class="line">__pow__(<span class="variable language_">self</span>, other[, modulo]) 定义当被 power() 调用或 ** 运算时的行为</span><br><span class="line">__lshift__(<span class="variable language_">self</span>, other)        定义按位左移位的行为：&lt;&lt;</span><br><span class="line">__rshift__(<span class="variable language_">self</span>, other)        定义按位右移位的行为：&gt;&gt;</span><br><span class="line">__and__(<span class="variable language_">self</span>, other)           定义按位与操作的行为：&amp;</span><br><span class="line">__xor__(<span class="variable language_">self</span>, other)           定义按位异或操作的行为：^</span><br><span class="line">__or__(<span class="variable language_">self</span>, other)            定义按位或操作的行为：|</span><br></pre></td></tr></table></figure>
+
+<h2 id="反运算相关魔术方法"><a href="#反运算相关魔术方法" class="headerlink" title="反运算相关魔术方法"></a>反运算相关魔术方法</h2><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">__radd__(<span class="variable language_">self</span>, other)      与上方相同，当左操作数不支持相应的操作时被调用</span><br><span class="line">__rsub__(<span class="variable language_">self</span>, other)      与上方相同，当左操作数不支持相应的操作时被调用</span><br><span class="line">__rmul__(<span class="variable language_">self</span>, other)      与上方相同，当左操作数不支持相应的操作时被调用</span><br><span class="line">__rtruediv__(<span class="variable language_">self</span>, other)  与上方相同，当左操作数不支持相应的操作时被调用</span><br><span class="line">__rfloordiv__(<span class="variable language_">self</span>, other) 与上方相同，当左操作数不支持相应的操作时被调用</span><br><span class="line">__rmod__(<span class="variable language_">self</span>, other)      与上方相同，当左操作数不支持相应的操作时被调用</span><br><span class="line">__rdivmod__(<span class="variable language_">self</span>, other)   与上方相同，当左操作数不支持相应的操作时被调用</span><br><span class="line">__rpow__(<span class="variable language_">self</span>, other)      与上方相同，当左操作数不支持相应的操作时被调用</span><br><span class="line">__rlshift__(<span class="variable language_">self</span>, other)   与上方相同，当左操作数不支持相应的操作时被调用</span><br><span class="line">__rrshift__(<span class="variable language_">self</span>, other)   与上方相同，当左操作数不支持相应的操作时被调用</span><br><span class="line">__rand__(<span class="variable language_">self</span>, other)      与上方相同，当左操作数不支持相应的操作时被调用</span><br><span class="line">__rxor__(<span class="variable language_">self</span>, other)      与上方相同，当左操作数不支持相应的操作时被调用</span><br><span class="line">__ror__(<span class="variable language_">self</span>, other)       与上方相同，当左操作数不支持相应的操作时被调用</span><br></pre></td></tr></table></figure>
+
+<h2 id="赋值运算相关魔术方法"><a href="#赋值运算相关魔术方法" class="headerlink" title="赋值运算相关魔术方法"></a>赋值运算相关魔术方法</h2><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">__iadd__(<span class="variable language_">self</span>, other)             定义赋值加法的行为：+=</span><br><span class="line">__isub__(<span class="variable language_">self</span>, other)             定义赋值减法的行为：-=</span><br><span class="line">__imul__(<span class="variable language_">self</span>, other)             定义赋值乘法的行为：=</span><br><span class="line">__itruediv__(<span class="variable language_">self</span>, other)         定义赋值真除法的行为：/=</span><br><span class="line">__ifloordiv__(<span class="variable language_">self</span>, other)        定义赋值整数除法的行为：//=</span><br><span class="line">__imod__(<span class="variable language_">self</span>, other)             定义赋值取模算法的行为：%=</span><br><span class="line">__ipow__(<span class="variable language_">self</span>, other[, modulo])   定义赋值幂运算的行为：**=</span><br><span class="line">__ilshift__(<span class="variable language_">self</span>, other)          定义赋值按位左移位的行为：&lt;&lt;=</span><br><span class="line">__irshift__(<span class="variable language_">self</span>, other)          定义赋值按位右移位的行为：&gt;&gt;=</span><br><span class="line">__iand__(<span class="variable language_">self</span>, other)             定义赋值按位与操作的行为：&amp;=</span><br><span class="line">__ixor__(<span class="variable language_">self</span>, other)             定义赋值按位异或操作的行为：^=</span><br><span class="line">__ior__(<span class="variable language_">self</span>, other)              定义赋值按位或操作的行为：|=</span><br></pre></td></tr></table></figure>
+
+<h2 id="一元运算相关魔术方法"><a href="#一元运算相关魔术方法" class="headerlink" title="一元运算相关魔术方法"></a>一元运算相关魔术方法</h2><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">__pos__(<span class="variable language_">self</span>)      定义正号的行为：+x</span><br><span class="line">__neg__(<span class="variable language_">self</span>)      定义负号的行为：-x</span><br><span class="line">__abs__(<span class="variable language_">self</span>)      定义当被 <span class="built_in">abs</span>() 调用时的行为</span><br><span class="line">__invert__(<span class="variable language_">self</span>)   定义按位求反的行为：~x</span><br></pre></td></tr></table></figure>
+
+<h2 id="类型转换相关魔术方法-JIANG"><a href="#类型转换相关魔术方法-JIANG" class="headerlink" title="类型转换相关魔术方法 JIANG"></a>类型转换相关魔术方法 JIANG</h2><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">__complex__(<span class="variable language_">self</span>)      定义当被 <span class="built_in">complex</span>() 调用时的行为（需要返回恰当的值）</span><br><span class="line">__int__(<span class="variable language_">self</span>)          定义当被 <span class="built_in">int</span>() 调用时的行为（需要返回恰当的值）</span><br><span class="line">__float__(<span class="variable language_">self</span>)        定义当被 <span class="built_in">float</span>() 调用时的行为（需要返回恰当的值）</span><br><span class="line">__round__(<span class="variable language_">self</span>[, n])   定义当被 <span class="built_in">round</span>() 调用时的行为（需要返回恰当的值）</span><br><span class="line">__index(<span class="variable language_">self</span>)__        <span class="number">1.</span> 当对象是被应用在切片表达式中时，实现整形强制转换</span><br><span class="line">                       <span class="number">2.</span> 如果你定义了一个可能在切片时用到的定制的数值型,你应该定义 index</span><br><span class="line">                       <span class="number">3.</span> 如果 index 被定义，则 <span class="built_in">int</span> 也需要被定义，且返回相同的值</span><br></pre></td></tr></table></figure>
+
+<h2 id="上下文管理相关魔术方法"><a href="#上下文管理相关魔术方法" class="headerlink" title="上下文管理相关魔术方法"></a>上下文管理相关魔术方法</h2><hr>
+<p><strong>enter</strong>() 和 <strong>exit</strong>()</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">enter(<span class="variable language_">self</span>)</span><br><span class="line">    <span class="number">1.</span> 定义当使用 <span class="keyword">with</span> 语句时的初始化行为</span><br><span class="line">    <span class="number">2.</span> enter 的返回值被 <span class="keyword">with</span> 语句的目标或者 <span class="keyword">as</span> 后的名字绑定</span><br><span class="line"></span><br><span class="line">exit(<span class="variable language_">self</span>, exctype, excvalue, traceback)</span><br><span class="line">    <span class="number">1.</span> 定义当一个代码块被执行或者终止后上下文管理器应该做什么</span><br><span class="line">    <span class="number">2.</span> 一般被用来处理异常，清除工作或者做一些代码块执行完毕之后的日常工作</span><br></pre></td></tr></table></figure>
+
+<h2 id="容器类型相关魔术方法"><a href="#容器类型相关魔术方法" class="headerlink" title="容器类型相关魔术方法"></a>容器类型相关魔术方法</h2><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">__len__(<span class="variable language_">self</span>)                  定义当被 <span class="built_in">len</span>() 调用时的行为（返回容器中元素的个数）</span><br><span class="line">__getitem__(<span class="variable language_">self</span>, key)         定义获取容器中指定元素的行为，相当于 <span class="variable language_">self</span>[key]</span><br><span class="line">__setitem__(<span class="variable language_">self</span>, key, value)  定义设置容器中指定元素的行为，相当于 <span class="variable language_">self</span>[key] = value</span><br><span class="line">__delitem__(<span class="variable language_">self</span>, key)         定义删除容器中指定元素的行为，相当于 <span class="keyword">del</span> <span class="variable language_">self</span>[key]</span><br><span class="line">__iter__(<span class="variable language_">self</span>)                 定义当迭代容器中的元素的行为</span><br><span class="line">__reversed__(<span class="variable language_">self</span>)             定义当被 <span class="built_in">reversed</span>() 调用时的行为</span><br><span class="line">__contains__(<span class="variable language_">self</span>, item)       定义当使用成员测试运算符（<span class="keyword">in</span> 或 <span class="keyword">not</span> <span class="keyword">in</span>）时的行为</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://wanswu.github.io">Wans</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://wanswu.github.io/posts/b87b8b00.html">https://wanswu.github.io/posts/b87b8b00.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://wanswu.github.io" target="_blank">Wans</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%87%AA%E5%AD%A6/">自学</a></div><div class="post-share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/650b5471.html" title="python_django"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">python_django</div></div><div class="info-2"><div class="info-item-1">我的笔记官方文档    平台 Shell 用于激活虚拟环境的命令    POSIX bash&#x2F;zsh $ source &#x2F;bin&#x2F;activate    fish $ source &#x2F;bin&#x2F;activate.fish    csh&#x2F;tcsh $ source &#x2F;bin&#x2F;activate.csh    PowerShell Core $ &#x2F;bin&#x2F;Activate.ps1   Windows cmd.exe C:&gt; \Scripts\activate.bat    PowerShell PS C:&gt; \Scripts\Activate.ps1   创建网站框架 1.\django-admin.exe startproject mysite  启动django框架 12python manage.py runserverpython manage.py runserver [端口号] 网站中的一个功能创建应用 1python .\manage.py startapp...</div></div></div></a><a class="pagination-related" href="/posts/d114782d.html" title="phpstudy和windows_mysql_冲突解决办法"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">phpstudy和windows_mysql_冲突解决办法</div></div><div class="info-2"><div class="info-item-1">1、删除自己在电脑上安装的mysql服务Win+X，管理员打开windows终端然后输入命令，PS：如果你没有添加mysql环境变量，那么你需要进入mysql中的bin目录里面打开终端  123# 先停止你的mysql服务net stop mysqlmysqld -remove  2、打开phpstudy启动mysql点击启动就可以启动了  3、创建新的mysql服务，服务名称重新命名1234# 新建myql服务名称mysqld install sql# 启动mysql服务，你就可以打开你原来的mysql数据库了net start slq  </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/650b5471.html" title="python_django"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-02</div><div class="info-item-2">python_django</div></div><div class="info-2"><div class="info-item-1">我的笔记官方文档    平台 Shell 用于激活虚拟环境的命令    POSIX bash&#x2F;zsh $ source &#x2F;bin&#x2F;activate    fish $ source &#x2F;bin&#x2F;activate.fish    csh&#x2F;tcsh $ source &#x2F;bin&#x2F;activate.csh    PowerShell Core $ &#x2F;bin&#x2F;Activate.ps1   Windows cmd.exe C:&gt; \Scripts\activate.bat    PowerShell PS C:&gt; \Scripts\Activate.ps1   创建网站框架 1.\django-admin.exe startproject mysite  启动django框架 12python manage.py runserverpython manage.py runserver [端口号] 网站中的一个功能创建应用 1python .\manage.py startapp...</div></div></div></a><a class="pagination-related" href="/posts/4090.html" title="内置函数+匿名函数"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-25</div><div class="info-item-2">内置函数+匿名函数</div></div><div class="info-2"><div class="info-item-1">  </div></div></div></a><a class="pagination-related" href="/posts/16177.html" title="文件操作"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-25</div><div class="info-item-2">文件操作</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/posts/76a3894a.html" title="生成器与迭代器"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-31</div><div class="info-item-2">生成器与迭代器</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Wans</div><div class="author-info-description">自学的笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/wanswu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/wanswu" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">打工牛马人。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#python-%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">python 魔术方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">常用魔术方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-init"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">1.init</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-new"><span class="toc-number">2.0.0.2.</span> <span class="toc-text">2.new</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-del"><span class="toc-number">2.0.0.3.</span> <span class="toc-text">3.del</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-call"><span class="toc-number">2.0.0.4.</span> <span class="toc-text">4.call</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-len"><span class="toc-number">2.0.0.5.</span> <span class="toc-text">5.len</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-str"><span class="toc-number">2.0.0.6.</span> <span class="toc-text">6.str</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-repr"><span class="toc-number">2.0.0.7.</span> <span class="toc-text">7.repr</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-bool"><span class="toc-number">2.0.0.8.</span> <span class="toc-text">8.bool</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-format"><span class="toc-number">2.0.0.9.</span> <span class="toc-text">9.format</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0%E7%AC%A6%E7%9B%B8%E5%85%B3%E7%9A%84%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">描述符相关的魔术方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-get"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">1.get()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-set"><span class="toc-number">3.0.0.2.</span> <span class="toc-text">2.set()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-delete"><span class="toc-number">3.0.0.3.</span> <span class="toc-text">3.delete()</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8E%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">与属性操作相关的魔术方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-getattr%EF%BC%88%EF%BC%89"><span class="toc-number">4.0.0.1.</span> <span class="toc-text">1.getattr（）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-setattr%EF%BC%88%EF%BC%89"><span class="toc-number">4.0.0.2.</span> <span class="toc-text">2.setattr（）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-delattr%EF%BC%88%EF%BC%89"><span class="toc-number">4.0.0.3.</span> <span class="toc-text">3.delattr（）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-getattribute%EF%BC%88%EF%BC%89"><span class="toc-number">4.0.0.4.</span> <span class="toc-text">4.getattribute（）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-dir%EF%BC%88%EF%BC%89"><span class="toc-number">4.0.0.5.</span> <span class="toc-text">5.dir（）</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%9B%B8%E5%85%B3%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95-%E4%B8%8A%E5%B8%9D%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.</span> <span class="toc-text">运算相关魔术方法(上帝模式)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%9B%B8%E5%85%B3%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">5.1.</span> <span class="toc-text">比较运算相关魔术方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-lt"><span class="toc-number">5.1.0.1.</span> <span class="toc-text">1.lt()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-le"><span class="toc-number">5.1.0.2.</span> <span class="toc-text">2.le()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-gt"><span class="toc-number">5.1.0.3.</span> <span class="toc-text">3.gt()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-ge"><span class="toc-number">5.1.0.4.</span> <span class="toc-text">4.ge()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-eq"><span class="toc-number">5.1.0.5.</span> <span class="toc-text">5.eq()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-ne"><span class="toc-number">5.1.0.6.</span> <span class="toc-text">6.ne()</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%9B%B8%E5%85%B3%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.</span> <span class="toc-text">算术运算相关魔术方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E8%BF%90%E7%AE%97%E7%9B%B8%E5%85%B3%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">5.3.</span> <span class="toc-text">反运算相关魔术方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%9B%B8%E5%85%B3%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">5.4.</span> <span class="toc-text">赋值运算相关魔术方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%85%83%E8%BF%90%E7%AE%97%E7%9B%B8%E5%85%B3%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">5.5.</span> <span class="toc-text">一元运算相关魔术方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E7%9B%B8%E5%85%B3%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95-JIANG"><span class="toc-number">5.6.</span> <span class="toc-text">类型转换相关魔术方法 JIANG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E7%9B%B8%E5%85%B3%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">5.7.</span> <span class="toc-text">上下文管理相关魔术方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B%E7%9B%B8%E5%85%B3%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">5.8.</span> <span class="toc-text">容器类型相关魔术方法</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/59a3d58d.html" title="安装遇到的各种问题"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装遇到的各种问题"/></a><div class="content"><a class="title" href="/posts/59a3d58d.html" title="安装遇到的各种问题">安装遇到的各种问题</a><time datetime="2022-10-21T05:52:24.000Z" title="发表于 2022-10-21 13:52:24">2022-10-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/730b8fb7.html" title="平时积累"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="平时积累"/></a><div class="content"><a class="title" href="/posts/730b8fb7.html" title="平时积累">平时积累</a><time datetime="2022-03-13T05:00:11.000Z" title="发表于 2022-03-13 13:00:11">2022-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/62eac934.html" title="proxy_pool搭建过程"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="proxy_pool搭建过程"/></a><div class="content"><a class="title" href="/posts/62eac934.html" title="proxy_pool搭建过程">proxy_pool搭建过程</a><time datetime="2021-12-25T13:24:05.000Z" title="发表于 2021-12-25 21:24:05">2021-12-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/4c3fd5bc.html" title="安装PicGo中的picgo-plugin-compress插件"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装PicGo中的picgo-plugin-compress插件"/></a><div class="content"><a class="title" href="/posts/4c3fd5bc.html" title="安装PicGo中的picgo-plugin-compress插件">安装PicGo中的picgo-plugin-compress插件</a><time datetime="2021-12-17T15:33:34.000Z" title="发表于 2021-12-17 23:33:34">2021-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d2b9d54.html" title="python多态"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python多态"/></a><div class="content"><a class="title" href="/posts/d2b9d54.html" title="python多态">python多态</a><time datetime="2021-12-17T14:56:12.000Z" title="发表于 2021-12-17 22:56:12">2021-12-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Wans</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"]):not([href="/messageboard/"]):not([href="/link/"]):not([href="/categories/"]):not([href="/tags/"]):not([href="/archives/"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: true,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      const usePjax = true
+      true 
+        ? (usePjax ? pjax.loadUrl('/404.html') : window.location.href = '/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

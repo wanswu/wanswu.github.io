@@ -1,0 +1,449 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>python_django | Wans</title><meta name="author" content="Wans"><meta name="copyright" content="Wans"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="我的笔记官方文档    平台 Shell 用于激活虚拟环境的命令    POSIX bash&#x2F;zsh $ source &#x2F;bin&#x2F;activate    fish $ source &#x2F;bin&#x2F;activate.fish    csh&#x2F;tcsh $ source &#x2F;bin&#x2F;activate.csh    PowerShe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python_django">
+<meta property="og:url" content="https://wanswu.github.io/posts/650b5471.html">
+<meta property="og:site_name" content="Wans">
+<meta property="og:description" content="我的笔记官方文档    平台 Shell 用于激活虚拟环境的命令    POSIX bash&#x2F;zsh $ source &#x2F;bin&#x2F;activate    fish $ source &#x2F;bin&#x2F;activate.fish    csh&#x2F;tcsh $ source &#x2F;bin&#x2F;activate.csh    PowerShe">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2021-11-02T14:19:14.000Z">
+<meta property="article:modified_time" content="2024-01-23T08:19:22.219Z">
+<meta property="article:author" content="Wans">
+<meta property="article:tag" content="毕设">
+<meta property="article:tag" content="自学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "python_django",
+  "url": "https://wanswu.github.io/posts/650b5471.html",
+  "image": "https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg",
+  "datePublished": "2021-11-02T14:19:14.000Z",
+  "dateModified": "2024-01-23T08:19:22.219Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Wans",
+      "url": "https://wanswu.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.ico"><link rel="canonical" href="https://wanswu.github.io/posts/650b5471.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//www.clarity.ms"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-6708142930496909',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1eef215a82c1ac65643b2f28468a92ab";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-NDJCWM8G60"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-NDJCWM8G60')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-NDJCWM8G60', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ab6du0wgum");</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'python_django',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Wans" type="application/atom+xml">
+</head><body><div id="web_bg" style="background-image: url(images/006ZFECEgy1fr1x6cbnb3j31hc0u0na3.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Wans</span></a><a class="nav-page-title" href="/"><span class="site-name">python_django</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">python_django</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-11-02T14:19:14.000Z" title="发表于 2021-11-02 22:19:14">2021-11-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-23T08:19:22.219Z" title="更新于 2024-01-23 16:19:22">2024-01-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/python/">python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="我的笔记"><a href="#我的笔记" class="headerlink" title="我的笔记"></a>我的笔记</h1><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.python.org/zh-cn/3/library/venv.html">官方文档</a></p>
+<table>
+<thead>
+<tr>
+<th align="left">平台</th>
+<th align="left">Shell</th>
+<th align="left">用于激活虚拟环境的命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">POSIX</td>
+<td align="left">bash&#x2F;zsh</td>
+<td align="left">$ source <venv>&#x2F;bin&#x2F;activate</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">fish</td>
+<td align="left">$ source <venv>&#x2F;bin&#x2F;activate.fish</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">csh&#x2F;tcsh</td>
+<td align="left">$ source <venv>&#x2F;bin&#x2F;activate.csh</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">PowerShell Core</td>
+<td align="left">$ <venv>&#x2F;bin&#x2F;Activate.ps1</td>
+</tr>
+<tr>
+<td align="left">Windows</td>
+<td align="left">cmd.exe</td>
+<td align="left">C:&gt; <venv>\Scripts\activate.bat</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">PowerShell</td>
+<td align="left">PS C:&gt; <venv>\Scripts\Activate.ps1</td>
+</tr>
+</tbody></table>
+<p>创建网站框架</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\django-admin.exe startproject mysite</span><br></pre></td></tr></table></figure>
+
+<p>启动django框架</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br><span class="line">python manage.py runserver [端口号]</span><br></pre></td></tr></table></figure>
+<p>网站中的一个功能创建应用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python .\manage.py startapp index</span><br></pre></td></tr></table></figure>
+
+<p>数据库迁移</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py migate</span><br></pre></td></tr></table></figure>
+
+<p>列出django子命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage .py</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="目录解读"><a href="#目录解读" class="headerlink" title="目录解读"></a>目录解读</h1><p><img src="/python-django/image-20211129095301686.webp" alt="image-20211129095301686"></p>
+<p><img src="/python-django/image-20211129104235294.webp" alt="image-20211129104235294"></p>
+<p><img src="/python-django/image-20211129104304785.webp" alt="image-20211129104304785"></p>
+<p><img src="/python-django/image-20211129104323422.webp" alt="image-20211129104323422"></p>
+<p><img src="/python-django/image-20211129104800457.webp" alt="image-20211129104800457"></p>
+<p><img src="/python-django/image-20211129104820337.webp" alt="image-20211129104820337"></p>
+<p><img src="/python-django/image-20211129104940840.webp" alt="image-20211129104940840"></p>
+<p><img src="/python-django/image-20211129105214895.webp" alt="image-20211129105214895"></p>
+<p><img src="/python-django/image-20211129105351007.webp" alt="image-20211129105351007"></p>
+<p><img src="/python-django/image-20211129105747983.webp" alt="image-20211129105747983"></p>
+<p>我的理解</p>
+<p>目前在我看来视图（view）就是用来写html的文件，urls就是将这个文件的路径导入，使得可以在浏览器显示</p>
+<p><img src="/python-django/image-20211129110849895.webp" alt="image-20211129110849895"></p>
+<p>浏览器访问page&#x2F;2003&#x2F;	djgano匹配到视图（views）中有page_2003中有函数，然后输出函数的内容</p>
+<p>这是路由吗？？我感觉是，因为urls将浏览器请求的url地址指向views</p>
+<p><img src="/python-django/image-20211129111001293.webp" alt="image-20211129111001293"><img src="/python-django/image-20211129111029113.webp" alt="image-20211129111029113"></p>
+<h1 id="路由配置"><a href="#路由配置" class="headerlink" title="路由配置"></a>路由配置</h1><p><img src="/python-django/image-20211129111214428.webp" alt="image-20211129111214428"></p>
+<h2 id="路由配置-path"><a href="#路由配置-path" class="headerlink" title="路由配置 - path"></a>路由配置 - path</h2><p><img src="/python-django/image-20211129111418584.webp" alt="image-20211129111418584"></p>
+<h2 id="路由配置-path-转换器"><a href="#路由配置-path-转换器" class="headerlink" title="路由配置 - path - 转换器"></a>路由配置 - path - 转换器</h2><p><img src="/python-django/image-20211129112600885.webp" alt="image-20211129112600885"></p>
+<h2 id="路由配置-path-转换器-1"><a href="#路由配置-path-转换器-1" class="headerlink" title="路由配置 - path - 转换器"></a>路由配置 - path - 转换器</h2><p><img src="/python-django/image-20211129112814502.webp" alt="image-20211129112814502"></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p><img src="/python-django/image-20211129113915653.webp" alt="image-20211129113915653"><img src="/python-django/image-20211129113939729.webp" alt="image-20211129113939729"></p>
+<p><img src="/python-django/image-20211129113926093.webp" alt="image-20211129113926093"><img src="/python-django/image-20211129114053987.webp" alt="image-20211129114053987"></p>
+<p>可以看出来，执行的时候是由上而下执行</p>
+<h3 id="练习：计算器"><a href="#练习：计算器" class="headerlink" title="练习：计算器"></a>练习：计算器</h3><p><img src="/python-django/image-20211129123645517.webp" alt="image-20211129123645517"></p>
+<h2 id="路由配置-re-path"><a href="#路由配置-re-path" class="headerlink" title="路由配置 - re_path()"></a>路由配置 - re_path()</h2><p><img src="/python-django/image-20211129141056822.webp" alt="image-20211129141056822"></p>
+<h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h3><p><img src="/python-django/image-20211129141712298.webp" alt="image-20211129141712298"></p>
+<h3 id="生日正则："><a href="#生日正则：" class="headerlink" title="生日正则："></a>生日正则：</h3><p><img src="/python-django/image-20211129145314266.webp" alt="image-20211129145314266"></p>
+<p><img src="/python-django/image-20211129145335743.webp" alt="image-20211129145335743"></p>
+<p><img src="/python-django/image-20211129145352623.webp" alt="image-20211129145352623"></p>
+<h1 id="Django中的请求"><a href="#Django中的请求" class="headerlink" title="Django中的请求"></a>Django中的请求</h1><p><img src="/python-django/image-20211129170039257.webp" alt="image-20211129170039257"></p>
+<p><img src="/python-django/image-20211129171430226.webp" alt="image-20211129171430226"></p>
+<h2 id="Django中的响应对象"><a href="#Django中的响应对象" class="headerlink" title="Django中的响应对象"></a>Django中的响应对象</h2><p><img src="/python-django/image-20211129172858756.webp" alt="image-20211129172858756"></p>
+<p>Django中的响应对象</p>
+<p><img src="/python-django/image-20211129173135044.webp" alt="image-20211129173135044"></p>
+<p><img src="/python-django/image-20211129173257111.webp" alt="image-20211129173257111"></p>
+<h2 id="GET处理"><a href="#GET处理" class="headerlink" title="GET处理"></a>GET处理</h2><p><img src="/python-django/image-20211129174221824.webp" alt="image-20211129174221824"></p>
+<p><img src="/python-django/image-20211129174751910.webp" alt="image-20211129174751910"></p>
+<p><img src="/python-django/image-20211129175033023.webp" alt="image-20211129175033023"></p>
+<h2 id="POST处理"><a href="#POST处理" class="headerlink" title="POST处理"></a>POST处理</h2><p><img src="/python-django/image-20211129201247287.webp" alt="image-20211129201247287"></p>
+<p><img src="/python-django/image-20211129201306505.webp" alt="image-20211129201306505"></p>
+<p><img src="/python-django/image-20211129201327000.webp" alt="image-20211129201327000"></p>
+<h2 id="传统的mvc"><a href="#传统的mvc" class="headerlink" title="传统的mvc"></a>传统的mvc</h2><p><img src="/python-django/image-20211129203627800.webp" alt="image-20211129203627800"></p>
+<p>Django是MTV结构</p>
+<h1 id="模板配置"><a href="#模板配置" class="headerlink" title="模板配置"></a>模板配置</h1><p><img src="/python-django/image-20211130185916088.webp" alt="image-20211130185916088"></p>
+<h2 id="模板加载方式"><a href="#模板加载方式" class="headerlink" title="模板加载方式"></a>模板加载方式</h2><p><img src="/python-django/image-20211130190516341.webp" alt="image-20211130190516341"></p>
+<p><img src="/python-django/image-20211130191454722.webp" alt="image-20211130191454722"></p>
+<h2 id="视图层与模板层之间的交互"><a href="#视图层与模板层之间的交互" class="headerlink" title="视图层与模板层之间的交互"></a>视图层与模板层之间的交互</h2><p><img src="/python-django/image-20211130192009564.webp" alt="image-20211130192009564"></p>
+<h3 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h3><p><img src="/python-django/image-20211201150602148.webp" alt="image-20211201150602148"></p>
+<p><img src="/python-django/image-20211201150617963.webp" alt="image-20211201150617963"></p>
+<h2 id="模板的变量"><a href="#模板的变量" class="headerlink" title="模板的变量"></a>模板的变量</h2><p><img src="/python-django/image-20211201151027473.webp" alt="image-20211201151027473"></p>
+<h3 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h3><p><img src="/python-django/image-20211201151055547.webp" alt="image-20211201151055547"></p>
+<p>都是用双大括号加变量名</p>
+<p>测试各种变量的传值</p>
+<p><img src="/python-django/image-20211201152336107.webp" alt="image-20211201152336107"></p>
+<p><img src="/python-django/image-20211201152350065.webp" alt="image-20211201152350065"></p>
+<p><img src="/python-django/image-20211201152402659.webp" alt="image-20211201152402659"></p>
+<h2 id="模板标签"><a href="#模板标签" class="headerlink" title="模板标签"></a>模板标签</h2><p><img src="/python-django/image-20211201152701477.webp" alt="image-20211201152701477"></p>
+<p>基本都需要结束标签，个别特殊的不需要结束标签，</p>
+<h3 id="if标签"><a href="#if标签" class="headerlink" title="if标签"></a>if标签</h3><p><img src="/python-django/image-20211201153028048.webp" alt="image-20211201153028048"></p>
+<p><code>if</code>标签的结束标签是<code>endif</code></p>
+<p><img src="/python-django/image-20211201153132882.webp" alt="image-20211201153132882"></p>
+<h3 id="测试例子"><a href="#测试例子" class="headerlink" title="测试例子"></a>测试例子</h3><p><img src="/python-django/image-20211201153747378.webp" alt="image-20211201153747378"></p>
+<p><img src="/python-django/image-20211203101238114.webp" alt="image-20211203101238114"></p>
+<p><img src="/python-django/image-20211203101258139.webp" alt="image-20211203101258139"></p>
+<h3 id="for标签"><a href="#for标签" class="headerlink" title="for标签"></a>for标签</h3><p><img src="/python-django/image-20211204160943943.webp" alt="image-20211204160943943"></p>
+<h2 id="模板过滤器"><a href="#模板过滤器" class="headerlink" title="模板过滤器"></a>模板过滤器</h2><p><img src="/python-django/image-20211204162513617.webp" alt="image-20211204162513617"></p>
+<h2 id="常用过滤器"><a href="#常用过滤器" class="headerlink" title="常用过滤器"></a>常用过滤器</h2><p><img src="/python-django/image-20211204162620250.webp" alt="image-20211204162620250"></p>
+<h2 id="模板继承"><a href="#模板继承" class="headerlink" title="模板继承"></a>模板继承</h2><p><img src="/python-django/image-20211204164816564.webp" alt="image-20211204164816564"></p>
+<h3 id="父页面传入的参数无法继承给子页面"><a href="#父页面传入的参数无法继承给子页面" class="headerlink" title="父页面传入的参数无法继承给子页面"></a>父页面传入的参数无法继承给子页面</h3><p><img src="/python-django/image-20211204185525663.webp" alt="image-20211204185525663"></p>
+<h1 id="url书写规范"><a href="#url书写规范" class="headerlink" title="url书写规范"></a>url书写规范</h1><p><img src="/python-django/image-20211207203612783.webp" alt="image-20211207203612783"></p>
+<p><code>相对地址使用较多</code></p>
+<p><img src="/python-django/image-20211207203845679.webp" alt="image-20211207203845679"></p>
+<h2 id="url反向解析"><a href="#url反向解析" class="headerlink" title="url反向解析"></a>url反向解析</h2><p><img src="/python-django/image-20211208153642369.webp" alt="image-20211208153642369"></p>
+<p>代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&#123;% url &#x27;tr&#x27; &#x27;100&#x27; %&#125;&quot;</span>&gt;</span>url反向解析版本<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">路由配置</span><br><span class="line">path(<span class="string">&#x27;test_urls_result/&lt;int:age&gt;&#x27;</span>, views.test_url_result, name=<span class="string">&#x27;tr&#x27;</span>)</span><br><span class="line"></span><br><span class="line">视图配置</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_url_result</span>(<span class="params">request, age</span>):</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">&quot;---test_url_result is ok----&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>优点：可以动态获取url，因为是通过别名来</p>
+<h1 id="静态文件"><a href="#静态文件" class="headerlink" title="静态文件"></a>静态文件</h1><p><img src="/python-django/image-20211212164924682.webp" alt="image-20211212164924682"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">第一种办法</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/staticpython-django/404.webp&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://127.0.0.1:8000/staticpython-django/right_top.webp&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">第二种方法</span><br></pre></td></tr></table></figure>
+
+<h1 id="应用及分布式路由"><a href="#应用及分布式路由" class="headerlink" title="应用及分布式路由"></a>应用及分布式路由</h1><p>应用就是在django项目中是一个独立的业务模块，可以包含自己的路由，视图，模板，模型，</p>
+<blockquote>
+<p>我的理解就是将分模块创建路由，不至于将这个项目所有的文件都在一个路由里面，这样会使代码不易阅读，</p>
+</blockquote>
+<p>创建路由的命令</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py startapp [项目名]</span><br></pre></td></tr></table></figure>
+
+<h1 id="数据（mysql）"><a href="#数据（mysql）" class="headerlink" title="数据（mysql）"></a>数据（mysql）</h1><p>python中的django连接mysql需要mysqlclient包，</p>
+<p>创建数据库必须指定字符集</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">create database mysite3 default charset utf8;</span><br><span class="line">		setting.py设置</span><br><span class="line">        # mysql配置</span><br><span class="line">        &#x27;ENGINE&#x27;: &#x27;django.db.backends.mysql&#x27;,</span><br><span class="line">        &#x27;NAME&#x27;: &#x27;mysite3&#x27;,</span><br><span class="line">        &#x27;USER&#x27;: &#x27;root&#x27;,</span><br><span class="line">        &#x27;PASSWORD&#x27;: &#x27;1&#x27;,</span><br><span class="line">        &#x27;HOST&#x27;: &#x27;127.0.0.1&#x27;,</span><br><span class="line">        &#x27;PORT&#x27;: &#x27;3306&#x27;,</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ORM框架</span></span><br><span class="line"><span class="keyword"></span><span class="keyword">ORM	</span>	</span><br><span class="line">类		数据表</span><br><span class="line">对象		数据行</span><br><span class="line">属性		字段</span><br></pre></td></tr></table></figure>
+
+<h2 id="连接过程"><a href="#连接过程" class="headerlink" title="连接过程"></a>连接过程</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">添加数据表</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Book</span>(models.Model):</span><br><span class="line">    title = models.CharField(<span class="string">&#x27;书名&#x27;</span>, max_length=<span class="number">7</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    price = models.DecimalField(<span class="string">&#x27;价格&#x27;</span>, max_digits=<span class="number">7</span>, decimal_places=<span class="number">2</span>)</span><br><span class="line">    info = models.CharField(<span class="string">&#x27;关于&#x27;</span>, max_length=<span class="number">100</span>, default=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">生成迁移文件</span><br><span class="line">python manage.py makmigrations</span><br><span class="line">执行迁移脚本程序</span><br><span class="line">python3 manage.py migrate</span><br></pre></td></tr></table></figure>
+
+<h2 id="模型类-字段类型"><a href="#模型类-字段类型" class="headerlink" title="模型类-字段类型"></a>模型类-字段类型</h2><p>BooleanField()</p>
+<p>​	数据库类型：tinyint(1)</p>
+<p>CharField()</p>
+<p>​	数据库类型varchar</p>
+<p>​	必须要指定max_length参数值</p>
+<p>DateField()</p>
+<p>​	数据库类型：date</p>
+<p>​	参数：</p>
+<p>​		auto_now：每次保存对象时，自动设置该字段为当前时间取值True</p>
+<p>​		auto_now_add：设置第一次创建时的当前时间</p>
+<p>​		default：设置当前时间（取值：字符串格式时间</p>
+<p>DateTimeField()</p>
+<p>​	数据库类型：datetime(6)</p>
+<p>​	作用：表示日期和时间</p>
+<p>​	参数同上</p>
+<p>FloatField()</p>
+<p>​	数据库类型：double</p>
+<p>​	编程语言中和数据库中都使用小数表示值</p>
+<p>DecimalField()</p>
+<p>​	数据库类型：decimal(x,y)</p>
+<p>​	参数：max_digits：位数总数，包括小数点后的位数，该值必须大于等于decimal_places</p>
+<p>​				decimal_places：小数点后的数字数量</p>
+<p>EmailField()</p>
+<p>​	数据库类型：varchar</p>
+<p>​	编程语言和数据库中使用字符串</p>
+<p>IntegerField()</p>
+<p>​	数据库类型：int</p>
+<p>ImageField()</p>
+<p>​	数据库类型：varchar(100)</p>
+<p>​	作用在数据库中为了保存图片的路径</p>
+<p>TextField()</p>
+<p>​	数据库类型：longtext</p>
+<h2 id="模型类-字段选项"><a href="#模型类-字段选项" class="headerlink" title="模型类-字段选项"></a>模型类-字段选项</h2><p>db_index</p>
+<p>​	索引</p>
+<p>unique</p>
+<p>​	为True时必须时唯一索引</p>
+<p>db_column</p>
+<p>​	指定列的名称，如果不指定，采用属性名作为列名</p>
+<p>verbose_name</p>
+<p>​	设置此字段的admin界面上的显示名称</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 字段选项样例</span></span><br><span class="line"><span class="comment"># 创建一个属性，表示用户名称，长度30字符，必须时唯一的，不能为空，添加索引</span></span><br><span class="line">name = models.CharField(max_length=<span class="number">30</span>,unique=<span class="literal">True</span>, null=<span class="literal">False</span>,db_index=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://wanswu.github.io">Wans</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://wanswu.github.io/posts/650b5471.html">https://wanswu.github.io/posts/650b5471.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://wanswu.github.io" target="_blank">Wans</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%AF%95%E8%AE%BE/">毕设</a><a class="post-meta__tags" href="/tags/%E8%87%AA%E5%AD%A6/">自学</a></div><div class="post-share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/76a3894a.html" title="生成器与迭代器"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">生成器与迭代器</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/posts/b87b8b00.html" title="python魔术方法"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">python魔术方法</div></div><div class="info-2"><div class="info-item-1">python 魔术方法常用魔术方法  魔术方法就是一个类&#x2F;对象中的方法，和普通方法唯一的不同时，普通方法需要调用！而魔术方法是在特定时刻自动触发。  1.init123456初始化魔术方法触发时机：初始化对象时触发（不是实例化触发，但是和实例化在一个操作中）参数：至少有一个self，接收对象返回值：无作用：初始化对象的成员注意：使用该方式初始化的成员都是直接写入对象当中，类中无法具有  2.new1234567实例化魔术方法触发时机： 在实例化对时触发参数：至少一个cls 接收当前类返回值：必须返回一个对象实例作用：实例化对象注意：实例化对象是Object类底层实现，其他类继承了Object的__new__才能够实现实例化对象。没事别碰这个魔术方法，先触发__new__才会触发__init__   3.del123456析构魔术方法触发时机：当对象没有用（没有任何变量引用）的时候被触发参数：一个self...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/b87b8b00.html" title="python魔术方法"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-13</div><div class="info-item-2">python魔术方法</div></div><div class="info-2"><div class="info-item-1">python 魔术方法常用魔术方法  魔术方法就是一个类&#x2F;对象中的方法，和普通方法唯一的不同时，普通方法需要调用！而魔术方法是在特定时刻自动触发。  1.init123456初始化魔术方法触发时机：初始化对象时触发（不是实例化触发，但是和实例化在一个操作中）参数：至少有一个self，接收对象返回值：无作用：初始化对象的成员注意：使用该方式初始化的成员都是直接写入对象当中，类中无法具有  2.new1234567实例化魔术方法触发时机： 在实例化对时触发参数：至少一个cls 接收当前类返回值：必须返回一个对象实例作用：实例化对象注意：实例化对象是Object类底层实现，其他类继承了Object的__new__才能够实现实例化对象。没事别碰这个魔术方法，先触发__new__才会触发__init__   3.del123456析构魔术方法触发时机：当对象没有用（没有任何变量引用）的时候被触发参数：一个self...</div></div></div></a><a class="pagination-related" href="/posts/4090.html" title="内置函数+匿名函数"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-25</div><div class="info-item-2">内置函数+匿名函数</div></div><div class="info-2"><div class="info-item-1">  </div></div></div></a><a class="pagination-related" href="/posts/16177.html" title="文件操作"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-25</div><div class="info-item-2">文件操作</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/posts/76a3894a.html" title="生成器与迭代器"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-31</div><div class="info-item-2">生成器与迭代器</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Wans</div><div class="author-info-description">自学的笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/wanswu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/wanswu" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">打工牛马人。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">我的笔记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E8%A7%A3%E8%AF%BB"><span class="toc-number">2.</span> <span class="toc-text">目录解读</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">路由配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE-path"><span class="toc-number">3.1.</span> <span class="toc-text">路由配置 - path</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE-path-%E8%BD%AC%E6%8D%A2%E5%99%A8"><span class="toc-number">3.2.</span> <span class="toc-text">路由配置 - path - 转换器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE-path-%E8%BD%AC%E6%8D%A2%E5%99%A8-1"><span class="toc-number">3.3.</span> <span class="toc-text">路由配置 - path - 转换器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">3.3.1.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%EF%BC%9A%E8%AE%A1%E7%AE%97%E5%99%A8"><span class="toc-number">3.3.2.</span> <span class="toc-text">练习：计算器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE-re-path"><span class="toc-number">3.4.</span> <span class="toc-text">路由配置 - re_path()</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B"><span class="toc-number">3.4.1.</span> <span class="toc-text">样例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%97%A5%E6%AD%A3%E5%88%99%EF%BC%9A"><span class="toc-number">3.4.2.</span> <span class="toc-text">生日正则：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Django%E4%B8%AD%E7%9A%84%E8%AF%B7%E6%B1%82"><span class="toc-number">4.</span> <span class="toc-text">Django中的请求</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Django%E4%B8%AD%E7%9A%84%E5%93%8D%E5%BA%94%E5%AF%B9%E8%B1%A1"><span class="toc-number">4.1.</span> <span class="toc-text">Django中的响应对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GET%E5%A4%84%E7%90%86"><span class="toc-number">4.2.</span> <span class="toc-text">GET处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#POST%E5%A4%84%E7%90%86"><span class="toc-number">4.3.</span> <span class="toc-text">POST处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E7%9A%84mvc"><span class="toc-number">4.4.</span> <span class="toc-text">传统的mvc</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E9%85%8D%E7%BD%AE"><span class="toc-number">5.</span> <span class="toc-text">模板配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E5%8A%A0%E8%BD%BD%E6%96%B9%E5%BC%8F"><span class="toc-number">5.1.</span> <span class="toc-text">模板加载方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E5%9B%BE%E5%B1%82%E4%B8%8E%E6%A8%A1%E6%9D%BF%E5%B1%82%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BA%A4%E4%BA%92"><span class="toc-number">5.2.</span> <span class="toc-text">视图层与模板层之间的交互</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9A"><span class="toc-number">5.2.1.</span> <span class="toc-text">例子：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E7%9A%84%E5%8F%98%E9%87%8F"><span class="toc-number">5.3.</span> <span class="toc-text">模板的变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">5.3.1.</span> <span class="toc-text">调用方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E6%A0%87%E7%AD%BE"><span class="toc-number">5.4.</span> <span class="toc-text">模板标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if%E6%A0%87%E7%AD%BE"><span class="toc-number">5.4.1.</span> <span class="toc-text">if标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E4%BE%8B%E5%AD%90"><span class="toc-number">5.4.2.</span> <span class="toc-text">测试例子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for%E6%A0%87%E7%AD%BE"><span class="toc-number">5.4.3.</span> <span class="toc-text">for标签</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">5.5.</span> <span class="toc-text">模板过滤器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">5.6.</span> <span class="toc-text">常用过滤器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E7%BB%A7%E6%89%BF"><span class="toc-number">5.7.</span> <span class="toc-text">模板继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%B6%E9%A1%B5%E9%9D%A2%E4%BC%A0%E5%85%A5%E7%9A%84%E5%8F%82%E6%95%B0%E6%97%A0%E6%B3%95%E7%BB%A7%E6%89%BF%E7%BB%99%E5%AD%90%E9%A1%B5%E9%9D%A2"><span class="toc-number">5.7.1.</span> <span class="toc-text">父页面传入的参数无法继承给子页面</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#url%E4%B9%A6%E5%86%99%E8%A7%84%E8%8C%83"><span class="toc-number">6.</span> <span class="toc-text">url书写规范</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#url%E5%8F%8D%E5%90%91%E8%A7%A3%E6%9E%90"><span class="toc-number">6.1.</span> <span class="toc-text">url反向解析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6"><span class="toc-number">7.</span> <span class="toc-text">静态文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%8F%8A%E5%88%86%E5%B8%83%E5%BC%8F%E8%B7%AF%E7%94%B1"><span class="toc-number">8.</span> <span class="toc-text">应用及分布式路由</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%EF%BC%88mysql%EF%BC%89"><span class="toc-number">9.</span> <span class="toc-text">数据（mysql）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E8%BF%87%E7%A8%8B"><span class="toc-number">9.1.</span> <span class="toc-text">连接过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E7%B1%BB-%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B"><span class="toc-number">9.2.</span> <span class="toc-text">模型类-字段类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E7%B1%BB-%E5%AD%97%E6%AE%B5%E9%80%89%E9%A1%B9"><span class="toc-number">9.3.</span> <span class="toc-text">模型类-字段选项</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/59a3d58d.html" title="安装遇到的各种问题"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装遇到的各种问题"/></a><div class="content"><a class="title" href="/posts/59a3d58d.html" title="安装遇到的各种问题">安装遇到的各种问题</a><time datetime="2022-10-21T05:52:24.000Z" title="发表于 2022-10-21 13:52:24">2022-10-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/730b8fb7.html" title="平时积累"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="平时积累"/></a><div class="content"><a class="title" href="/posts/730b8fb7.html" title="平时积累">平时积累</a><time datetime="2022-03-13T05:00:11.000Z" title="发表于 2022-03-13 13:00:11">2022-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/62eac934.html" title="proxy_pool搭建过程"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="proxy_pool搭建过程"/></a><div class="content"><a class="title" href="/posts/62eac934.html" title="proxy_pool搭建过程">proxy_pool搭建过程</a><time datetime="2021-12-25T13:24:05.000Z" title="发表于 2021-12-25 21:24:05">2021-12-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/4c3fd5bc.html" title="安装PicGo中的picgo-plugin-compress插件"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装PicGo中的picgo-plugin-compress插件"/></a><div class="content"><a class="title" href="/posts/4c3fd5bc.html" title="安装PicGo中的picgo-plugin-compress插件">安装PicGo中的picgo-plugin-compress插件</a><time datetime="2021-12-17T15:33:34.000Z" title="发表于 2021-12-17 23:33:34">2021-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d2b9d54.html" title="python多态"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python多态"/></a><div class="content"><a class="title" href="/posts/d2b9d54.html" title="python多态">python多态</a><time datetime="2021-12-17T14:56:12.000Z" title="发表于 2021-12-17 22:56:12">2021-12-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Wans</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"]):not([href="/messageboard/"]):not([href="/link/"]):not([href="/categories/"]):not([href="/tags/"]):not([href="/archives/"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: true,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      const usePjax = true
+      true 
+        ? (usePjax ? pjax.loadUrl('/404.html') : window.location.href = '/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
