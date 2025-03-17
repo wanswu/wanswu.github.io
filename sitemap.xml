@@ -182,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://wanswu.github.io/categories/index.html</loc>
+    <loc>https://wanswu.github.io/baidu_verify_code-XQnCRlRxQN.html</loc>
     
     <lastmod>2024-01-23</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://wanswu.github.io/baidu_verify_code-XQnCRlRxQN.html</loc>
+    <loc>https://wanswu.github.io/categories/index.html</loc>
     
     <lastmod>2024-01-23</lastmod>
     
@@ -227,13 +227,6 @@
 
   
   <url>
-    <loc>https://wanswu.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2025-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wanswu.github.io/tags/%E6%BF%80%E6%B4%BB/</loc>
     <lastmod>2025-03-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -262,7 +255,7 @@
   </url>
   
   <url>
-    <loc>https://wanswu.github.io/tags/%E8%87%AA%E5%AD%A6/</loc>
+    <loc>https://wanswu.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -276,7 +269,7 @@
   </url>
   
   <url>
-    <loc>https://wanswu.github.io/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <loc>https://wanswu.github.io/tags/%E8%87%AA%E5%AD%A6/</loc>
     <lastmod>2025-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -296,14 +289,14 @@
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://wanswu.github.io/categories/%E5%88%86%E4%BA%AB/</loc>
+    <loc>https://wanswu.github.io/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2025-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
+  
+
   
   <url>
     <loc>https://wanswu.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
@@ -313,7 +306,7 @@
   </url>
   
   <url>
-    <loc>https://wanswu.github.io/categories/Python/</loc>
+    <loc>https://wanswu.github.io/categories/%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2025-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -321,6 +314,13 @@
   
   <url>
     <loc>https://wanswu.github.io/categories/Docker/</loc>
+    <lastmod>2025-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wanswu.github.io/categories/Python/</loc>
     <lastmod>2025-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
