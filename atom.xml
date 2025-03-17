@@ -313,18 +313,18 @@
   </entry>
   
   <entry>
-    <title>python可变参数列表拆装</title>
-    <link href="https://wanswu.github.io/posts/10926.html"/>
-    <id>https://wanswu.github.io/posts/10926.html</id>
+    <title>python函数调用</title>
+    <link href="https://wanswu.github.io/posts/28879.html"/>
+    <id>https://wanswu.github.io/posts/28879.html</id>
     <published>2021-09-27T03:01:57.000Z</published>
-    <updated>2025-03-17T01:30:32.763Z</updated>
+    <updated>2025-03-17T01:30:13.266Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;笔记&quot;&gt;&lt;a href=&quot;#笔记&quot; class=&quot;headerlink&quot; title=&quot;笔记&quot;&gt;&lt;/a&gt;笔记&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+    <summary type="html">&lt;h1 id=&quot;函数嵌套调用&quot;&gt;&lt;a href=&quot;#函数嵌套调用&quot; class=&quot;headerlink&quot; title=&quot;函数嵌套调用&quot;&gt;&lt;/a&gt;函数嵌套调用&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
         
       
     
@@ -338,18 +338,18 @@
   </entry>
   
   <entry>
-    <title>python函数调用</title>
-    <link href="https://wanswu.github.io/posts/28879.html"/>
-    <id>https://wanswu.github.io/posts/28879.html</id>
+    <title>python可变参数列表拆装</title>
+    <link href="https://wanswu.github.io/posts/10926.html"/>
+    <id>https://wanswu.github.io/posts/10926.html</id>
     <published>2021-09-27T03:01:57.000Z</published>
-    <updated>2025-03-17T01:30:13.266Z</updated>
+    <updated>2025-03-17T01:30:32.763Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;函数嵌套调用&quot;&gt;&lt;a href=&quot;#函数嵌套调用&quot; class=&quot;headerlink&quot; title=&quot;函数嵌套调用&quot;&gt;&lt;/a&gt;函数嵌套调用&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+    <summary type="html">&lt;h1 id=&quot;笔记&quot;&gt;&lt;a href=&quot;#笔记&quot; class=&quot;headerlink&quot; title=&quot;笔记&quot;&gt;&lt;/a&gt;笔记&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
         
       
     
