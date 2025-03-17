@@ -5,18 +5,18 @@
 <meta property="og:site_name" content="Wans">
 <meta property="og:description" content="# -*- Codeing &#x3D; utf-8 -*- # @Time : 2021-11-27 下午 1:43 # @Author : Wans # @File : object09.py # @Software : PyCharm  # class Person: #     def __init__(self, name): #         self.name &#x3D; name # #">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
 <meta property="article:published_time" content="2021-12-17T14:56:12.000Z">
 <meta property="article:modified_time" content="2025-03-17T01:28:50.672Z">
 <meta property="article:author" content="Wans">
 <meta property="article:tag" content="自学">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"><script type="application/ld+json">{
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "python多态",
   "url": "https://wanswu.github.io/posts/d2b9d54.html",
-  "image": "https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png",
+  "image": "https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg",
   "datePublished": "2021-12-17T14:56:12.000Z",
   "dateModified": "2025-03-17T01:28:50.672Z",
   "author": [
@@ -163,7 +163,7 @@ btf.addGlobalFn('pjaxComplete', () => {
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
   translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
   copy: {
     success: '复制成功',
     error: '复制失败',
@@ -202,261 +202,261 @@ btf.addGlobalFn('pjaxComplete', () => {
   isToc: false,
   pageType: 'post'
 }</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Wans" type="application/atom+xml">
-</head><body><div id="web_bg" style="background-image: url(images/006ZFECEgy1fr1x6cbnb3j31hc0u0na3.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Wans</span></a><a class="nav-page-title" href="/"><span class="site-name">python多态</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">python多态</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-17T14:56:12.000Z" title="发表于 2021-12-17 22:56:12">2021-12-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-17T01:28:50.672Z" title="更新于 2025-03-17 09:28:50">2025-03-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python/">Python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;距离上次更新已经&quot;,&quot;messageNext&quot;:&quot;天了，文章部分内容可能已经过时，请注意甄别。&quot;,&quot;postUpdate&quot;:&quot;2025-03-17 09:28:50&quot;}" hidden></div><pre><code class="highlight python"><span class="comment"># -*- Codeing = utf-8 -*-</span>
-<span class="comment"># @Time : 2021-11-27 下午 1:43</span>
-<span class="comment"># @Author : Wans</span>
-<span class="comment"># @File : object09.py</span>
-<span class="comment"># @Software : PyCharm</span>
+</head><body><div id="web_bg" style="background-image: url(images/006ZFECEgy1fr1x6cbnb3j31hc0u0na3.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Wans</span></a><a class="nav-page-title" href="/"><span class="site-name">python多态</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">python多态</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-17T14:56:12.000Z" title="发表于 2021-12-17 22:56:12">2021-12-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-17T01:28:50.672Z" title="更新于 2025-03-17 09:28:50">2025-03-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python/">Python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;距离上次更新已经&quot;,&quot;messageNext&quot;:&quot;天了，文章部分内容可能已经过时，请注意甄别。&quot;,&quot;postUpdate&quot;:&quot;2025-03-17 09:28:50&quot;}" hidden></div><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- Codeing = utf-8 -*-</span>
+<span class="token comment"># @Time : 2021-11-27 下午 1:43</span>
+<span class="token comment"># @Author : Wans</span>
+<span class="token comment"># @File : object09.py</span>
+<span class="token comment"># @Software : PyCharm</span>
 
-<span class="comment"># class Person:</span>
-<span class="comment">#     def __init__(self, name):</span>
-<span class="comment">#         self.name = name</span>
-<span class="comment">#</span>
-<span class="comment">#     def eat(self):</span>
-<span class="comment">#         print(&#x27;----------&gt;eat1&#x27;)</span>
-<span class="comment">#</span>
-<span class="comment">#     def eat(self, food):</span>
-<span class="comment">#         print(&#x27;-----------&gt;eat：&#x27;, food)</span>
-<span class="comment">#</span>
-<span class="comment">#</span>
-<span class="comment"># p = Person(&#x27;jack&#x27;)</span>
-<span class="comment"># p.eat(&#x27;肉丸子&#x27;)</span>
-<span class="keyword">import</span> inspect
-
-
-<span class="keyword">class</span> <span class="title class_">Base</span>:
-    <span class="keyword">def</span> <span class="title function_">test</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;------base&#x27;</span>)
+<span class="token comment"># class Person:</span>
+<span class="token comment">#     def __init__(self, name):</span>
+<span class="token comment">#         self.name = name</span>
+<span class="token comment">#</span>
+<span class="token comment">#     def eat(self):</span>
+<span class="token comment">#         print('---------->eat1')</span>
+<span class="token comment">#</span>
+<span class="token comment">#     def eat(self, food):</span>
+<span class="token comment">#         print('----------->eat：', food)</span>
+<span class="token comment">#</span>
+<span class="token comment">#</span>
+<span class="token comment"># p = Person('jack')</span>
+<span class="token comment"># p.eat('肉丸子')</span>
+<span class="token keyword">import</span> inspect
 
 
-<span class="keyword">class</span> <span class="title class_">A</span>(<span class="title class_ inherited__">Base</span>):
-    <span class="keyword">def</span> <span class="title function_">test</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;AAAAAAAAAA&#x27;</span>)
+<span class="token keyword">class</span> <span class="token class-name">Base</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'------base'</span><span class="token punctuation">)</span>
 
 
-<span class="keyword">class</span> <span class="title class_">B</span>(<span class="title class_ inherited__">Base</span>):
-    <span class="keyword">def</span> <span class="title function_">test</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;BBBBBBBBBB&#x27;</span>)
+<span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">(</span>Base<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'AAAAAAAAAA'</span><span class="token punctuation">)</span>
 
 
-<span class="keyword">class</span> <span class="title class_">C</span>(<span class="title class_ inherited__">Base</span>):
-    <span class="keyword">def</span> <span class="title function_">test</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;CCCCCCCCCC&#x27;</span>)
+<span class="token keyword">class</span> <span class="token class-name">B</span><span class="token punctuation">(</span>Base<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'BBBBBBBBBB'</span><span class="token punctuation">)</span>
 
 
-<span class="keyword">class</span> <span class="title class_">D</span>(A, B, C):
-    <span class="keyword">pass</span>
+<span class="token keyword">class</span> <span class="token class-name">C</span><span class="token punctuation">(</span>Base<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'CCCCCCCCCC'</span><span class="token punctuation">)</span>
 
 
-<span class="comment"># c = C()</span>
-<span class="comment"># c.test()</span>
-<span class="comment"># c.test1()</span>
-<span class="comment"># c.test2()</span>
-d = D()
-d.test()
-<span class="built_in">print</span>(inspect.getmro(D))
-<span class="built_in">print</span>(D.__mro__)
-
-<span class="string">&#x27;&#x27;&#x27;</span>
-<span class="string">python允许多继承</span>
-<span class="string">def 子类（父类1，父类2）</span>
-<span class="string">    pas</span>
-<span class="string"></span>
-<span class="string">如果父类有相同方法名称，搜索顺序是，</span>
-<span class="string">自己-父类1-父类2。。。。-父类中的父类</span>
-<span class="string"></span>
-<span class="string"></span>
-<span class="string"></span>
-<span class="string">&#x27;&#x27;&#x27;</span></code></pre>
-
-<pre><code class="highlight python"><span class="comment"># -*- Codeing = utf-8 -*-</span>
-<span class="comment"># @Time : 2021-11-27 下午 2:17</span>
-<span class="comment"># @Author : Wans</span>
-<span class="comment"># @File : object10.py</span>
-<span class="comment"># @Software : PyCharm</span>
+<span class="token keyword">class</span> <span class="token class-name">D</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span> B<span class="token punctuation">,</span> C<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
 
 
-<span class="comment"># 多继承的搜索顺序，经典类，新式类</span>
-<span class="keyword">class</span> <span class="title class_">P1</span>():
-    <span class="keyword">def</span> <span class="title function_">foo</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;p1====foo&#x27;</span>)
+<span class="token comment"># c = C()</span>
+<span class="token comment"># c.test()</span>
+<span class="token comment"># c.test1()</span>
+<span class="token comment"># c.test2()</span>
+d <span class="token operator">=</span> D<span class="token punctuation">(</span><span class="token punctuation">)</span>
+d<span class="token punctuation">.</span>test<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>inspect<span class="token punctuation">.</span>getmro<span class="token punctuation">(</span>D<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>D<span class="token punctuation">.</span>__mro__<span class="token punctuation">)</span>
 
-    <span class="keyword">def</span> <span class="title function_">bar</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;p1------bar&#x27;</span>)
+<span class="token triple-quoted-string string">'''
+python允许多继承
+def 子类（父类1，父类2）
+    pas
 
-
-<span class="keyword">class</span> <span class="title class_">P2</span>():
-    <span class="keyword">def</span> <span class="title function_">foo</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;p2------.foo&#x27;</span>)
-
-
-<span class="keyword">class</span> <span class="title class_">C1</span>(P1, P2):
-    <span class="keyword">pass</span>
-
-
-<span class="keyword">class</span> <span class="title class_">C2</span>(P1, P2):
-    <span class="keyword">def</span> <span class="title function_">bar</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;C2====bar&#x27;</span>)
+如果父类有相同方法名称，搜索顺序是，
+自己-父类1-父类2。。。。-父类中的父类
 
 
-<span class="keyword">class</span> <span class="title class_">D1</span>(C1, C2):
-    <span class="keyword">pass</span>
-d = D1()
-d.foo()
-d.bar()
-<span class="built_in">print</span>(D1.__mro__)</code></pre>
 
-<pre><code class="highlight python"><span class="comment"># -*- Codeing = utf-8 -*-</span>
-<span class="comment"># @Time : 2021-11-27 下午 2:40</span>
-<span class="comment"># @Author : Wans</span>
-<span class="comment"># @File : object11.py</span>
-<span class="comment"># @Software : PyCharm</span>
+'''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="string">&quot;&quot;&quot;</span>
-<span class="string">私有化：</span>
-<span class="string">    __age</span>
-<span class="string">    def __show(self):</span>
-<span class="string">        pass</span>
-<span class="string">    ---&gt;__类名__属性</span>
-<span class="string">    私有化：封装 将属性私有化，定义公有set和get方法</span>
-<span class="string">    def setAge(self, age):</span>
-<span class="string">        判断</span>
-<span class="string">    def getAge(self):</span>
-<span class="string">        return self.__age</span>
-<span class="string"></span>
-<span class="string">    s.setAge(20)</span>
-<span class="string">    s.getAge()</span>
-<span class="string"></span>
-<span class="string">    class Studnt:</span>
-<span class="string">        def __init__(self,age):</span>
-<span class="string">            self.__age=age</span>
-<span class="string"></span>
-<span class="string">        @property</span>
-<span class="string">        def age(self):</span>
-<span class="string">            return ...</span>
-<span class="string">        @age.setter</span>
-<span class="string">        def age(self,age):</span>
-<span class="string">            self.__age=age</span>
-<span class="string">    s = student()</span>
-<span class="string">    s.age = 10</span>
-<span class="string">    print(s.age)</span>
-<span class="string"></span>
-<span class="string"></span>
-<span class="string">    继承：</span>
-<span class="string">        has a</span>
-<span class="string">        class Student：</span>
-<span class="string">            def __init__(self,name,book):</span>
-<span class="string">                pass</span>
-<span class="string"></span>
-<span class="string">        is a    # 真正的继承</span>
-<span class="string">            父类  子类</span>
-<span class="string">            class Person:</span>
-<span class="string">                pass</span>
-<span class="string"></span>
-<span class="string">            class Student(Person):</span>
-<span class="string">                ...</span>
-<span class="string">                def study(self):</span>
-<span class="string">                    ...</span>
-<span class="string">                def</span>
-<span class="string">        s = Student()</span>
-<span class="string">        s.study()</span>
-<span class="string"></span>
-<span class="string">        1.__init__</span>
-<span class="string">        2.重写方法</span>
-<span class="string"></span>
-<span class="string">    多继承：</span>
-<span class="string">        class A:</span>
-<span class="string">            pass</span>
-<span class="string">        class B:</span>
-<span class="string">            pass</span>
-<span class="string">        class C(A,B):</span>
-<span class="string">            pass</span>
-<span class="string">        python3使用新式类：广度优先</span>
-<span class="string">        python2使用经典类：深度优先</span>
-<span class="string"></span>
-<span class="string">        查看搜索顺序</span>
-<span class="string">        C.__mor__</span>
-<span class="string">        import inspect</span>
-<span class="string">        priny(inspect.getmro(C))</span>
-<span class="string">&quot;&quot;&quot;</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- Codeing = utf-8 -*-</span>
+<span class="token comment"># @Time : 2021-11-27 下午 2:17</span>
+<span class="token comment"># @Author : Wans</span>
+<span class="token comment"># @File : object10.py</span>
+<span class="token comment"># @Software : PyCharm</span>
 
 
-<span class="comment"># 面向对象的特点：多态   封装  继承</span>
-<span class="keyword">class</span> <span class="title class_">Person</span>:
-    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name</span>):
-        <span class="variable language_">self</span>.name = name
+<span class="token comment"># 多继承的搜索顺序，经典类，新式类</span>
+<span class="token keyword">class</span> <span class="token class-name">P1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'p1====foo'</span><span class="token punctuation">)</span>
 
-    <span class="keyword">def</span> <span class="title function_">feed_pet</span>(<span class="params">self, pet</span>):    <span class="comment"># pet既可以接受cat，也可以接受dog，还可以接收tiger</span>
-        <span class="comment"># 其他语言的多态只能传一个类的子类</span>
-        <span class="comment"># 如果传入的pet参数是Pet类型为真</span>
-        <span class="comment"># isinstance(obj,类) -----&gt;判断obj是不是类的对象或者判断obj是不是该子类的对象</span>
-        <span class="keyword">if</span> <span class="built_in">isinstance</span>(pet, Pet):
-            <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125;喜欢养宠物&#123;&#125;，昵称是&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="variable language_">self</span>.name, pet.role, pet.nickname))
-        <span class="keyword">else</span>:
-            <span class="built_in">print</span>(<span class="string">&#x27;不是宠物类型。。。。&#x27;</span>)
+    <span class="token keyword">def</span> <span class="token function">bar</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'p1------bar'</span><span class="token punctuation">)</span>
 
 
-<span class="keyword">class</span> <span class="title class_">Pet</span>:
-    role = <span class="string">&#x27;&#x27;</span>
-
-    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, nickname, age</span>):
-        <span class="variable language_">self</span>.nickname = nickname
-        <span class="variable language_">self</span>.age = age
-
-    <span class="keyword">def</span> <span class="title function_">show</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;昵称：&#123;&#125;，年龄：&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="variable language_">self</span>.nickname, <span class="variable language_">self</span>.age))
+<span class="token keyword">class</span> <span class="token class-name">P2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'p2------.foo'</span><span class="token punctuation">)</span>
 
 
-<span class="keyword">class</span> <span class="title class_">Cat</span>(<span class="title class_ inherited__">Pet</span>):
-    role = <span class="string">&#x27;猫&#x27;</span>
-
-    <span class="keyword">def</span> <span class="title function_">catch_mouse</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;抓老鼠....&#x27;</span>)
+<span class="token keyword">class</span> <span class="token class-name">C1</span><span class="token punctuation">(</span>P1<span class="token punctuation">,</span> P2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
 
 
-<span class="keyword">class</span> <span class="title class_">Dog</span>(<span class="title class_ inherited__">Pet</span>):
-    role = <span class="string">&#x27;狗&#x27;</span>
-
-    <span class="keyword">def</span> <span class="title function_">whach_house</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;看家高手....&#x27;</span>)
+<span class="token keyword">class</span> <span class="token class-name">C2</span><span class="token punctuation">(</span>P1<span class="token punctuation">,</span> P2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">bar</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'C2====bar'</span><span class="token punctuation">)</span>
 
 
-<span class="keyword">class</span> <span class="title class_">Tiger</span>:
-    <span class="keyword">def</span> <span class="title function_">eat</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;太可怕了，能吃人&#x27;</span>)
+<span class="token keyword">class</span> <span class="token class-name">D1</span><span class="token punctuation">(</span>C1<span class="token punctuation">,</span> C2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+d <span class="token operator">=</span> D1<span class="token punctuation">(</span><span class="token punctuation">)</span>
+d<span class="token punctuation">.</span>foo<span class="token punctuation">(</span><span class="token punctuation">)</span>
+d<span class="token punctuation">.</span>bar<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>D1<span class="token punctuation">.</span>__mro__<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- Codeing = utf-8 -*-</span>
+<span class="token comment"># @Time : 2021-11-27 下午 2:40</span>
+<span class="token comment"># @Author : Wans</span>
+<span class="token comment"># @File : object11.py</span>
+<span class="token comment"># @Software : PyCharm</span>
+
+<span class="token triple-quoted-string string">"""
+私有化：
+    __age
+    def __show(self):
+        pass
+    --->__类名__属性
+    私有化：封装 将属性私有化，定义公有set和get方法
+    def setAge(self, age):
+        判断
+    def getAge(self):
+        return self.__age
+
+    s.setAge(20)
+    s.getAge()
+
+    class Studnt:
+        def __init__(self,age):
+            self.__age=age
+
+        @property
+        def age(self):
+            return ...
+        @age.setter
+        def age(self,age):
+            self.__age=age
+    s = student()
+    s.age = 10
+    print(s.age)
 
 
-<span class="comment"># 创建对象</span>
-cat = Cat(<span class="string">&#x27;花花&#x27;</span>, <span class="number">2</span>)
-dog = Dog(<span class="string">&#x27;大黄&#x27;</span>, <span class="number">4</span>)
+    继承：
+        has a
+        class Student：
+            def __init__(self,name,book):
+                pass
 
-person = Person(<span class="string">&#x27;小明&#x27;</span>)
-person.feed_pet(cat)
-<span class="built_in">print</span>(<span class="string">&#x27;-------------&#x27;</span>)
-person = Person(<span class="string">&#x27;小花&#x27;</span>)
-person.feed_pet(Tiger)
-<span class="string">&#x27;&#x27;&#x27;</span>
-<span class="string">pet     父类  cat  dog 子类</span>
-<span class="string">pet     大类型 cat </span>
-<span class="string">&#x27;&#x27;&#x27;</span></code></pre>
+        is a    # 真正的继承
+            父类  子类
+            class Person:
+                pass
 
-<pre><code class="highlight plaintext">回顾：
+            class Student(Person):
+                ...
+                def study(self):
+                    ...
+                def
+        s = Student()
+        s.study()
+
+        1.__init__
+        2.重写方法
+
+    多继承：
+        class A:
+            pass
+        class B:
+            pass
+        class C(A,B):
+            pass
+        python3使用新式类：广度优先
+        python2使用经典类：深度优先
+
+        查看搜索顺序
+        C.__mor__
+        import inspect
+        priny(inspect.getmro(C))
+"""</span>
+
+
+<span class="token comment"># 面向对象的特点：多态   封装  继承</span>
+<span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+
+    <span class="token keyword">def</span> <span class="token function">feed_pet</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pet<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token comment"># pet既可以接受cat，也可以接受dog，还可以接收tiger</span>
+        <span class="token comment"># 其他语言的多态只能传一个类的子类</span>
+        <span class="token comment"># 如果传入的pet参数是Pet类型为真</span>
+        <span class="token comment"># isinstance(obj,类) ----->判断obj是不是类的对象或者判断obj是不是该子类的对象</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>pet<span class="token punctuation">,</span> Pet<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'&#123;&#125;喜欢养宠物&#123;&#125;，昵称是&#123;&#125;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span> pet<span class="token punctuation">.</span>role<span class="token punctuation">,</span> pet<span class="token punctuation">.</span>nickname<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'不是宠物类型。。。。'</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Pet</span><span class="token punctuation">:</span>
+    role <span class="token operator">=</span> <span class="token string">''</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nickname<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>nickname <span class="token operator">=</span> nickname
+        self<span class="token punctuation">.</span>age <span class="token operator">=</span> age
+
+    <span class="token keyword">def</span> <span class="token function">show</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'昵称：&#123;&#125;，年龄：&#123;&#125;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>nickname<span class="token punctuation">,</span> self<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Cat</span><span class="token punctuation">(</span>Pet<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    role <span class="token operator">=</span> <span class="token string">'猫'</span>
+
+    <span class="token keyword">def</span> <span class="token function">catch_mouse</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'抓老鼠....'</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span>Pet<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    role <span class="token operator">=</span> <span class="token string">'狗'</span>
+
+    <span class="token keyword">def</span> <span class="token function">whach_house</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'看家高手....'</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Tiger</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">eat</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'太可怕了，能吃人'</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># 创建对象</span>
+cat <span class="token operator">=</span> Cat<span class="token punctuation">(</span><span class="token string">'花花'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+dog <span class="token operator">=</span> Dog<span class="token punctuation">(</span><span class="token string">'大黄'</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+
+person <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">'小明'</span><span class="token punctuation">)</span>
+person<span class="token punctuation">.</span>feed_pet<span class="token punctuation">(</span>cat<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'-------------'</span><span class="token punctuation">)</span>
+person <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">'小花'</span><span class="token punctuation">)</span>
+person<span class="token punctuation">.</span>feed_pet<span class="token punctuation">(</span>Tiger<span class="token punctuation">)</span>
+<span class="token triple-quoted-string string">'''
+pet     父类  cat  dog 子类
+pet     大类型 cat 
+'''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">回顾：
 面向对象的特点：
 封装，继承，多态
 封装：
 私有化属性：定义公有的set和get方法
 class Student
     def __init__(self):
-        self.__age=age
+        self.__age&#x3D;age
 
     @property
     def age(self):
         return self.__age
     @age.setter  装饰器，防止下面将上面覆盖
     def age(self,age):
-        self.__age=age
-s = Student()
-s.age = 10
+        self.__age&#x3D;age
+s &#x3D; Student()
+s.age &#x3D; 10
 
 
 
@@ -470,7 +470,7 @@ has a:
     class Student:
         def __init__(self,book,computer):
             book是自定义类型  --- 系统类型
-    s = Student()
+    s &#x3D; Student()
 
 多继承：
 class C(A,B):
@@ -484,38 +484,38 @@ C.__mro__
 class Person：
     def feed_pet(self,cat):
         isinstance(pet,Pet)判断参数是否是哪个类
-            pass</code></pre>
+            pass<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre><code class="highlight python"><span class="comment"># -*- Codeing = utf-8 -*-</span>
-<span class="comment"># @Time : 2021-12-17 下午 11:58</span>
-<span class="comment"># @Author : Wans</span>
-<span class="comment"># @File : test.py</span>
-<span class="comment"># @Software : PyCharm</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- Codeing = utf-8 -*-</span>
+<span class="token comment"># @Time : 2021-12-17 下午 11:58</span>
+<span class="token comment"># @Author : Wans</span>
+<span class="token comment"># @File : test.py</span>
+<span class="token comment"># @Software : PyCharm</span>
 
-<span class="keyword">class</span> <span class="title class_">Person</span>:
-    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):
-        <span class="variable language_">self</span>.__money = <span class="number">200</span>
-        <span class="variable language_">self</span>.name = <span class="string">&#x27;匿名&#x27;</span>
+<span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>__money <span class="token operator">=</span> <span class="token number">200</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'匿名'</span>
 
-    <span class="keyword">def</span> <span class="title function_">show1</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="variable language_">self</span>.name, <span class="variable language_">self</span>.__money)
-
-
-<span class="keyword">class</span> <span class="title class_">Studen</span>(<span class="title class_ inherited__">Person</span>):
-    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):
-        <span class="built_in">super</span>().__init__()
-        <span class="built_in">super</span>(Studen, <span class="variable language_">self</span>).__init__()
-        Person().__init__()<span class="comment"># 用的少</span>
-        <span class="variable language_">self</span>.__money = <span class="number">100</span>
-
-    <span class="keyword">def</span> <span class="title function_">show</span>(<span class="params">self</span>):
-        <span class="built_in">print</span>(<span class="string">&#x27;money:&#x27;</span>, <span class="variable language_">self</span>.__money)
+    <span class="token keyword">def</span> <span class="token function">show1</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>__money<span class="token punctuation">)</span>
 
 
-s = Studen()
-s.show()
-s.show1()</code></pre>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://wanswu.github.io">Wans</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://wanswu.github.io/posts/d2b9d54.html">https://wanswu.github.io/posts/d2b9d54.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://wanswu.github.io" target="_blank">Wans</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%87%AA%E5%AD%A6/">自学</a></div><div class="post-share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/366baac0.html" title="IntelliJ IDEA 2021.3、PyCharm永久激活"><img class="cover" src="https://wanswu.github.io/images/jetbrains.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">IntelliJ IDEA 2021.3、PyCharm永久激活</div></div><div class="info-2"><div class="info-item-1">前言 今天我安装PyCharm和IDEA的时候专业版的时候发现之前的激活方法已经失效了，于是，我花了两个小时在网上找到了。两种插件激活方法，这两种都是比较新的， 第一个插件FineAgent（作者好像把这项目停了，但是还可以使用） 第二种ja-netfilterZ大开发的（2021.11.30号发布）  接下来我就以Z大的插件来写一个教程  插件地址：热心大佬，随便选择一个进入   如果不能进入，按照下面操作进入  最后下载左上角这个文件，解压到你想安装的目录，记住这个目录...</div></div></div></a><a class="pagination-related" href="/posts/730b8fb7.html" title="平时积累"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">平时积累</div></div><div class="info-2"><div class="info-item-1">1、重装系统1.1、备份环境变量的注册表 ​		备份环境变量的目的是让你操作系统之后不需要再去配置环境变量  ​			Win+R输入regedit ​			打开下面这个地址 ​			系统环境变量位置 ​			HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/34285.html" title="Docker自学"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-06</div><div class="info-item-2">Docker自学</div></div><div class="info-2"><div class="info-item-1">Docker安装（linux）安装docker # 卸载干净 $ sudo yum remove docker \                   docker-client \                   docker-client-latest \                   docker-common \                   docker-latest \                   docker-latest-logrotate \                   docker-logrotate \                   docker-engine  # 安装包 yum install -y yum-utils # 设置镜像仓库 yum-config-manager \     --add-repo \     http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo # 更新yum软件包索引 yum makecache fast #...</div></div></div></a><a class="pagination-related" href="/posts/57307.html" title="python关键字参数和默认值参数"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-23</div><div class="info-item-2">python关键字参数和默认值参数</div></div><div class="info-2"><div class="info-item-1">关键字参数和默认值参数python **&lt;字典&gt; 可以将字典拆包 def func(**kwargs): 	print(kwargs)      # 这里的**代表可以传递字典（以字典的形式传递参数） # key：value只能以键值对方式传递 # 或者以**传值 func() func(a=1,b=2,c=3)  # 传递字典的方法 dict1 = &#123;&#x27;001&#x27;: &#x27;python&#x27;, &#x27;002&#x27;: &#x27;java&#x27;, &#x27;004&#x27;: &#x27;c++&#x27;&#125; func(**dict1) # 拆包步骤： # 1、func(001 = python,002 = java,004 = c++)将字典拆包成关键字参数的形式 # 2、func里面的参数都是关键字参数 # 3、将关键字参数再一次进行装包动作 # 4、装包成功：kwargs studens = &#123;     &#x27;001&#x27;: (&#x27;蔡徐坤&#x27;,...</div></div></div></a><a class="pagination-related" href="/posts/28879.html" title="python函数调用"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-27</div><div class="info-item-2">python函数调用</div></div><div class="info-2"><div class="info-item-1">函数嵌套调用def a():     print(&#x27;AAAAAAA&#x27;)   def b():     # 调用函数a     a()     print(&#x27;BBBBBBB&#x27;)   def c():     b()     print(&#x27;CCCCCCC&#x27;)   c()  例子# 定义函数：随机数产生 # 自动格式化Ctrl+Alt+L import random   def generate_random():     for i in range(20):         ran = random.randint(1, 20)         print(ran)   print(generate_random) # &lt;function generate_random at 0x000002755D17E040&gt; #  函数名      函数           在  内存地址   # 调用：函数名()...</div></div></div></a><a class="pagination-related" href="/posts/19235.html" title="Python列表"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-05</div><div class="info-item-2">Python列表</div></div><div class="info-2"><div class="info-item-1"> pycharm Code 配置 # -*- codeing = utf-8 -*- # @Time : $&#123;DATE&#125; $&#123;TIME&#125; # @Author : Wans # @File : $&#123;NAME&#125;.py # @Sofware : $&#123;PRODUCT_NAME&#125;  # -*- codeing = utf-8 -*- # @Time : 2021/3/8 10:46 # @Author : Wans # @File : list01.py # @Sofware : PyCharm  # &#x27;&#x27;&#x27; 翻转：reverse()  pop 弹栈 移除列表最后一个，返回值是删除的那个元素  &#x27;&#x27;&#x27;  hotpot_list = [&#x27;海底捞&#x27;, &#x27;呷哺&#x27;, &#x27;张亮麻辣烫&#x27;, &#x27;热辣一号&#x27;,...</div></div></div></a><a class="pagination-related" href="/posts/4090.html" title="内置函数+匿名函数"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-25</div><div class="info-item-2">内置函数+匿名函数</div></div><div class="info-2"><div class="info-item-1">  </div></div></div></a><a class="pagination-related" href="/posts/10926.html" title="python可变参数列表拆装"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-27</div><div class="info-item-2">python可变参数列表拆装</div></div><div class="info-2"><div class="info-item-1">笔记def func(a, *args):     print(&#x27;&#123;&#125;&#123;&#125;&#x27;.format(a, args))   func(2, [1, 23, 4], &#x27;fad&#x27;)   def func2(a, b=10, c=3, **kwargs):     print(a, b, c, kwargs)   func2(1)  # 1 10 3 &#123;&#125;  给默认值所以可传入一个参数 func2(2, b=11)  # 2 11 3 &#123;&#125; func2(3, c=5, b=7, x=1, y=2)  # 3 7 5 &#123;&#x27;x&#x27;: 1, &#x27;y&#x27;: 2&#125;，传值的时候可以打乱位置   def func3(a, *args, **kwargs):     print(a, args, kwargs)   t = (1, 2, 3, 4) func3(1, t)  # 1 ((1, 2, 3, 4),)...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Twikoo</span><span id="switch-btn"></span><span class="second-comment">Gitalk</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Wans</div><div class="author-info-description">自学的笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/wanswu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/wanswu" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">打工牛马人。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/730b8fb7.html" title="平时积累"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="平时积累"/></a><div class="content"><a class="title" href="/posts/730b8fb7.html" title="平时积累">平时积累</a><time datetime="2022-03-13T05:00:11.000Z" title="发表于 2022-03-13 13:00:11">2022-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d2b9d54.html" title="python多态"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python多态"/></a><div class="content"><a class="title" href="/posts/d2b9d54.html" title="python多态">python多态</a><time datetime="2021-12-17T14:56:12.000Z" title="发表于 2021-12-17 22:56:12">2021-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/366baac0.html" title="IntelliJ IDEA 2021.3、PyCharm永久激活"><img src="https://wanswu.github.io/images/jetbrains.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IntelliJ IDEA 2021.3、PyCharm永久激活"/></a><div class="content"><a class="title" href="/posts/366baac0.html" title="IntelliJ IDEA 2021.3、PyCharm永久激活">IntelliJ IDEA 2021.3、PyCharm永久激活</a><time datetime="2021-12-11T05:35:08.000Z" title="发表于 2021-12-11 13:35:08">2021-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/387075cf.html" title="我在校园2.5"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我在校园2.5"/></a><div class="content"><a class="title" href="/posts/387075cf.html" title="我在校园2.5">我在校园2.5</a><time datetime="2021-12-06T04:53:29.000Z" title="发表于 2021-12-06 12:53:29">2021-12-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d114782d.html" title="phpstudy和windows_mysql_冲突解决办法"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="phpstudy和windows_mysql_冲突解决办法"/></a><div class="content"><a class="title" href="/posts/d114782d.html" title="phpstudy和windows_mysql_冲突解决办法">phpstudy和windows_mysql_冲突解决办法</a><time datetime="2021-11-15T09:38:53.000Z" title="发表于 2021-11-15 17:38:53">2021-11-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Wans</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"><script>(() => {
+<span class="token keyword">class</span> <span class="token class-name">Studen</span><span class="token punctuation">(</span>Person<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>Studen<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        Person<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment"># 用的少</span>
+        self<span class="token punctuation">.</span>__money <span class="token operator">=</span> <span class="token number">100</span>
+
+    <span class="token keyword">def</span> <span class="token function">show</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'money:'</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>__money<span class="token punctuation">)</span>
+
+
+s <span class="token operator">=</span> Studen<span class="token punctuation">(</span><span class="token punctuation">)</span>
+s<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+s<span class="token punctuation">.</span>show1<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://wanswu.github.io">Wans</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://wanswu.github.io/posts/d2b9d54.html">https://wanswu.github.io/posts/d2b9d54.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://wanswu.github.io" target="_blank">Wans</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%87%AA%E5%AD%A6/">自学</a></div><div class="post-share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/366baac0.html" title="IntelliJ IDEA 2021.3、PyCharm永久激活"><img class="cover" src="https://wanswu.github.io/images/jetbrains.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">IntelliJ IDEA 2021.3、PyCharm永久激活</div></div><div class="info-2"><div class="info-item-1">前言 今天我安装PyCharm和IDEA的时候专业版的时候发现之前的激活方法已经失效了，于是，我花了两个小时在网上找到了。两种插件激活方法，这两种都是比较新的， 第一个插件FineAgent（作者好像把这项目停了，但是还可以使用） 第二种ja-netfilterZ大开发的（2021.11.30号发布）  接下来我就以Z大的插件来写一个教程  插件地址：热心大佬，随便选择一个进入   如果不能进入，按照下面操作进入  最后下载左上角这个文件，解压到你想安装的目录，记住这个目录...</div></div></div></a><a class="pagination-related" href="/posts/730b8fb7.html" title="平时积累"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">平时积累</div></div><div class="info-2"><div class="info-item-1">1、重装系统1.1、备份环境变量的注册表 ​		备份环境变量的目的是让你操作系统之后不需要再去配置环境变量  ​			Win+R输入regedit ​			打开下面这个地址 ​			系统环境变量位置 ​			HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/34285.html" title="Docker自学"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-06</div><div class="info-item-2">Docker自学</div></div><div class="info-2"><div class="info-item-1">Docker安装（linux）安装docker # 卸载干净 $ sudo yum remove docker \                   docker-client \                   docker-client-latest \                   docker-common \                   docker-latest \                   docker-latest-logrotate \                   docker-logrotate \                   docker-engine  # 安装包 yum install -y yum-utils # 设置镜像仓库 yum-config-manager \     --add-repo \     http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo # 更新yum软件包索引 yum makecache fast #...</div></div></div></a><a class="pagination-related" href="/posts/57307.html" title="python关键字参数和默认值参数"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-23</div><div class="info-item-2">python关键字参数和默认值参数</div></div><div class="info-2"><div class="info-item-1">关键字参数和默认值参数python **&lt;字典&gt; 可以将字典拆包 def func(**kwargs): 	print(kwargs)      # 这里的**代表可以传递字典（以字典的形式传递参数） # key：value只能以键值对方式传递 # 或者以**传值 func() func(a=1,b=2,c=3)  # 传递字典的方法 dict1 = &#123;'001': 'python', '002': 'java', '004': 'c++'&#125; func(**dict1) # 拆包步骤： # 1、func(001 = python,002 = java,004 = c++)将字典拆包成关键字参数的形式 # 2、func里面的参数都是关键字参数 # 3、将关键字参数再一次进行装包动作 # 4、装包成功：kwargs studens = &#123;     '001': ('蔡徐坤', 20),     '002': ('王源', 18),     '003': ('王俊凯', 21),     '004': ('易烊千玺',...</div></div></div></a><a class="pagination-related" href="/posts/28879.html" title="python函数调用"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-27</div><div class="info-item-2">python函数调用</div></div><div class="info-2"><div class="info-item-1">函数嵌套调用def a():     print('AAAAAAA')   def b():     # 调用函数a     a()     print('BBBBBBB')   def c():     b()     print('CCCCCCC')   c()  例子# 定义函数：随机数产生 # 自动格式化Ctrl+Alt+L import random   def generate_random():     for i in range(20):         ran = random.randint(1, 20)         print(ran)   print(generate_random) # &lt;function generate_random at 0x000002755D17E040> #  函数名      函数           在  内存地址   # 调用：函数名()...</div></div></div></a><a class="pagination-related" href="/posts/19235.html" title="Python列表"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-05</div><div class="info-item-2">Python列表</div></div><div class="info-2"><div class="info-item-1"> pycharm Code 配置 # -*- codeing = utf-8 -*- # @Time : $&#123;DATE&#125; $&#123;TIME&#125; # @Author : Wans # @File : $&#123;NAME&#125;.py # @Sofware : $&#123;PRODUCT_NAME&#125;  # -*- codeing = utf-8 -*- # @Time : 2021/3/8 10:46 # @Author : Wans # @File : list01.py # @Sofware : PyCharm  # ''' 翻转：reverse()  pop 弹栈 移除列表最后一个，返回值是删除的那个元素  '''  hotpot_list = ['海底捞', '呷哺', '张亮麻辣烫', '热辣一号',...</div></div></div></a><a class="pagination-related" href="/posts/4090.html" title="内置函数+匿名函数"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-25</div><div class="info-item-2">内置函数+匿名函数</div></div><div class="info-2"><div class="info-item-1">  </div></div></div></a><a class="pagination-related" href="/posts/10926.html" title="python可变参数列表拆装"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-27</div><div class="info-item-2">python可变参数列表拆装</div></div><div class="info-2"><div class="info-item-1">笔记def func(a, *args):     print('&#123;&#125;&#123;&#125;'.format(a, args))   func(2, [1, 23, 4], 'fad')   def func2(a, b=10, c=3, **kwargs):     print(a, b, c, kwargs)   func2(1)  # 1 10 3 &#123;&#125;  给默认值所以可传入一个参数 func2(2, b=11)  # 2 11 3 &#123;&#125; func2(3, c=5, b=7, x=1, y=2)  # 3 7 5 &#123;'x': 1, 'y': 2&#125;，传值的时候可以打乱位置   def func3(a, *args, **kwargs):     print(a, args, kwargs)   t = (1, 2, 3, 4) func3(1, t)  # 1 ((1, 2, 3, 4),) &#123;&#125;  l = [2, 5, 8] func3(1, l, c=9, b=6) ...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Twikoo</span><span id="switch-btn"></span><span class="second-comment">Gitalk</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Wans</div><div class="author-info-description">折腾的笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/wanswu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/wanswu" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">打工牛马人。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/730b8fb7.html" title="平时积累"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="平时积累"/></a><div class="content"><a class="title" href="/posts/730b8fb7.html" title="平时积累">平时积累</a><time datetime="2022-03-13T05:00:11.000Z" title="发表于 2022-03-13 13:00:11">2022-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d2b9d54.html" title="python多态"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python多态"/></a><div class="content"><a class="title" href="/posts/d2b9d54.html" title="python多态">python多态</a><time datetime="2021-12-17T14:56:12.000Z" title="发表于 2021-12-17 22:56:12">2021-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/366baac0.html" title="IntelliJ IDEA 2021.3、PyCharm永久激活"><img src="https://wanswu.github.io/images/jetbrains.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IntelliJ IDEA 2021.3、PyCharm永久激活"/></a><div class="content"><a class="title" href="/posts/366baac0.html" title="IntelliJ IDEA 2021.3、PyCharm永久激活">IntelliJ IDEA 2021.3、PyCharm永久激活</a><time datetime="2021-12-11T05:35:08.000Z" title="发表于 2021-12-11 13:35:08">2021-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/387075cf.html" title="我在校园2.5"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我在校园2.5"/></a><div class="content"><a class="title" href="/posts/387075cf.html" title="我在校园2.5">我在校园2.5</a><time datetime="2021-12-06T04:53:29.000Z" title="发表于 2021-12-06 12:53:29">2021-12-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d114782d.html" title="phpstudy和windows_mysql_冲突解决办法"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="phpstudy和windows_mysql_冲突解决办法"/></a><div class="content"><a class="title" href="/posts/d114782d.html" title="phpstudy和windows_mysql_冲突解决办法">phpstudy和windows_mysql_冲突解决办法</a><time datetime="2021-11-15T09:38:53.000Z" title="发表于 2021-11-15 17:38:53">2021-11-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Wans</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"><script>(() => {
   const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
   const option = null
 

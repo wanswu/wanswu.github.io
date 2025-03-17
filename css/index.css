@@ -1561,107 +1561,135 @@ blockquote > :last-child {
   --hlscrollbar-bg: #1f1f1f;
   --hlexpand-bg: linear-gradient(180deg, rgba(23,23,23,0.6), rgba(23,23,23,0.9));
 }
+.container pre[class*='language-'].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+  line-height: 1.6;
+}
+.container pre[class*='language-'].line-numbers > code {
+  position: relative;
+  line-height: 1.6;
+  white-space: inherit;
+  word-wrap: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+.container pre[class*='language-'].line-numbers .line-numbers-rows {
+  position: absolute;
+  top: 0;
+  left: -3.8em;
+  width: 3em;
+  letter-spacing: -1px;
+  font-size: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.container pre[class*='language-'].line-numbers .line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+  pointer-events: none;
+}
+.container pre[class*='language-'].line-numbers .line-numbers-rows > span:before {
+  display: block;
+  padding-right: 0.8em;
+  color: var(--hlnumber-color);
+  content: counter(linenumber);
+  text-align: right;
+}
+pre[class*='language-'].language-css > code,
+pre[class*='language-'].language-sass > code,
+pre[class*='language-'].language-scss > code {
+  color: #fd9170 !important;
+}
+pre[class*='language-'] .namespace {
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+}
+pre[class*='language-'] .token.atrule,
+pre[class*='language-'] .token.symbol,
+pre[class*='language-'] .token.constant,
+pre[class*='language-'] .token.boolean,
+pre[class*='language-'] .token.function {
+  color: #c792ea;
+}
+pre[class*='language-'] .token.attr-name,
+pre[class*='language-'] .token.builtin,
+pre[class*='language-'] .token.class {
+  color: #ffcb6b;
+}
+pre[class*='language-'] .token.attr-value,
+pre[class*='language-'] .token.attribute,
+pre[class*='language-'] .token.pseudo-class,
+pre[class*='language-'] .token.pseudo-element,
+pre[class*='language-'] .token.string {
+  color: #c3e88d;
+}
+pre[class*='language-'] .token.cdata,
+pre[class*='language-'] .token.property,
+pre[class*='language-'] .token.char,
+pre[class*='language-'] .token.inserted {
+  color: #80cbc4;
+}
+pre[class*='language-'] .token.class-name,
+pre[class*='language-'] .token.color,
+pre[class*='language-'] .token.hexcode,
+pre[class*='language-'] .token.regex {
+  color: #f2ff00;
+}
+pre[class*='language-'] .token.comment,
+pre[class*='language-'] .token.prolog,
+pre[class*='language-'] .token.doctype {
+  color: #546e7a;
+}
+pre[class*='language-'] .token.deleted,
+pre[class*='language-'] .token.variable,
+pre[class*='language-'] .token.entity,
+pre[class*='language-'] .token.selector,
+pre[class*='language-'] .token.tag,
+pre[class*='language-'] .token.unit {
+  color: #f07178;
+}
+pre[class*='language-'] .token.id {
+  color: #c792ea;
+  font-weight: bold;
+}
+pre[class*='language-'] .token.important {
+  color: #c792ea;
+  font-weight: bold;
+}
+pre[class*='language-'] .token.keyword {
+  color: #c792ea;
+  font-style: italic;
+}
+pre[class*='language-'] .token.number,
+pre[class*='language-'] .token.url {
+  color: #fd9170;
+}
+pre[class*='language-'] .token.operator,
+pre[class*='language-'] .token.punctuation {
+  color: #89ddff;
+}
 @-moz-document url-prefix() {
   scrollbar-color: var(--hlscrollbar-bg) transparent;
 }
-figure.highlight table::-webkit-scrollbar-thumb {
+.container pre[class*='language-']::-webkit-scrollbar-thumb {
   background: var(--hlscrollbar-bg);
 }
-figure.highlight pre .deletion {
-  color: #bf42bf;
+.container pre[class*='language-']:not(.line-numbers) {
+  padding: 10px 20px;
 }
-figure.highlight pre .addition {
-  color: #105ede;
+.container pre[class*='language-'] .caption {
+  margin-left: -3.8em;
+  padding: 4px 16px !important;
 }
-figure.highlight pre .meta {
-  color: #c792ea;
-}
-figure.highlight pre .comment {
-  color: rgba(101,115,126,0.8);
-}
-figure.highlight pre .variable,
-figure.highlight pre .attribute,
-figure.highlight pre .regexp,
-figure.highlight pre .ruby .constant,
-figure.highlight pre .xml .tag .title,
-figure.highlight pre .xml .pi,
-figure.highlight pre .xml .doctype,
-figure.highlight pre .html .doctype,
-figure.highlight pre .css .id,
-figure.highlight pre .tag .name,
-figure.highlight pre .css .class,
-figure.highlight pre .css .pseudo {
-  color: #ff5370;
-}
-figure.highlight pre .tag {
-  color: #89ddff;
-}
-figure.highlight pre .number,
-figure.highlight pre .preprocessor,
-figure.highlight pre .literal,
-figure.highlight pre .params,
-figure.highlight pre .constant,
-figure.highlight pre .command {
-  color: #f78c6c;
-}
-figure.highlight pre .built_in {
-  color: #ffcb6b;
-}
-figure.highlight pre .ruby .class .title,
-figure.highlight pre .css .rules .attribute,
-figure.highlight pre .string,
-figure.highlight pre .value,
-figure.highlight pre .inheritance,
-figure.highlight pre .header,
-figure.highlight pre .ruby .symbol,
-figure.highlight pre .xml .cdata,
-figure.highlight pre .special,
-figure.highlight pre .number,
-figure.highlight pre .formula {
-  color: #c3e88d;
-}
-figure.highlight pre .keyword,
-figure.highlight pre .title,
-figure.highlight pre .css .hexcolor {
-  color: #89ddff;
-}
-figure.highlight pre .function,
-figure.highlight pre .python .decorator,
-figure.highlight pre .python .title,
-figure.highlight pre .ruby .function .title,
-figure.highlight pre .ruby .title .keyword,
-figure.highlight pre .perl .sub,
-figure.highlight pre .javascript .title,
-figure.highlight pre .coffeescript .title {
-  color: #82aaff;
-}
-figure.highlight pre .tag .attr,
-figure.highlight pre .javascript .function {
-  color: #c792ea;
-}
-.container figure.highlight .line.marked {
-  background-color: rgba(113,124,180,0.314);
-}
-.container figure.highlight table {
-  display: block;
-  overflow: auto;
-  border: none;
-}
-.container figure.highlight table td {
-  padding: 0;
-  border: none;
-}
-.container figure.highlight .gutter pre {
-  padding-right: 10px;
-  padding-left: 10px;
-  background-color: var(--hlnumber-bg);
-  color: var(--hlnumber-color);
-  text-align: right;
-}
-.container figure.highlight .code pre {
-  padding-right: 10px;
-  padding-left: 10px;
-  width: 100%;
+.container pre[class*='language-'] .caption a {
+  padding: 0 !important;
 }
 .container pre,
 .container figure.highlight {

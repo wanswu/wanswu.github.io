@@ -1,22 +1,22 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>文件操作 | Wans</title><meta name="author" content="Wans"><meta name="copyright" content="Wans"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="# file1 # 文件操作： &#x27;&#x27;&#x27; 文件上传： 保存log  系统函数 open(file,mode,buffering,encodeing)  读：     open(path&#x2F;filename,&#x27;rt&#x27;) -----&gt;返回值：stream(管道)     container &#x3D; stream.read() ----&gt;读取管道中">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>文件操作 | Wans</title><meta name="author" content="Wans"><meta name="copyright" content="Wans"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="# file1 # 文件操作： &#39;&#39;&#39; 文件上传： 保存log  系统函数 open(file,mode,buffering,encodeing)  读：     open(path&#x2F;filename,&#39;rt&#39;) -----&gt;返回值：stream(管道)     container &#x3D; stream.read() ----&gt;读取管道中内容     注意：如果传递的path&#x2F;filename有误，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文件操作">
 <meta property="og:url" content="https://wanswu.github.io/posts/16177.html">
 <meta property="og:site_name" content="Wans">
-<meta property="og:description" content="# file1 # 文件操作： &#x27;&#x27;&#x27; 文件上传： 保存log  系统函数 open(file,mode,buffering,encodeing)  读：     open(path&#x2F;filename,&#x27;rt&#x27;) -----&gt;返回值：stream(管道)     container &#x3D; stream.read() ----&gt;读取管道中">
+<meta property="og:description" content="# file1 # 文件操作： &#39;&#39;&#39; 文件上传： 保存log  系统函数 open(file,mode,buffering,encodeing)  读：     open(path&#x2F;filename,&#39;rt&#39;) -----&gt;返回值：stream(管道)     container &#x3D; stream.read() ----&gt;读取管道中内容     注意：如果传递的path&#x2F;filename有误，">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
 <meta property="article:published_time" content="2021-09-25T15:28:57.000Z">
 <meta property="article:modified_time" content="2025-03-17T01:28:09.644Z">
 <meta property="article:author" content="Wans">
 <meta property="article:tag" content="自学">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"><script type="application/ld+json">{
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "文件操作",
   "url": "https://wanswu.github.io/posts/16177.html",
-  "image": "https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png",
+  "image": "https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg",
   "datePublished": "2021-09-25T15:28:57.000Z",
   "dateModified": "2025-03-17T01:28:09.644Z",
   "author": [
@@ -163,7 +163,7 @@ btf.addGlobalFn('pjaxComplete', () => {
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
   translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
   copy: {
     success: '复制成功',
     error: '复制失败',
@@ -202,261 +202,261 @@ btf.addGlobalFn('pjaxComplete', () => {
   isToc: false,
   pageType: 'post'
 }</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Wans" type="application/atom+xml">
-</head><body><div id="web_bg" style="background-image: url(images/006ZFECEgy1fr1x6cbnb3j31hc0u0na3.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Wans</span></a><a class="nav-page-title" href="/"><span class="site-name">文件操作</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">文件操作</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-09-25T15:28:57.000Z" title="发表于 2021-09-25 23:28:57">2021-09-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-17T01:28:09.644Z" title="更新于 2025-03-17 09:28:09">2025-03-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python/">Python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;距离上次更新已经&quot;,&quot;messageNext&quot;:&quot;天了，文章部分内容可能已经过时，请注意甄别。&quot;,&quot;postUpdate&quot;:&quot;2025-03-17 09:28:09&quot;}" hidden></div><p><img src="/posts/16177/image-20211004110415017.webp" alt="image-20211004110415017"></p>
-<pre><code class="highlight python"><span class="comment"># file1</span>
-<span class="comment"># 文件操作：</span>
-<span class="string">&#x27;&#x27;&#x27;</span>
-<span class="string">文件上传：</span>
-<span class="string">保存log</span>
-<span class="string"></span>
-<span class="string">系统函数</span>
-<span class="string">open(file,mode,buffering,encodeing)</span>
-<span class="string"></span>
-<span class="string">读：</span>
-<span class="string">    open(path/filename,&#x27;rt&#x27;) -----&gt;返回值：stream(管道)</span>
-<span class="string">    container = stream.read() ----&gt;读取管道中内容</span>
-<span class="string">    注意：如果传递的path/filename有误，则会报错：FileNotFoundError</span>
-<span class="string">    如果是图片则不能使用默认的读取方式，mode = &#x27;rb&#x27;</span>
-<span class="string"></span>
-<span class="string">    总结：</span>
-<span class="string">    read()</span>
-<span class="string">    readline()  每次读取一行内容</span>
-<span class="string">    readlines() 读取所有的行保存到列表中</span>
-<span class="string">    readable()  判断是否是可读的</span>
-<span class="string"></span>
-<span class="string">&#x27;&#x27;&#x27;</span>
+</head><body><div id="web_bg" style="background-image: url(images/006ZFECEgy1fr1x6cbnb3j31hc0u0na3.webp);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Wans</span></a><a class="nav-page-title" href="/"><span class="site-name">文件操作</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">文件操作</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-09-25T15:28:57.000Z" title="发表于 2021-09-25 23:28:57">2021-09-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-17T01:28:09.644Z" title="更新于 2025-03-17 09:28:09">2025-03-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python/">Python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;距离上次更新已经&quot;,&quot;messageNext&quot;:&quot;天了，文章部分内容可能已经过时，请注意甄别。&quot;,&quot;postUpdate&quot;:&quot;2025-03-17 09:28:09&quot;}" hidden></div><p><img src="/posts/16177/image-20211004110415017.webp" alt="image-20211004110415017"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># file1</span>
+<span class="token comment"># 文件操作：</span>
+<span class="token triple-quoted-string string">'''
+文件上传：
+保存log
 
-stream = <span class="built_in">open</span>(<span class="string">r&#x27;../../个人工具/base.txt&#x27;</span>, <span class="string">&#x27;rt&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)  <span class="comment"># rt文本文档读</span>
-<span class="comment"># container = stream.read()</span>
-<span class="comment"># print(container)</span>
-result = stream.readable()  <span class="comment"># able判断是否可以读取</span>
-<span class="built_in">print</span>(result)
+系统函数
+open(file,mode,buffering,encodeing)
 
-<span class="comment"># while True:</span>
-<span class="comment">#     line = stream.readline()</span>
-<span class="comment">#     print(line)</span>
-<span class="comment">#     if not line:</span>
-<span class="comment">#         break</span>
+读：
+    open(path/filename,'rt') ----->返回值：stream(管道)
+    container = stream.read() ---->读取管道中内容
+    注意：如果传递的path/filename有误，则会报错：FileNotFoundError
+    如果是图片则不能使用默认的读取方式，mode = 'rb'
 
-lines = stream.readlines()  <span class="comment"># 保存到列表中</span>
-<span class="built_in">print</span>(lines)
-<span class="keyword">for</span> i <span class="keyword">in</span> lines:
-    <span class="built_in">print</span>(i)
+    总结：
+    read()
+    readline()  每次读取一行内容
+    readlines() 读取所有的行保存到列表中
+    readable()  判断是否是可读的
 
-stream = <span class="built_in">open</span>(<span class="string">r&#x27;../../img/2021-09-26/OHR.MackenzieRiver_ZH-CN0214805768_480x800.jpg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>)
+'''</span>
 
-container = stream.read()
-<span class="built_in">print</span>(container)
+stream <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'../../个人工具/base.txt'</span><span class="token punctuation">,</span> <span class="token string">'rt'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>  <span class="token comment"># rt文本文档读</span>
+<span class="token comment"># container = stream.read()</span>
+<span class="token comment"># print(container)</span>
+result <span class="token operator">=</span> stream<span class="token punctuation">.</span>readable<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># able判断是否可以读取</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
 
-<span class="comment"># file2</span>
-<span class="comment"># 写文件</span>
-<span class="string">&#x27;&#x27;&#x27;</span>
-<span class="string">stream = open(r&#x27;aa.txt&#x27;, &#x27;w&#x27;)</span>
-<span class="string">mode 是&#x27;w&#x27;表示写操作</span>
-<span class="string">方法：</span>
-<span class="string">    write(内容)   每次都会将原来的内容清空，然后写当前的内容</span>
-<span class="string">    writelines(Iterable)    没有换行的效果 4444444GGGGRE</span>
-<span class="string">    straem.writelines([&#x27;赌神：小明明\n&#x27;, &#x27;赌侠笑道\n&#x27;, &#x27;赌圣周星星\n&#x27;])</span>
-<span class="string"></span>
-<span class="string">如果有mode=&#x27;a&#x27; 表示追加</span>
-<span class="string">&#x27;&#x27;&#x27;</span>
+<span class="token comment"># while True:</span>
+<span class="token comment">#     line = stream.readline()</span>
+<span class="token comment">#     print(line)</span>
+<span class="token comment">#     if not line:</span>
+<span class="token comment">#         break</span>
 
-straem = <span class="built_in">open</span>(<span class="string">r&#x27;a.txt&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)
-s = <span class="string">&#x27;&#x27;&#x27;</span>
-<span class="string">你好！</span>
-<span class="string">    欢迎来到澳门菠菜，赠送给你一个金币！</span>
-<span class="string">                赌王：小明</span>
-<span class="string">&#x27;&#x27;&#x27;</span>
-result = straem.write(s)
-<span class="built_in">print</span>(result)
+lines <span class="token operator">=</span> stream<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 保存到列表中</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lines<span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> lines<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
 
-straem.write(<span class="string">&#x27;      你需要戒指吗？？？\n&#x27;</span>)  <span class="comment"># 可以\n换行</span>
-straem.writelines([<span class="string">&#x27;        赌神：小明明\n&#x27;</span>, <span class="string">&#x27;        赌侠笑道\n&#x27;</span>, <span class="string">&#x27;      赌圣周星星\n&#x27;</span>])
-straem.write(<span class="string">&#x27;      僵尸先生&#x27;</span>)
-straem.close()  <span class="comment"># 释放资源</span>
-<span class="comment"># 关闭之后就无法写入</span>
+stream <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'../../img/2021-09-26/OHR.MackenzieRiver_ZH-CN0214805768_480x800.jpg'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
 
-<span class="comment"># file3</span>
-<span class="comment"># 文件的复制</span>
-<span class="string">&#x27;&#x27;&#x27;</span>
-<span class="string">原文件：../../img/2021-09-26/OHR.MackenzieRiver_ZH-CN0214805768_480x800.jpg</span>
-<span class="string">目标文件：./1.jpg</span>
-<span class="string">&#x27;&#x27;&#x27;</span>
+container <span class="token operator">=</span> stream<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>container<span class="token punctuation">)</span>
 
-<span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">r&#x27;./OHR.MackenzieRiver_ZH-CN0214805768_1920x1080.jpg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> result:
-    container = result.read()
-    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">r&#x27;1.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> wstream:
-        wstream.write(container)
-<span class="built_in">print</span>(<span class="string">&#x27;文件复制完成&#x27;</span>)
+<span class="token comment"># file2</span>
+<span class="token comment"># 写文件</span>
+<span class="token triple-quoted-string string">'''
+stream = open(r'aa.txt', 'w')
+mode 是'w'表示写操作
+方法：
+    write(内容)   每次都会将原来的内容清空，然后写当前的内容
+    writelines(Iterable)    没有换行的效果 4444444GGGGRE
+    straem.writelines(['赌神：小明明\n', '赌侠笑道\n', '赌圣周星星\n'])
+
+如果有mode='a' 表示追加
+'''</span>
+
+straem <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'a.txt'</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+s <span class="token operator">=</span> <span class="token triple-quoted-string string">'''
+你好！
+    欢迎来到澳门菠菜，赠送给你一个金币！
+                赌王：小明
+'''</span>
+result <span class="token operator">=</span> straem<span class="token punctuation">.</span>write<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+
+straem<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'      你需要戒指吗？？？\n'</span><span class="token punctuation">)</span>  <span class="token comment"># 可以\n换行</span>
+straem<span class="token punctuation">.</span>writelines<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'        赌神：小明明\n'</span><span class="token punctuation">,</span> <span class="token string">'        赌侠笑道\n'</span><span class="token punctuation">,</span> <span class="token string">'      赌圣周星星\n'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+straem<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'      僵尸先生'</span><span class="token punctuation">)</span>
+straem<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 释放资源</span>
+<span class="token comment"># 关闭之后就无法写入</span>
+
+<span class="token comment"># file3</span>
+<span class="token comment"># 文件的复制</span>
+<span class="token triple-quoted-string string">'''
+原文件：../../img/2021-09-26/OHR.MackenzieRiver_ZH-CN0214805768_480x800.jpg
+目标文件：./1.jpg
+'''</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'./OHR.MackenzieRiver_ZH-CN0214805768_1920x1080.jpg'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> result<span class="token punctuation">:</span>
+    container <span class="token operator">=</span> result<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'1.jpg'</span><span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> wstream<span class="token punctuation">:</span>
+        wstream<span class="token punctuation">.</span>write<span class="token punctuation">(</span>container<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'文件复制完成'</span><span class="token punctuation">)</span>
 
 
-<span class="comment"># os</span>
-<span class="comment"># 模块：os.py</span>
-<span class="string">&#x27;&#x27;&#x27;</span>
-<span class="string">os.path:</span>
-<span class="string">os.path.dirname(__file__)   获取当前文件所在的文件目录（绝对路径）</span>
-<span class="string">os.path.join(path,&#x27;&#x27;)   返回的是一个拼接后的新的路径</span>
-<span class="string"></span>
-<span class="string">&#x27;&#x27;&#x27;</span>
-<span class="keyword">import</span> os
+<span class="token comment"># os</span>
+<span class="token comment"># 模块：os.py</span>
+<span class="token triple-quoted-string string">'''
+os.path:
+os.path.dirname(__file__)   获取当前文件所在的文件目录（绝对路径）
+os.path.join(path,'')   返回的是一个拼接后的新的路径
 
-<span class="comment"># print(os.path)</span>
-<span class="comment"># path = os.path.dirname(__file__)  # 显示当前目录的绝对路径</span>
-<span class="comment"># print(path, &#x27;\n&#x27;, type(path))</span>
-<span class="comment"># result = os.path.join(path, &#x27;a1.jpg&#x27;)</span>
-<span class="comment"># print(result)</span>
+'''</span>
+<span class="token keyword">import</span> os
 
-<span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">r&#x27;./OHR.MackenzieRiver_ZH-CN0214805768_1920x1080.jpg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> stream:  <span class="comment"># 要复制的文件</span>
-    container = stream.read()   <span class="comment"># 读取文件内容</span>
-    file = stream.name
-    filename = file[file.rfind(<span class="string">r&#x27;/&#x27;</span>)+<span class="number">1</span>:]
-    path = os.path.dirname(__file__)
-    path1 = os.path.join(path, filename)
-    <span class="keyword">with</span> <span class="built_in">open</span>(path1, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> wstream:
-        wstream.write(container)
+<span class="token comment"># print(os.path)</span>
+<span class="token comment"># path = os.path.dirname(__file__)  # 显示当前目录的绝对路径</span>
+<span class="token comment"># print(path, '\n', type(path))</span>
+<span class="token comment"># result = os.path.join(path, 'a1.jpg')</span>
+<span class="token comment"># print(result)</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'./OHR.MackenzieRiver_ZH-CN0214805768_1920x1080.jpg'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> stream<span class="token punctuation">:</span>  <span class="token comment"># 要复制的文件</span>
+    container <span class="token operator">=</span> stream<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token comment"># 读取文件内容</span>
+    <span class="token builtin">file</span> <span class="token operator">=</span> stream<span class="token punctuation">.</span>name
+    filename <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">[</span><span class="token builtin">file</span><span class="token punctuation">.</span>rfind<span class="token punctuation">(</span><span class="token string">r'/'</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+    path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span>
+    path1 <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>path<span class="token punctuation">,</span> filename<span class="token punctuation">)</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>path1<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> wstream<span class="token punctuation">:</span>
+        wstream<span class="token punctuation">.</span>write<span class="token punctuation">(</span>container<span class="token punctuation">)</span>
 
         
         
-<span class="comment"># file 01</span>
-<span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;book/a1.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> wstrem:
-    wstrem.write(<span class="string">&#x27;hello&#x27;</span>)
+<span class="token comment"># file 01</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'book/a1.txt'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> wstrem<span class="token punctuation">:</span>
+    wstrem<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span>
 
-<span class="keyword">import</span> os
+<span class="token keyword">import</span> os
 
-result = os.path.isabs(<span class="string">r&#x27;C:\\Users\\Wans\\AppData\\Local\\Programs\\Python39\\lib\\a1.txt&#x27;</span>)
-<span class="built_in">print</span>(<span class="string">&#x27;------&gt;&#x27;</span>, result)
-<span class="comment"># ------&gt; True</span>
+result <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isabs<span class="token punctuation">(</span><span class="token string">r'C:\\Users\\Wans\\AppData\\Local\\Programs\\Python39\\lib\\a1.txt'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'------>'</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span>
+<span class="token comment"># ------> True</span>
 
-result1 = os.path.isabs(<span class="string">r&#x27;../day10_函数/func01.py&#x27;</span>)  <span class="comment"># 当前文件的上一级</span>
-<span class="built_in">print</span>(<span class="string">&#x27;------&gt;&#x27;</span>, result1)
-<span class="comment"># ------&gt; False</span>
+result1 <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isabs<span class="token punctuation">(</span><span class="token string">r'../day10_函数/func01.py'</span><span class="token punctuation">)</span>  <span class="token comment"># 当前文件的上一级</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'------>'</span><span class="token punctuation">,</span> result1<span class="token punctuation">)</span>
+<span class="token comment"># ------> False</span>
 
-result1 = os.path.isabs(<span class="string">r&#x27;/day10_函数/func01.py&#x27;</span>)  <span class="comment"># 找跟file01.py同级别的func01.py</span>
-<span class="built_in">print</span>(<span class="string">&#x27;------&gt;&#x27;</span>, result1)
-<span class="comment"># ------&gt; True</span>
-
-
-<span class="comment"># 获取路径，directory目录 文件夹</span>
-<span class="comment"># 当前文件所在文件夹的路径</span>
-path = os.path.dirname(__file__)
-<span class="comment"># 通过相对路径得到绝对路径</span>
-<span class="built_in">print</span>(path)
-<span class="comment"># D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\a.txt</span>
+result1 <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isabs<span class="token punctuation">(</span><span class="token string">r'/day10_函数/func01.py'</span><span class="token punctuation">)</span>  <span class="token comment"># 找跟file01.py同级别的func01.py</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'------>'</span><span class="token punctuation">,</span> result1<span class="token punctuation">)</span>
+<span class="token comment"># ------> True</span>
 
 
-path = os.path.abspath(<span class="string">&#x27;a.txt&#x27;</span>)
-<span class="built_in">print</span>(path)
-<span class="comment"># D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\a.txt</span>
+<span class="token comment"># 获取路径，directory目录 文件夹</span>
+<span class="token comment"># 当前文件所在文件夹的路径</span>
+path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span>
+<span class="token comment"># 通过相对路径得到绝对路径</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token comment"># D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\a.txt</span>
 
 
-<span class="comment"># 获取当前文件的绝对路径</span>
-<span class="comment"># __file__ 当前文件</span>
-path = os.path.abspath(__file__)
-<span class="built_in">print</span>(path)
-<span class="comment"># D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\file01.py</span>
+path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>abspath<span class="token punctuation">(</span><span class="token string">'a.txt'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token comment"># D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\a.txt</span>
 
 
-path = os.getcwd()  <span class="comment"># 类似os.path.dirname(__file__)</span>
-<span class="built_in">print</span>(path)
-<span class="comment"># D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件</span>
+<span class="token comment"># 获取当前文件的绝对路径</span>
+<span class="token comment"># __file__ 当前文件</span>
+path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>abspath<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token comment"># D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\file01.py</span>
 
 
-r = os.path.isfile(os.getcwd())  <span class="comment"># isfile判断是不是文件</span>
-<span class="built_in">print</span>(r)
-<span class="comment"># False</span>
+path <span class="token operator">=</span> os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 类似os.path.dirname(__file__)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token comment"># D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件</span>
 
 
-r = os.path.isdir(os.getcwd())  <span class="comment"># isdir判断是不是目录</span>
-<span class="built_in">print</span>(r)
-<span class="comment"># True</span>
+r <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isfile<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># isfile判断是不是文件</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span>
+<span class="token comment"># False</span>
 
 
-path = <span class="string">r&#x27;D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\file01.py&#x27;</span>
-result = os.path.split(path)
-<span class="built_in">print</span>(result)  <span class="comment"># 输出前面是路径，后面是文件名</span>
-<span class="comment"># (&#x27;D:\\Users\\Wans\\Desktop\\python stduy\\千峰笔记\\day13_文件&#x27;, &#x27;file01.py&#x27;)</span>
-<span class="built_in">print</span>(result[<span class="number">1</span>])  <span class="comment"># 这样可以输出文件名</span>
-<span class="comment"># filename = path[path.rfind(&#x27;\\&#x27;)+1:]</span>
-<span class="comment"># file01.py</span>
+r <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isdir<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># isdir判断是不是目录</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span>
+<span class="token comment"># True</span>
 
 
-result = os.path.splitext(path)  <span class="comment"># 分割文件与扩展名查看文件的后缀</span>
-<span class="built_in">print</span>(result)
-<span class="comment"># (&#x27;D:\\Users\\Wans\\Desktop\\python stduy\\千峰笔记\\day13_文件\\file01&#x27;, &#x27;.py&#x27;)</span>
-
-<span class="built_in">print</span>(os.path.getsize(<span class="string">&#x27;a.txt&#x27;</span>))  <span class="comment"># 返回文件的大小，单位字节</span>
-<span class="built_in">print</span>(os.path.join(os.getcwd(), <span class="string">&#x27;file&#x27;</span>, <span class="string">&#x27;a.txt&#x27;</span>))  <span class="comment"># 每多一个加一层</span>
-<span class="comment"># D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\file\a.txt</span>
-
-
-<span class="string">&#x27;&#x27;&#x27;</span>
-<span class="string">os.path: 常用函数</span>
-<span class="string">    dirname()</span>
-<span class="string">    join()</span>
-<span class="string">    split()</span>
-<span class="string">    splittext()</span>
-<span class="string">    getsize()</span>
-<span class="string">    isabs()</span>
-<span class="string">    isfile()</span>
-<span class="string">    isdir()</span>
-<span class="string">&#x27;&#x27;&#x27;</span>
-
-<span class="comment"># file 02</span>
-<span class="comment"># -*- codeing = utf-8 -*-</span>
-<span class="comment"># @Time : 2021/10/26 19:08</span>
-<span class="comment"># @Author : Wans</span>
-<span class="comment"># @File : file02.py</span>
-<span class="comment"># @Sofware : PyCharm</span>
+path <span class="token operator">=</span> <span class="token string">r'D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\file01.py'</span>
+result <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>split<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>  <span class="token comment"># 输出前面是路径，后面是文件名</span>
+<span class="token comment"># ('D:\\Users\\Wans\\Desktop\\python stduy\\千峰笔记\\day13_文件', 'file01.py')</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 这样可以输出文件名</span>
+<span class="token comment"># filename = path[path.rfind('\\')+1:]</span>
+<span class="token comment"># file01.py</span>
 
 
-<span class="comment"># os.path里面的函数</span>
-<span class="comment"># os函数</span>
-<span class="keyword">import</span> os
+result <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>path<span class="token punctuation">)</span>  <span class="token comment"># 分割文件与扩展名查看文件的后缀</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token comment"># ('D:\\Users\\Wans\\Desktop\\python stduy\\千峰笔记\\day13_文件\\file01', '.py')</span>
 
-<span class="comment"># os.getcwd()</span>
-<span class="comment">#</span>
-<span class="comment"># dir = os.getcwd()</span>
-<span class="comment"># print(dir)</span>
-<span class="comment"># # 返回指定目录下的所有的文件和文件夹</span>
-<span class="comment"># print(os.listdir(r&#x27;D:\Users\Wans\Desktop\python stduy\千峰笔记&#x27;))</span>
-<span class="comment">#</span>
-<span class="comment"># # 创建文件夹</span>
-<span class="comment"># if not os.path.exists(r&#x27;D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\book&#x27;):</span>
-<span class="comment">#     os.mkdir(r&#x27;D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\book&#x27;)</span>
-<span class="comment"># os.rmdir(r&#x27;D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\book&#x27;)    #  只能删除空文件夹</span>
-<span class="comment">#</span>
-<span class="comment"># os.removedirs(r&#x27;D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\book&#x27;) # 目录不是空的</span>
-<span class="comment"># os.remove(r&#x27;D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\book\a1.txt&#x27;)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>getsize<span class="token punctuation">(</span><span class="token string">'a.txt'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 返回文件的大小，单位字节</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'file'</span><span class="token punctuation">,</span> <span class="token string">'a.txt'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 每多一个加一层</span>
+<span class="token comment"># D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\file\a.txt</span>
 
-<span class="comment"># 删除p4文件夹</span>
-path = <span class="string">r&#x27;/千峰笔记/day13_文件/book&#x27;</span>
-<span class="comment"># filelist = os.listdir(path)</span>
-<span class="comment"># for file in filelist:</span>
-<span class="comment">#     path1 = os.path.join(path, file)</span>
-<span class="comment">#     os.remove(path1)</span>
-<span class="comment"># else:</span>
-<span class="comment">#     os.removedirs(path)</span>
-<span class="comment">#     # os.rmdir(path)</span>
-<span class="comment"># print(&#x27;删除成功&#x27;)</span>
 
-path = os.getcwd()
-<span class="built_in">print</span>(path)
-<span class="comment"># 切换目录</span>
-f = os.chdir(<span class="string">r&#x27;D:\Users\Wans\Desktop\python stduy\千峰笔记\day12_函数&#x27;</span>)
-<span class="built_in">print</span>()
-path = os.getcwd()
-<span class="built_in">print</span>(path)
-<span class="string">&#x27;&#x27;&#x27;</span>
-<span class="string">os模块下的方法：</span>
-<span class="string">os.getcwd()     # 获取当前目录</span>
-<span class="string">os.listdir()    # 浏览文件夹</span>
-<span class="string">os.mkdir()      # 创建文件夹</span>
-<span class="string">os.rmdir()      # 删除空的文件夹</span>
-<span class="string">os.remove()     # 删除文件</span>
-<span class="string">os.chdir()      # 切换目录</span>
-<span class="string">&#x27;&#x27;&#x27;</span></code></pre>
+<span class="token triple-quoted-string string">'''
+os.path: 常用函数
+    dirname()
+    join()
+    split()
+    splittext()
+    getsize()
+    isabs()
+    isfile()
+    isdir()
+'''</span>
 
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://wanswu.github.io">Wans</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://wanswu.github.io/posts/16177.html">https://wanswu.github.io/posts/16177.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://wanswu.github.io" target="_blank">Wans</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%87%AA%E5%AD%A6/">自学</a></div><div class="post-share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/4090.html" title="内置函数+匿名函数"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">内置函数+匿名函数</div></div><div class="info-2"><div class="info-item-1">  </div></div></div></a><a class="pagination-related" href="/posts/28879.html" title="python函数调用"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">python函数调用</div></div><div class="info-2"><div class="info-item-1">函数嵌套调用def a():     print(&#x27;AAAAAAA&#x27;)   def b():     # 调用函数a     a()     print(&#x27;BBBBBBB&#x27;)   def c():     b()     print(&#x27;CCCCCCC&#x27;)   c()  例子# 定义函数：随机数产生 # 自动格式化Ctrl+Alt+L import random   def generate_random():     for i in range(20):         ran = random.randint(1, 20)         print(ran)   print(generate_random) # &lt;function generate_random at 0x000002755D17E040&gt; #  函数名      函数           在  内存地址   # 调用：函数名()...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/34285.html" title="Docker自学"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-06</div><div class="info-item-2">Docker自学</div></div><div class="info-2"><div class="info-item-1">Docker安装（linux）安装docker # 卸载干净 $ sudo yum remove docker \                   docker-client \                   docker-client-latest \                   docker-common \                   docker-latest \                   docker-latest-logrotate \                   docker-logrotate \                   docker-engine  # 安装包 yum install -y yum-utils # 设置镜像仓库 yum-config-manager \     --add-repo \     http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo # 更新yum软件包索引 yum makecache fast #...</div></div></div></a><a class="pagination-related" href="/posts/57307.html" title="python关键字参数和默认值参数"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-23</div><div class="info-item-2">python关键字参数和默认值参数</div></div><div class="info-2"><div class="info-item-1">关键字参数和默认值参数python **&lt;字典&gt; 可以将字典拆包 def func(**kwargs): 	print(kwargs)      # 这里的**代表可以传递字典（以字典的形式传递参数） # key：value只能以键值对方式传递 # 或者以**传值 func() func(a=1,b=2,c=3)  # 传递字典的方法 dict1 = &#123;&#x27;001&#x27;: &#x27;python&#x27;, &#x27;002&#x27;: &#x27;java&#x27;, &#x27;004&#x27;: &#x27;c++&#x27;&#125; func(**dict1) # 拆包步骤： # 1、func(001 = python,002 = java,004 = c++)将字典拆包成关键字参数的形式 # 2、func里面的参数都是关键字参数 # 3、将关键字参数再一次进行装包动作 # 4、装包成功：kwargs studens = &#123;     &#x27;001&#x27;: (&#x27;蔡徐坤&#x27;,...</div></div></div></a><a class="pagination-related" href="/posts/28879.html" title="python函数调用"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-27</div><div class="info-item-2">python函数调用</div></div><div class="info-2"><div class="info-item-1">函数嵌套调用def a():     print(&#x27;AAAAAAA&#x27;)   def b():     # 调用函数a     a()     print(&#x27;BBBBBBB&#x27;)   def c():     b()     print(&#x27;CCCCCCC&#x27;)   c()  例子# 定义函数：随机数产生 # 自动格式化Ctrl+Alt+L import random   def generate_random():     for i in range(20):         ran = random.randint(1, 20)         print(ran)   print(generate_random) # &lt;function generate_random at 0x000002755D17E040&gt; #  函数名      函数           在  内存地址   # 调用：函数名()...</div></div></div></a><a class="pagination-related" href="/posts/19235.html" title="Python列表"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-05</div><div class="info-item-2">Python列表</div></div><div class="info-2"><div class="info-item-1"> pycharm Code 配置 # -*- codeing = utf-8 -*- # @Time : $&#123;DATE&#125; $&#123;TIME&#125; # @Author : Wans # @File : $&#123;NAME&#125;.py # @Sofware : $&#123;PRODUCT_NAME&#125;  # -*- codeing = utf-8 -*- # @Time : 2021/3/8 10:46 # @Author : Wans # @File : list01.py # @Sofware : PyCharm  # &#x27;&#x27;&#x27; 翻转：reverse()  pop 弹栈 移除列表最后一个，返回值是删除的那个元素  &#x27;&#x27;&#x27;  hotpot_list = [&#x27;海底捞&#x27;, &#x27;呷哺&#x27;, &#x27;张亮麻辣烫&#x27;, &#x27;热辣一号&#x27;,...</div></div></div></a><a class="pagination-related" href="/posts/4090.html" title="内置函数+匿名函数"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-25</div><div class="info-item-2">内置函数+匿名函数</div></div><div class="info-2"><div class="info-item-1">  </div></div></div></a><a class="pagination-related" href="/posts/d2b9d54.html" title="python多态"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-17</div><div class="info-item-2">python多态</div></div><div class="info-2"><div class="info-item-1"># -*- Codeing = utf-8 -*- # @Time : 2021-11-27 下午 1:43 # @Author : Wans # @File : object09.py # @Software : PyCharm  # class Person: #     def __init__(self, name): #         self.name = name # #     def eat(self): #         print(&#x27;----------&gt;eat1&#x27;) # #     def eat(self, food): #         print(&#x27;-----------&gt;eat：&#x27;, food) # # # p = Person(&#x27;jack&#x27;) # p.eat(&#x27;肉丸子&#x27;) import inspect   class Base:     def test(self):        ...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Twikoo</span><span id="switch-btn"></span><span class="second-comment">Gitalk</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Wans</div><div class="author-info-description">自学的笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/wanswu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/wanswu" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">打工牛马人。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/730b8fb7.html" title="平时积累"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="平时积累"/></a><div class="content"><a class="title" href="/posts/730b8fb7.html" title="平时积累">平时积累</a><time datetime="2022-03-13T05:00:11.000Z" title="发表于 2022-03-13 13:00:11">2022-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d2b9d54.html" title="python多态"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python多态"/></a><div class="content"><a class="title" href="/posts/d2b9d54.html" title="python多态">python多态</a><time datetime="2021-12-17T14:56:12.000Z" title="发表于 2021-12-17 22:56:12">2021-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/366baac0.html" title="IntelliJ IDEA 2021.3、PyCharm永久激活"><img src="https://wanswu.github.io/images/jetbrains.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IntelliJ IDEA 2021.3、PyCharm永久激活"/></a><div class="content"><a class="title" href="/posts/366baac0.html" title="IntelliJ IDEA 2021.3、PyCharm永久激活">IntelliJ IDEA 2021.3、PyCharm永久激活</a><time datetime="2021-12-11T05:35:08.000Z" title="发表于 2021-12-11 13:35:08">2021-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/387075cf.html" title="我在校园2.5"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我在校园2.5"/></a><div class="content"><a class="title" href="/posts/387075cf.html" title="我在校园2.5">我在校园2.5</a><time datetime="2021-12-06T04:53:29.000Z" title="发表于 2021-12-06 12:53:29">2021-12-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d114782d.html" title="phpstudy和windows_mysql_冲突解决办法"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="phpstudy和windows_mysql_冲突解决办法"/></a><div class="content"><a class="title" href="/posts/d114782d.html" title="phpstudy和windows_mysql_冲突解决办法">phpstudy和windows_mysql_冲突解决办法</a><time datetime="2021-11-15T09:38:53.000Z" title="发表于 2021-11-15 17:38:53">2021-11-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Wans</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"><script>(() => {
+<span class="token comment"># file 02</span>
+<span class="token comment"># -*- codeing = utf-8 -*-</span>
+<span class="token comment"># @Time : 2021/10/26 19:08</span>
+<span class="token comment"># @Author : Wans</span>
+<span class="token comment"># @File : file02.py</span>
+<span class="token comment"># @Sofware : PyCharm</span>
+
+
+<span class="token comment"># os.path里面的函数</span>
+<span class="token comment"># os函数</span>
+<span class="token keyword">import</span> os
+
+<span class="token comment"># os.getcwd()</span>
+<span class="token comment">#</span>
+<span class="token comment"># dir = os.getcwd()</span>
+<span class="token comment"># print(dir)</span>
+<span class="token comment"># # 返回指定目录下的所有的文件和文件夹</span>
+<span class="token comment"># print(os.listdir(r'D:\Users\Wans\Desktop\python stduy\千峰笔记'))</span>
+<span class="token comment">#</span>
+<span class="token comment"># # 创建文件夹</span>
+<span class="token comment"># if not os.path.exists(r'D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\book'):</span>
+<span class="token comment">#     os.mkdir(r'D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\book')</span>
+<span class="token comment"># os.rmdir(r'D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\book')    #  只能删除空文件夹</span>
+<span class="token comment">#</span>
+<span class="token comment"># os.removedirs(r'D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\book') # 目录不是空的</span>
+<span class="token comment"># os.remove(r'D:\Users\Wans\Desktop\python stduy\千峰笔记\day13_文件\book\a1.txt')</span>
+
+<span class="token comment"># 删除p4文件夹</span>
+path <span class="token operator">=</span> <span class="token string">r'/千峰笔记/day13_文件/book'</span>
+<span class="token comment"># filelist = os.listdir(path)</span>
+<span class="token comment"># for file in filelist:</span>
+<span class="token comment">#     path1 = os.path.join(path, file)</span>
+<span class="token comment">#     os.remove(path1)</span>
+<span class="token comment"># else:</span>
+<span class="token comment">#     os.removedirs(path)</span>
+<span class="token comment">#     # os.rmdir(path)</span>
+<span class="token comment"># print('删除成功')</span>
+
+path <span class="token operator">=</span> os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token comment"># 切换目录</span>
+f <span class="token operator">=</span> os<span class="token punctuation">.</span>chdir<span class="token punctuation">(</span><span class="token string">r'D:\Users\Wans\Desktop\python stduy\千峰笔记\day12_函数'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+path <span class="token operator">=</span> os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token triple-quoted-string string">'''
+os模块下的方法：
+os.getcwd()     # 获取当前目录
+os.listdir()    # 浏览文件夹
+os.mkdir()      # 创建文件夹
+os.rmdir()      # 删除空的文件夹
+os.remove()     # 删除文件
+os.chdir()      # 切换目录
+'''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://wanswu.github.io">Wans</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://wanswu.github.io/posts/16177.html">https://wanswu.github.io/posts/16177.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://wanswu.github.io" target="_blank">Wans</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%87%AA%E5%AD%A6/">自学</a></div><div class="post-share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/4090.html" title="内置函数+匿名函数"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">内置函数+匿名函数</div></div><div class="info-2"><div class="info-item-1">  </div></div></div></a><a class="pagination-related" href="/posts/28879.html" title="python函数调用"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">python函数调用</div></div><div class="info-2"><div class="info-item-1">函数嵌套调用def a():     print('AAAAAAA')   def b():     # 调用函数a     a()     print('BBBBBBB')   def c():     b()     print('CCCCCCC')   c()  例子# 定义函数：随机数产生 # 自动格式化Ctrl+Alt+L import random   def generate_random():     for i in range(20):         ran = random.randint(1, 20)         print(ran)   print(generate_random) # &lt;function generate_random at 0x000002755D17E040> #  函数名      函数           在  内存地址   # 调用：函数名()...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/34285.html" title="Docker自学"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-06</div><div class="info-item-2">Docker自学</div></div><div class="info-2"><div class="info-item-1">Docker安装（linux）安装docker # 卸载干净 $ sudo yum remove docker \                   docker-client \                   docker-client-latest \                   docker-common \                   docker-latest \                   docker-latest-logrotate \                   docker-logrotate \                   docker-engine  # 安装包 yum install -y yum-utils # 设置镜像仓库 yum-config-manager \     --add-repo \     http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo # 更新yum软件包索引 yum makecache fast #...</div></div></div></a><a class="pagination-related" href="/posts/57307.html" title="python关键字参数和默认值参数"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-23</div><div class="info-item-2">python关键字参数和默认值参数</div></div><div class="info-2"><div class="info-item-1">关键字参数和默认值参数python **&lt;字典&gt; 可以将字典拆包 def func(**kwargs): 	print(kwargs)      # 这里的**代表可以传递字典（以字典的形式传递参数） # key：value只能以键值对方式传递 # 或者以**传值 func() func(a=1,b=2,c=3)  # 传递字典的方法 dict1 = &#123;'001': 'python', '002': 'java', '004': 'c++'&#125; func(**dict1) # 拆包步骤： # 1、func(001 = python,002 = java,004 = c++)将字典拆包成关键字参数的形式 # 2、func里面的参数都是关键字参数 # 3、将关键字参数再一次进行装包动作 # 4、装包成功：kwargs studens = &#123;     '001': ('蔡徐坤', 20),     '002': ('王源', 18),     '003': ('王俊凯', 21),     '004': ('易烊千玺',...</div></div></div></a><a class="pagination-related" href="/posts/28879.html" title="python函数调用"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-27</div><div class="info-item-2">python函数调用</div></div><div class="info-2"><div class="info-item-1">函数嵌套调用def a():     print('AAAAAAA')   def b():     # 调用函数a     a()     print('BBBBBBB')   def c():     b()     print('CCCCCCC')   c()  例子# 定义函数：随机数产生 # 自动格式化Ctrl+Alt+L import random   def generate_random():     for i in range(20):         ran = random.randint(1, 20)         print(ran)   print(generate_random) # &lt;function generate_random at 0x000002755D17E040> #  函数名      函数           在  内存地址   # 调用：函数名()...</div></div></div></a><a class="pagination-related" href="/posts/19235.html" title="Python列表"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-05</div><div class="info-item-2">Python列表</div></div><div class="info-2"><div class="info-item-1"> pycharm Code 配置 # -*- codeing = utf-8 -*- # @Time : $&#123;DATE&#125; $&#123;TIME&#125; # @Author : Wans # @File : $&#123;NAME&#125;.py # @Sofware : $&#123;PRODUCT_NAME&#125;  # -*- codeing = utf-8 -*- # @Time : 2021/3/8 10:46 # @Author : Wans # @File : list01.py # @Sofware : PyCharm  # ''' 翻转：reverse()  pop 弹栈 移除列表最后一个，返回值是删除的那个元素  '''  hotpot_list = ['海底捞', '呷哺', '张亮麻辣烫', '热辣一号',...</div></div></div></a><a class="pagination-related" href="/posts/4090.html" title="内置函数+匿名函数"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-25</div><div class="info-item-2">内置函数+匿名函数</div></div><div class="info-2"><div class="info-item-1">  </div></div></div></a><a class="pagination-related" href="/posts/10926.html" title="python可变参数列表拆装"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-27</div><div class="info-item-2">python可变参数列表拆装</div></div><div class="info-2"><div class="info-item-1">笔记def func(a, *args):     print('&#123;&#125;&#123;&#125;'.format(a, args))   func(2, [1, 23, 4], 'fad')   def func2(a, b=10, c=3, **kwargs):     print(a, b, c, kwargs)   func2(1)  # 1 10 3 &#123;&#125;  给默认值所以可传入一个参数 func2(2, b=11)  # 2 11 3 &#123;&#125; func2(3, c=5, b=7, x=1, y=2)  # 3 7 5 &#123;'x': 1, 'y': 2&#125;，传值的时候可以打乱位置   def func3(a, *args, **kwargs):     print(a, args, kwargs)   t = (1, 2, 3, 4) func3(1, t)  # 1 ((1, 2, 3, 4),) &#123;&#125;  l = [2, 5, 8] func3(1, l, c=9, b=6) ...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Twikoo</span><span id="switch-btn"></span><span class="second-comment">Gitalk</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/tx.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Wans</div><div class="author-info-description">折腾的笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/wanswu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/wanswu" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">打工牛马人。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/730b8fb7.html" title="平时积累"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="平时积累"/></a><div class="content"><a class="title" href="/posts/730b8fb7.html" title="平时积累">平时积累</a><time datetime="2022-03-13T05:00:11.000Z" title="发表于 2022-03-13 13:00:11">2022-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d2b9d54.html" title="python多态"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python多态"/></a><div class="content"><a class="title" href="/posts/d2b9d54.html" title="python多态">python多态</a><time datetime="2021-12-17T14:56:12.000Z" title="发表于 2021-12-17 22:56:12">2021-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/366baac0.html" title="IntelliJ IDEA 2021.3、PyCharm永久激活"><img src="https://wanswu.github.io/images/jetbrains.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IntelliJ IDEA 2021.3、PyCharm永久激活"/></a><div class="content"><a class="title" href="/posts/366baac0.html" title="IntelliJ IDEA 2021.3、PyCharm永久激活">IntelliJ IDEA 2021.3、PyCharm永久激活</a><time datetime="2021-12-11T05:35:08.000Z" title="发表于 2021-12-11 13:35:08">2021-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/387075cf.html" title="我在校园2.5"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我在校园2.5"/></a><div class="content"><a class="title" href="/posts/387075cf.html" title="我在校园2.5">我在校园2.5</a><time datetime="2021-12-06T04:53:29.000Z" title="发表于 2021-12-06 12:53:29">2021-12-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d114782d.html" title="phpstudy和windows_mysql_冲突解决办法"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="phpstudy和windows_mysql_冲突解决办法"/></a><div class="content"><a class="title" href="/posts/d114782d.html" title="phpstudy和windows_mysql_冲突解决办法">phpstudy和windows_mysql_冲突解决办法</a><time datetime="2021-11-15T09:38:53.000Z" title="发表于 2021-11-15 17:38:53">2021-11-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Wans</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"><script>(() => {
   const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
   const option = null
 
