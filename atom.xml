@@ -100,11 +100,11 @@
   </entry>
   
   <entry>
-    <title>我在校园2.5python</title>
+    <title>我在校园2.5</title>
     <link href="https://wanswu.github.io/posts/387075cf.html"/>
     <id>https://wanswu.github.io/posts/387075cf.html</id>
     <published>2021-12-06T04:53:29.000Z</published>
-    <updated>2025-03-17T01:31:47.237Z</updated>
+    <updated>2025-03-17T03:49:09.492Z</updated>
     
     
       
@@ -123,8 +123,6 @@
     
     
     <category term="工具" scheme="https://wanswu.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="校园" scheme="https://wanswu.github.io/tags/%E6%A0%A1%E5%9B%AD/"/>
     
   </entry>
   
@@ -279,9 +277,9 @@
     <category term="Docker" scheme="https://wanswu.github.io/categories/Docker/"/>
     
     
-    <category term="Docker" scheme="https://wanswu.github.io/tags/Docker/"/>
-    
     <category term="自学" scheme="https://wanswu.github.io/tags/%E8%87%AA%E5%AD%A6/"/>
+    
+    <category term="Docker" scheme="https://wanswu.github.io/tags/Docker/"/>
     
   </entry>
   
